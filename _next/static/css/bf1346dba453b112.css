@@ -1,0 +1,45 @@
+.PlayButton_play-button__ouvPH {
+    border-radius: 100%;
+    block-size: 40px;
+    inline-size: 40px;
+    color: var(--background-color);
+    transition: color .1s cubic-bezier(.25, .46, .45, .94)
+}
+
+.PlayButton_play-button__ouvPH.PlayButton_is-hover__7iQsx {
+    color: var(--foreground-color)
+}
+
+@media(hover:hover)and (pointer:fine) {
+    .PlayButton_play-button__ouvPH:hover {
+        color: var(--foreground-color)
+    }
+}
+
+.PlayButton_background-hover__bLRUD {
+    position: absolute;
+    block-size: 200%;
+    inline-size: 150%;
+    border-radius: 50%;
+    inset-block-start: -50%;
+    inset-inline-start: -25%;
+    transform: translateY(-75%);
+    background-color: var(--background-color);
+    opacity: .75
+}
+
+.PlayButton_background__r4CR5 {
+    border-radius: inherit;
+    background-color: var(--foreground-color);
+    transition: background-color .3s cubic-bezier(.25, .46, .45, .94);
+    overflow: hidden
+}
+
+@media(min-width:768px) {
+    .PlayButton_play-button__ouvPH {
+        block-size: 80px;
+        inline-size: 80px
+    }
+}
+
+/*# sourceMappingURL=bf1346dba453b112.css.map*/
