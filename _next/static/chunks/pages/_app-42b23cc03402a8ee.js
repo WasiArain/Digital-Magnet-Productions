@@ -93,7 +93,7 @@
 
             function r(e, t) {
                 let r = e || 75;
-                return t ? .qualities ? .length ? t.qualities.reduce((e, t) => Math.abs(t - r) < Math.abs(e - r) ? t : e, t.qualities[0]) : r
+                return t ?.qualities ?.length ? t.qualities.reduce((e, t) => Math.abs(t - r) < Math.abs(e - r) ? t : e, t.qualities[0]) : r
             }
             Object.defineProperty(t, "__esModule", {
                 value: !0
@@ -596,9 +596,9 @@
             let a = {};
 
             function u(e, t = {}, r = !0) {
-                let [l, c] = (0, n.useState)(!1), f = t.threshold ? ? .5, d = Array.isArray(f) ? `${f.join("|")}_${t.rootMargin}` : `${f.toString()}_${t.rootMargin}`, h = (0, o.d)(), p = null;
+                let [l, c] = (0, n.useState)(!1), f = t.threshold ??.5, d = Array.isArray(f) ? `${f.join("|")}_${t.rootMargin}` : `${f.toString()}_${t.rootMargin}`, h = (0, o.d)(), p = null;
                 return h && (p = h.scrollWrapperRef.current), (0, n.useEffect)(() => {
-                    r && (l && t.onEnterViewport ? .(), l || t.onLeaveViewport ? .())
+                    r && (l && t.onEnterViewport ?.(), l || t.onLeaveViewport ?.())
                 }, [l, t, r]), (0, i.A)(() => {
                     if (e.current && r) {
                         let r = a[d];
@@ -610,7 +610,7 @@
                                 observer: new IntersectionObserver(t => {
                                     t.forEach(t => {
                                         let r = e.get(t.target);
-                                        t.isIntersecting && r ? .onEnterViewport(), t.isIntersecting || r ? .onLeaveViewport()
+                                        t.isIntersecting && r ?.onEnterViewport(), t.isIntersecting || r ?.onLeaveViewport()
                                     })
                                 }, {
                                     threshold: f,
@@ -881,7 +881,7 @@
                         !R || U && F && y(R, M, I, {
                             locale: T
                         })
-                    }, [I, M, U, T, F, R ? .locale, R]);
+                    }, [I, M, U, T, F, R ?.locale, R]);
                     let q = {
                         ref: G,
                         onClick(e) {
@@ -903,7 +903,7 @@
                                                     }
                                                 }), e) return
                                         }
-                                        let e = s ? ? !0;
+                                        let e = s ?? !0;
                                         "beforePopState" in t ? t[i ? "replace" : "push"](r, n, {
                                             shallow: o,
                                             locale: a,
@@ -932,8 +932,8 @@
                     };
                     if ((0, f.isAbsoluteUrl)(I)) q.href = I;
                     else if (!S || w || "a" === n.type && !("href" in n.props)) {
-                        let e = void 0 !== T ? T : R ? .locale;
-                        q.href = R ? .isLocaleDomain && (0, v.getDomainLocale)(I, e, R ? .locales, R ? .domainLocales) || (0, m.addBasePath)((0, d.addLocale)(I, e, R ? .defaultLocale))
+                        let e = void 0 !== T ? T : R ?.locale;
+                        q.href = R ?.isLocaleDomain && (0, v.getDomainLocale)(I, e, R ?.locales, R ?.domainLocales) || (0, m.addBasePath)((0, d.addLocale)(I, e, R ?.defaultLocale))
                     }
                     return S ? a.default.cloneElement(n, q) : (0, s.jsx)("a", { ...j,
                         ...q,
@@ -1050,7 +1050,7 @@
                 enableChineseTransitionFallback: n,
                 isChineseLanguage: i
             }) {
-                t ? .current && (n && i.current && "none" !== r ? e.add((0, d.z)(t.current, "fadeIn")) : e.add((0, d.z)(t.current, r)))
+                t ?.current && (n && i.current && "none" !== r ? e.add((0, d.z)(t.current, "fadeIn")) : e.add((0, d.z)(t.current, r)))
             }
 
             function p(e, {
@@ -1059,7 +1059,7 @@
                 enableChineseTransitionFallback: n,
                 isChineseLanguage: i
             }) {
-                t ? .current && (n && i.current && "none" !== r ? e.add((0, d.z)(t.current, "fadeOut")) : e.add((0, d.z)(t.current, r)))
+                t ?.current && (n && i.current && "none" !== r ? e.add((0, d.z)(t.current, "fadeOut")) : e.add((0, d.z)(t.current, r)))
             }
             var v = r(89010),
                 m = r(73105);
@@ -1781,20 +1781,20 @@
                     };
                     return e && (a = Date.now()), t.cv = a, t
                 },
-                c = e => (e ? .data ? .story ? .alternates && delete e ? .data ? .story ? .alternates, e ? .data ? .story ? .content ? .modules && e.data.story.content.modules.forEach(e => {
+                c = e => (e ?.data ?.story ?.alternates && delete e ?.data ?.story ?.alternates, e ?.data ?.story ?.content ?.modules && e.data.story.content.modules.forEach(e => {
                     ("case_carousel" === e.component || "case_listing" === e.component) && e.cards.forEach(e => {
                         var t;
-                        t = e.case, delete t.content ? .modules, t.content ? .locations ? .forEach(e => {
-                            e.alternates && delete e.alternates, delete e.content ? .sections, delete e.content ? .office_details
+                        t = e.case, delete t.content ?.modules, t.content ?.locations ?.forEach(e => {
+                            e.alternates && delete e.alternates, delete e.content ?.sections, delete e.content ?.office_details
                         })
-                    }), "locations_blok" === e.component && delete e.locations, "case_listing" === e.component && e ? .locations_filter.forEach(e => {
-                        e && (delete e ? .content ? .sections, delete e ? .content ? .office_details)
+                    }), "locations_blok" === e.component && delete e.locations, "case_listing" === e.component && e ?.locations_filter.forEach(e => {
+                        e && (delete e ?.content ?.sections, delete e ?.content ?.office_details)
                     }), "featured_news_overview" === e.component && e.news_items.forEach(e => {
-                        delete e.news.content ? .modules
+                        delete e.news.content ?.modules
                     })
                 }), e),
                 f = e => {
-                    if (e ? .locations) return e ? .locations.map(e => ({
+                    if (e ?.locations) return e ?.locations.map(e => ({
                         component: e.component,
                         countries: [],
                         title: e.title,
@@ -2186,7 +2186,7 @@
                 o = r(21429);
 
             function s(e, t) {
-                let r = (0, n.useMemo)(() => (0, o.aj)(e()), t ? ? []);
+                let r = (0, n.useMemo)(() => (0, o.aj)(e()), t ?? []);
                 return (0, i.A)(() => ((0, o.$u)(r), r.setupTimeline({
                     direction: "in"
                 }), () => {
@@ -2250,10 +2250,10 @@
                 };
 
             function m(e, t, r, n, i, o, s) {
-                let a = e ? .src;
+                let a = e ?.src;
                 e && e["data-loaded-src"] !== a && (e["data-loaded-src"] = a, ("decode" in e ? e.decode() : Promise.resolve()).catch(() => {}).then(() => {
                     if (e.parentElement && e.isConnected) {
-                        if ("empty" !== t && i(!0), r ? .current) {
+                        if ("empty" !== t && i(!0), r ?.current) {
                             let t = new Event("load");
                             Object.defineProperty(t, "target", {
                                 writable: !1,
@@ -2276,7 +2276,7 @@
                                 }
                             })
                         }
-                        n ? .current && n.current(e)
+                        n ?.current && n.current(e)
                     }
                 }))
             }
@@ -2364,7 +2364,7 @@
                         let e = v || n || c.imageConfigDefault,
                             t = [...e.deviceSizes, ...e.imageSizes].sort((e, t) => e - t),
                             r = e.deviceSizes.sort((e, t) => e - t),
-                            i = e.qualities ? .sort((e, t) => e - t);
+                            i = e.qualities ?.sort((e, t) => e - t);
                         return { ...e,
                             allSizes: t,
                             deviceSizes: r,
@@ -2892,7 +2892,7 @@
                                 }),
                                 G = e.effectsPrefix || "",
                                 q = l.getScrollFunc(n),
-                                W = 1 === l.isTouch ? !0 === I ? .8 : parseFloat(I) || 0 : 0 === B || !1 === B ? 0 : parseFloat(B) || .8,
+                                W = 1 === l.isTouch ? !0 === I ?.8 : parseFloat(I) || 0 : 0 === B || !1 === B ? 0 : parseFloat(B) || .8,
                                 $ = 0,
                                 X = 0,
                                 Y = 1,
@@ -3010,7 +3010,7 @@
                                                 if (s) {
                                                     for (n = -$, i = e.end; s--;) {
                                                         if ((r = x[s]).trig.isActive || n >= r.start && n <= r.end) {
-                                                            c && (r.trig.progress += r.trig.direction < 0 ? .001 : -.001, r.trig.update(0, 0, 1), c.resetTo("y", parseFloat(g.y), -X, !0), Y && c.progress(1));
+                                                            c && (r.trig.progress += r.trig.direction < 0 ?.001 : -.001, r.trig.update(0, 0, 1), c.resetTo("y", parseFloat(g.y), -X, !0), Y && c.progress(1));
                                                             return
                                                         }
                                                         n > r.end && (u += r.distance), i -= r.distance
@@ -3478,7 +3478,7 @@
 
             function a(e) {
                 return {
-                    default: e ? .default || e
+                    default: e ?.default || e
                 }
             }
 
@@ -3598,26 +3598,26 @@
                         let o = {
                             paused: !0
                         };
-                        "in" === t && (o = { ...e.timelineVars ? .(),
+                        "in" === t && (o = { ...e.timelineVars ?.(),
                             ...o
                         });
                         let s = r[t];
-                        return null == s ? (s = u.Ay.timeline(o), r[t] = s, s.eventCallback("onStart", () => e.onStart ? .(t)), s.eventCallback("onComplete", () => e.onComplete ? .(t)), s.eventCallback("onUpdate", () => e.onUpdate ? .(s)), "in" === t && s.eventCallback("onReverseComplete", () => e.onComplete ? .(t))) : n && (0, l.de)(s), i(s, e.refs), s
+                        return null == s ? (s = u.Ay.timeline(o), r[t] = s, s.eventCallback("onStart", () => e.onStart ?.(t)), s.eventCallback("onComplete", () => e.onComplete ?.(t)), s.eventCallback("onUpdate", () => e.onUpdate ?.(s)), "in" === t && s.eventCallback("onReverseComplete", () => e.onComplete ?.(t))) : n && (0, l.de)(s), i(s, e.refs), s
                     },
                     killOldTimeline(e) {
-                        let t = r.out && r ? .out ? .getChildren(!0).length > 0,
+                        let t = r.out && r ?.out ?.getChildren(!0).length > 0,
                             n = r["in" === e && t ? "out" : "in"];
-                        n ? .kill()
+                        n ?.kill()
                     },
                     async transition(t) {
                         this.killOldTimeline(t.direction);
-                        let n = !r.out || r ? .out ? .getChildren(!0).length === 0,
-                            i = r[t.direction] ? ? r.in;
+                        let n = !r.out || r ?.out ?.getChildren(!0).length === 0,
+                            i = r[t.direction] ?? r.in;
                         if (n && (i = r.in), null == i) throw Error("Timeline is undefined, did you forget to call TransitionController.setupTimeline()?");
-                        t.onStart ? .(t.direction), "out" === t.direction && n ? await i.reverse(0, !0) : await i.restart(!0, !0), t.onComplete ? .(t.direction), e.onComplete ? .(t.direction)
+                        t.onStart ?.(t.direction), "out" === t.direction && n ? await i.reverse(0, !0) : await i.restart(!0, !0), t.onComplete ?.(t.direction), e.onComplete ?.(t.direction)
                     },
                     async transitionIn(e) {
-                        e ? .reset && this.setupTimeline({
+                        e ?.reset && this.setupTimeline({
                             direction: "in",
                             reset: !0
                         }), await this.transition({ ...e,
@@ -3625,11 +3625,11 @@
                         }), this.direction = "in"
                     },
                     dispose() {
-                        r ? .in ? .kill(), t && (t(), t = void 0), r ? .out ? .kill()
+                        r ?.in ?.kill(), t && (t(), t = void 0), r ?.out ?.kill()
                     },
                     async transitionOut(e) {
                         return new Promise(n => {
-                            t = n, (e ? .reset || r ? .out ? .getChildren(!0).length === 0 || !r.out) && this.setupTimeline({
+                            t = n, (e ?.reset || r ?.out ?.getChildren(!0).length === 0 || !r.out) && this.setupTimeline({
                                 direction: "out",
                                 reset: !0
                             }), this.transition({ ...e,
@@ -5771,7 +5771,7 @@
                         F(!0)
                     }, []),
                     B = (0, n.jsx)(l(), { ...I,
-                        alt: f ? ? "",
+                        alt: f ?? "",
                         className: a()(d().image),
                         onLoad: N
                     });
@@ -5783,7 +5783,7 @@
                     src: I.src
                 }));
                 let z = B;
-                if (C ? .type) {
+                if (C ?.type) {
                     let e = {};
                     "parallax" === C.type && (e.offset = 30), z = (0, n.jsx)(v.A, {
                         as: "div",
@@ -5801,14 +5801,14 @@
                 let U = {
                     ref: j,
                     className: a()(d().imageHolder, e, {
-                        [d().innerAnimation]: C ? .type,
-                        [d().innerParallax]: C ? .type === "parallax",
-                        [d().isHorizontal]: C ? .config ? .direction === "horizontal",
-                        [d().isVertical]: C ? .type === "parallax" && C ? .config ? .direction !== "horizontal",
+                        [d().innerAnimation]: C ?.type,
+                        [d().innerParallax]: C ?.type === "parallax",
+                        [d().isHorizontal]: C ?.config ?.direction === "horizontal",
+                        [d().isVertical]: C ?.type === "parallax" && C ?.config ?.direction !== "horizontal",
                         [d().isLoaded]: R
                     })
                 };
-                return O ? .type ? (0, n.jsx)(v.A, {
+                return O ?.type ? (0, n.jsx)(v.A, {
                     as: "div",
                     type: O.type,
                     config: O.config,
@@ -5963,13 +5963,13 @@
                 });
                 (0, a.s)(j, e);
                 let R = (0, i.useCallback)(() => {
-                        S ? .current ? .reverse()
+                        S ?.current ?.reverse()
                     }, [S]),
                     F = (0, i.useCallback)(() => {
-                        S ? .current ? .play()
+                        S ?.current ?.play()
                     }, [S]);
                 return (0, i.useEffect)(() => {
-                    d && (S ? .current ? .paused(!0), S ? .current ? .seek(0))
+                    d && (S ?.current ?.paused(!0), S ?.current ?.seek(0))
                 }, [d, S]), (0, l.j)({
                     innerTemplate: (0, n.jsxs)(n.Fragment, {
                         children: [(0, n.jsx)("div", {
@@ -7084,30 +7084,30 @@
                     h = (0, ef.useRef)(void 0),
                     p = (0, ef.useRef)(!!e.enableGsapScrollSmooth),
                     m = (0, ef.useCallback)(() => {
-                        p.current ? t ? .current ? .paused(!0) : d.current ? r ? .current ? .updatePluginOptions("lock", {
+                        p.current ? t ?.current ?.paused(!0) : d.current ? r ?.current ?.updatePluginOptions("lock", {
                             isLock: !0
                         }) : h.current = window.scrollY || document.documentElement.scrollTop
                     }, [r]),
                     g = (0, ef.useCallback)(() => {
-                        p.current ? t ? .current ? .paused(!1) : d.current ? r ? .current ? .updatePluginOptions("lock", {
+                        p.current ? t ?.current ?.paused(!1) : d.current ? r ?.current ?.updatePluginOptions("lock", {
                             isLock: !1
                         }) : h.current = void 0
                     }, [r]),
                     _ = (0, ef.useCallback)((e = .25) => {
-                        p.current || d.current && (r ? .current ? .setMomentum(0, 0), r ? .current ? .updatePluginOptions("scaleDelta", {
+                        p.current || d.current && (r ?.current ?.setMomentum(0, 0), r ?.current ?.updatePluginOptions("scaleDelta", {
                             speed: e,
                             isScaling: !0
                         }))
                     }, [r]),
                     y = (0, ef.useCallback)(() => {
-                        p.current || d.current && r ? .current ? .updatePluginOptions("scaleDelta", {
+                        p.current || d.current && r ?.current ?.updatePluginOptions("scaleDelta", {
                             isScaling: !1
                         })
                     }, [r]),
                     b = (0, ef.useCallback)((e, t) => {
                         /Android/i.test(navigator.userAgent) && e.scrollIntoView({
                             behavior: "smooth"
-                        }), p.current || d.current ? r ? .current ? .scrollIntoView(e, t) : e.scrollIntoView({
+                        }), p.current || d.current ? r ?.current ?.scrollIntoView(e, t) : e.scrollIntoView({
                             behavior: "smooth"
                         })
                     }, [r]),
@@ -7115,7 +7115,7 @@
                         p.current && t.current ? l.current = {
                             offset: {
                                 x: 0,
-                                y: t.current ? .scrollTop()
+                                y: t.current ?.scrollTop()
                             },
                             limit: {
                                 x: 0,
@@ -7133,25 +7133,25 @@
                         }, c && c(l.current)
                     }, [l, c, d]),
                     x = (0, ef.useCallback)((e, n, i, o) => {
-                        p.current && t.current ? ec.os.to(t ? .current, {
-                            scrollTop: t ? .current ? .offset(o ? .target || a.current, `${n}`),
+                        p.current && t.current ? ec.os.to(t ?.current, {
+                            scrollTop: t ?.current ?.offset(o ?.target || a.current, `${n}`),
                             duration: i / 1e3,
-                            ease: o ? .easing || "Quad.easeInOut",
+                            ease: o ?.easing || "Quad.easeInOut",
                             onUpdate: () => {
                                 w()
                             },
                             onComplete: () => {
-                                o ? .callback && o.callback()
+                                o ?.callback && o.callback()
                             }
-                        }) : d.current ? r ? .current ? .scrollTo(e, n, i, o) : ec.os.to(window, {
+                        }) : d.current ? r ?.current ?.scrollTo(e, n, i, o) : ec.os.to(window, {
                             duration: i / 1e3,
-                            ease: o ? .easing || "Quad.easeInOut",
+                            ease: o ?.easing || "Quad.easeInOut",
                             scrollTo: {
                                 y: n,
                                 x: e
                             },
                             onComplete: () => {
-                                o ? .callback && o.callback()
+                                o ?.callback && o.callback()
                             }
                         })
                     }, [r, p, w]);
@@ -7172,19 +7172,19 @@
                                 smoothTouch: !1
                             }) : d.current && (r.current = en.init(s.current, { ...{
                                     renderByPixels: !ey.CI,
-                                    damping: ey.CI ? .05 : .1,
+                                    damping: ey.CI ?.05 : .1,
                                     delegateTo: document
                                 },
                                 ...e.scrollBarOptions
                             }), eo().scrollerProxy(s.current, {
-                                scrollTop: e => (arguments.length > 0 && r.current && void 0 !== e && (r.current.scrollTop = e), r.current ? .scrollTop || 0),
+                                scrollTop: e => (arguments.length > 0 && r.current && void 0 !== e && (r.current.scrollTop = e), r.current ?.scrollTop || 0),
                                 getBoundingClientRect: () => {
                                     let {
                                         width: e,
                                         height: t,
                                         top: r,
                                         left: n
-                                    } = s.current ? .getBoundingClientRect() || {
+                                    } = s.current ?.getBoundingClientRect() || {
                                         width: 0,
                                         height: 0,
                                         top: 0,
@@ -7198,7 +7198,7 @@
                                     }
                                 }
                             }), r.current.addListener(eo().update)), p.current);
-                        else if (d.current) r.current ? .addListener(u.current);
+                        else if (d.current) r.current ?.addListener(u.current);
                     else {
                         o = (0, eb.q)(window, "scroll", u.current);
                         let e = "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
@@ -7213,7 +7213,7 @@
                         })
                     }
                     return () => {
-                        n && n(), i && i(), o && o(), t.current && t.current ? .kill(), r.current ? .removeListener(u.current), r.current ? .destroy()
+                        n && n(), i && i(), o && o(), t.current && t.current ?.kill(), r.current ?.removeListener(u.current), r.current ?.destroy()
                     }
                 }, []), (0, v.jsx)(ex.Provider, {
                     value: {
@@ -7525,12 +7525,12 @@
                 o = r(14232);
 
             function s(e, t) {
-                let r = (0, o.useRef)(t ? .value || !1);
+                let r = (0, o.useRef)(t ?.value || !1);
                 (0, n.A)(() => {
-                    t ? .onMount && t ? .value && e.transitionIn()
+                    t ?.onMount && t ?.value && e.transitionIn()
                 }), (0, i.A)(() => {
-                    !r.current && t ? .value ? e.transitionIn() : r.current && !t ? .value && e.transitionOut(), r.current = t ? .value || !1
-                }, [t ? .value])
+                    !r.current && t ?.value ? e.transitionIn() : r.current && !t ?.value && e.transitionOut(), r.current = t ?.value || !1
+                }, [t ?.value])
             }
         },
         34425: (e, t, r) => {
@@ -8637,7 +8637,7 @@
                 transitionInType: r,
                 iconRef: n
             }) {
-                t ? .current && e.add((0, c.z)(t.current, r)), n ? .current && "none" !== r && e.add((0, f.m)(n.current), .1)
+                t ?.current && e.add((0, c.z)(t.current, r)), n ?.current && "none" !== r && e.add((0, f.m)(n.current), .1)
             }
 
             function h(e, {
@@ -8645,7 +8645,7 @@
                 transitionOutType: r,
                 iconRef: n
             }) {
-                t ? .current && e.add((0, c.z)(t.current, r)), n ? .current && "none" !== r && e.add((0, f._)(n.current), 0)
+                t ?.current && e.add((0, c.z)(t.current, r)), n ?.current && "none" !== r && e.add((0, f._)(n.current), 0)
             }
             var p = r(53465),
                 v = r.n(p),
@@ -8740,39 +8740,39 @@
                     enableInView: g
                 } = (0, n.useRef)(e).current, _ = (0, o.d)(), y = (0, n.useRef)(void 0), b = (0, n.useRef)(void 0), w = (0, n.useRef)(e.canTransitionIn), x = (0, n.useCallback)(t => {
                     b.current = t;
-                    let r = !d ? .scrub && !d ? .once && !v;
-                    "onEnter" === b.current && r && y ? .current ? .paused(!("boolean" != typeof w.current || w.current)), "onLeaveBack" === b.current && (r && y ? .current ? .pause(-(e.transitionInDelay || 0), !1), v && y ? .current ? .reverse())
-                }, [w, e.transitionInDelay, v, d ? .once, d ? .scrub]);
+                    let r = !d ?.scrub && !d ?.once && !v;
+                    "onEnter" === b.current && r && y ?.current ?.paused(!("boolean" != typeof w.current || w.current)), "onLeaveBack" === b.current && (r && y ?.current ?.pause(-(e.transitionInDelay || 0), !1), v && y ?.current ?.reverse())
+                }, [w, e.transitionInDelay, v, d ?.once, d ?.scrub]);
                 return (0, n.useEffect)(() => {
-                    w.current = e.canTransitionIn, d ? .scrub || "onEnter" !== b.current || y ? .current ? .paused(!("boolean" != typeof e.canTransitionIn || e.canTransitionIn))
+                    w.current = e.canTransitionIn, d ?.scrub || "onEnter" !== b.current || y ?.current ?.paused(!("boolean" != typeof e.canTransitionIn || e.canTransitionIn))
                 }, [e.canTransitionIn]), (0, n.useEffect)(() => {
                     if (!p) {
                         let e;
-                        if (h ? .ref) {
+                        if (h ?.ref) {
                             let e = (0, s.xy)(h.ref);
-                            e && (y.current = e ? .getTimeline(h ? .direction || "in"))
+                            e && (y.current = e ?.getTimeline(h ?.direction || "in"))
                         }
-                        y.current || (y.current = h ? .controller ? .getTimeline(h ? .direction || "in") ? ? a), y.current && "number" == typeof m && y.current ? .delay(m), d ? .pinType && (e = _ ? .hasSmoothScroll ? .current ? "transform" : "fixed");
+                        y.current || (y.current = h ?.controller ?.getTimeline(h ?.direction || "in") ?? a), y.current && "number" == typeof m && y.current ?.delay(m), d ?.pinType && (e = _ ?.hasSmoothScroll ?.current ? "transform" : "fixed");
                         let t = {
-                            scroller: _ ? .hasSmoothScroll ? .current ? _ ? .scrollWrapperRef ? .current : void 0,
-                            pin: l ? .current,
-                            pinSpacer: f ? .current,
-                            endTrigger: c ? .current,
+                            scroller: _ ?.hasSmoothScroll ?.current ? _ ?.scrollWrapperRef ?.current : void 0,
+                            pin: l ?.current,
+                            pinSpacer: f ?.current,
+                            endTrigger: c ?.current,
                             ...d,
                             pinType: e
                         };
                         t.onEnter = e => {
-                            g && r(!0), x("onEnter"), d ? .onEnter && d ? .onEnter(e)
+                            g && r(!0), x("onEnter"), d ?.onEnter && d ?.onEnter(e)
                         }, t.onLeave = e => {
-                            g && r(!1), d ? .onLeave && d ? .onLeave(e)
+                            g && r(!1), d ?.onLeave && d ?.onLeave(e)
                         }, t.onEnterBack = e => {
-                            g && r(!0), d ? .onEnterBack && d ? .onEnterBack(e)
+                            g && r(!0), d ?.onEnterBack && d ?.onEnterBack(e)
                         }, t.onLeaveBack = e => {
-                            g && r(!1), x("onLeaveBack"), d ? .onLeaveBack && d ? .onLeaveBack(e)
+                            g && r(!1), x("onLeaveBack"), d ?.onLeaveBack && d ?.onLeaveBack(e)
                         };
                         let n = (0, i.KE)(u.current, y.current, t);
                         return () => {
-                            n ? .kill()
+                            n ?.kill()
                         }
                     }
                 }, []), {
@@ -10836,34 +10836,34 @@
                     })
                 }
                 refreshDuration() {
-                    this.player ? .getDuration() ? .then(e => {
-                        this ? .options.onDuration && this.options.onDuration(e), this.duration = e
+                    this.player ?.getDuration() ?.then(e => {
+                        this ?.options.onDuration && this.options.onDuration(e), this.duration = e
                     }).catch(e => {
                         console.warn(e)
                     })
                 }
                 play() {
-                    return this.attemptToPlay = !0, this ? .player ? .play() ? .catch(e => {
+                    return this.attemptToPlay = !0, this ?.player ?.play() ?.catch(e => {
                         console.warn(e)
                     })
                 }
                 pause() {
-                    return this.attemptToPlay = !1, this ? .player ? .pause() ? .catch(e => {
+                    return this.attemptToPlay = !1, this ?.player ?.pause() ?.catch(e => {
                         console.warn(e)
                     })
                 }
                 setVolume(e) {
-                    return this ? .player ? .setVolume(e) ? .catch(e => {
+                    return this ?.player ?.setVolume(e) ?.catch(e => {
                         console.warn(e)
                     })
                 }
                 setMuted(e) {
-                    return this ? .player ? .setMuted(e) ? .catch(e => {
+                    return this ?.player ?.setMuted(e) ?.catch(e => {
                         console.warn(e)
                     })
                 }
                 seekTo(e) {
-                    return this ? .player ? .setCurrentTime(e) ? .catch(e => {
+                    return this ?.player ?.setCurrentTime(e) ?.catch(e => {
                         console.warn(e)
                     })
                 }
@@ -11031,20 +11031,20 @@
                 async setVideo(e, t = !0) {
                     e && (this.videoIsLoadedPromise = this.player.setSrc({
                         src: e
-                    }), this.duration = await this ? .player ? .getDuration() || 0, this.refreshDuration(), this.options.onReady && this.options.onReady(), t && this.play())
+                    }), this.duration = await this ?.player ?.getDuration() || 0, this.refreshDuration(), this.options.onReady && this.options.onReady(), t && this.play())
                 }
                 refreshDuration() {
-                    this.player ? .getDuration() ? .then(e => {
-                        this ? .options.onDuration && this.options.onDuration(e), this.duration = e
+                    this.player ?.getDuration() ?.then(e => {
+                        this ?.options.onDuration && this.options.onDuration(e), this.duration = e
                     }).catch(e => {
                         console.warn(e)
                     })
                 }
                 async play() {
-                    await this.videoIsLoadedPromise, this ? .player ? .play()
+                    await this.videoIsLoadedPromise, this ?.player ?.play()
                 }
                 async pause() {
-                    await this.videoIsLoadedPromise, this ? .player ? .pause()
+                    await this.videoIsLoadedPromise, this ?.player ?.pause()
                 }
                 setVolume(e) {
                     this.player.element && (this.player.element.volume = e)
@@ -11053,7 +11053,7 @@
                     this.player.element && (this.player.element.muted = e)
                 }
                 async seekTo(e) {
-                    await this.videoIsLoadedPromise, this ? .player ? .seek(e)
+                    await this.videoIsLoadedPromise, this ?.player ?.seek(e)
                 }
                 getDuration() {
                     return this.duration
@@ -11084,9 +11084,9 @@
                 ...r
             }) {
                 let n = (0, f.useRef)(null),
-                    i = t.current ? .elementRef || n,
+                    i = t.current ?.elementRef || n,
                     o = (0, f.useRef)(void 0),
-                    [s, a] = (0, f.useState)(eq(r ? .url, r ? .playerType)),
+                    [s, a] = (0, f.useState)(eq(r ?.url, r ?.playerType)),
                     [l, d] = (0, f.useState)();
                 (0, f.useEffect)(() => {
                     a(eq(r.url, r.playerType))
@@ -11094,7 +11094,7 @@
                     d((0, eH.O)(s))
                 }, [s]), (0, N.A)(() => {
                     if (i.current) {
-                        let e = (0, eH.O)(r ? .url);
+                        let e = (0, eH.O)(r ?.url);
                         ("vimeo" === e || r && "vimeo" === r.playerType) && (o.current = new eR(i.current, { ...r,
                             url: s
                         })), ("file" === e || r && "file" === r.playerType) && (o.current = new eV(i.current, { ...r,
@@ -11102,22 +11102,22 @@
                         }))
                     }
                 }), (0, eG.A)(() => {
-                    o ? .current ? .setVideo(s)
+                    o ?.current ?.setVideo(s)
                 }, [s, o]), (0, eF.A)(() => {
-                    o ? .current ? .dispose()
+                    o ?.current ?.dispose()
                 }), (0, f.useEffect)(() => {
-                    "number" == typeof r ? .volume && o ? .current ? .setVolume(r ? .volume)
+                    "number" == typeof r ?.volume && o ?.current ?.setVolume(r ?.volume)
                 }, [r.volume]), (0, f.useEffect)(() => {
-                    o ? .current ? .setMuted(!!r ? .muted)
+                    o ?.current ?.setMuted(!!r ?.muted)
                 }, [r.muted]);
                 let h = (0, f.useCallback)(e => {
-                        o ? .current ? .seekTo(e)
+                        o ?.current ?.seekTo(e)
                     }, []),
-                    p = (0, f.useCallback)(() => o.current ? .play(), []),
-                    v = (0, f.useCallback)(() => o.current ? .pause(), []),
-                    m = (0, f.useCallback)(() => o ? .current ? .getCurrentTime() || 0, []),
-                    g = (0, f.useCallback)(() => o ? .current ? .getDuration() || 0, []),
-                    _ = (0, f.useCallback)(() => o ? .current ? .getInternalPlayer(), []);
+                    p = (0, f.useCallback)(() => o.current ?.play(), []),
+                    v = (0, f.useCallback)(() => o.current ?.pause(), []),
+                    m = (0, f.useCallback)(() => o ?.current ?.getCurrentTime() || 0, []),
+                    g = (0, f.useCallback)(() => o ?.current ?.getDuration() || 0, []),
+                    _ = (0, f.useCallback)(() => o ?.current ?.getInternalPlayer(), []);
                 return (0, f.useImperativeHandle)(t, () => ({
                     elementRef: i,
                     getInternalPlayer: _,
@@ -11180,7 +11180,7 @@
                 ref: U
             }) {
                 let V = (0, f.useRef)(null),
-                    H = U ? .current ? .elementRef || V,
+                    H = U ?.current ?.elementRef || V,
                     G = (0, f.useRef)(null),
                     q = (0, f.useRef)(null),
                     W = (0, f.useRef)(null),
@@ -11188,9 +11188,9 @@
                     [X, Y] = (0, f.useState)(!1),
                     K = (0, eQ.J)(),
                     [J, Q] = (0, f.useState)(!N),
-                    Z = r ? .vimeo_url,
+                    Z = r ?.vimeo_url,
                     ee = !0;
-                r ? .hosted_video && r ? .hosted_video ? .filename ? .length > 0 && (ee = !1, Z = r ? .hosted_video ? .filename);
+                r ?.hosted_video && r ?.hosted_video ?.filename ?.length > 0 && (ee = !1, Z = r ?.hosted_video ?.filename);
                 let et = (0, eZ.B)(H, {
                     threshold: [0, 1]
                 }, L || N);
@@ -11204,7 +11204,7 @@
                         [o, s] = (0, f.useState)(),
                         [a, u] = (0, f.useState)(),
                         l = (0, f.useCallback)(() => {
-                            s(e.current ? .offsetWidth), u(e.current ? .offsetHeight)
+                            s(e.current ?.offsetWidth), u(e.current ?.offsetHeight)
                         }, [e]);
                     return (0, f.useEffect)(() => {
                         l()
@@ -11251,7 +11251,7 @@
                             exitFullScreen: w,
                             isFullscreen: x
                         } = (i = (0, F.A)(), o = (0, f.useCallback)(() => {
-                            let t = e.current ? .getInternalPlayer();
+                            let t = e.current ?.getInternalPlayer();
                             if (t) {
                                 let {
                                     element: e
@@ -11261,7 +11261,7 @@
                         }, [e]), s = (0, f.useRef)(document), {
                             enterFullScreen: o,
                             exitFullScreen: a = (0, f.useCallback)(() => {
-                                let t = e.current ? .getInternalPlayer();
+                                let t = e.current ?.getInternalPlayer();
                                 if (t) {
                                     let {
                                         element: e
@@ -11275,7 +11275,7 @@
                     (0, f.useEffect)(() => {
                         _(n)
                     }, [n]), (0, f.useEffect)(() => {
-                        (r || t) && m(r), r ? e.current ? .play() : e.current ? .pause()
+                        (r || t) && m(r), r ? e.current ?.play() : e.current ?.pause()
                     }, [r, t, e]);
                     let D = (0, f.useCallback)(() => {
                             p(!1)
@@ -11284,7 +11284,7 @@
                             p(!0)
                         }, []),
                         T = (0, f.useCallback)(() => {
-                            e.current && e.current.seekTo(0), m(!1), e.current ? .pause()
+                            e.current && e.current.seekTo(0), m(!1), e.current ?.pause()
                         }, [e]),
                         A = (0, f.useCallback)(({
                             percent: e
@@ -11298,13 +11298,13 @@
                             e.current && e.current.seekTo(t * e.current.getDuration())
                         }, [e]),
                         k = (0, f.useCallback)(() => {
-                            m(!1), e.current ? .pause()
+                            m(!1), e.current ?.pause()
                         }, [e]),
                         S = (0, f.useCallback)(() => {
-                            m(!0), e.current ? .play()
+                            m(!0), e.current ?.play()
                         }, [e]),
                         P = (0, f.useCallback)(() => {
-                            (!h || t) && m(!h), h ? e.current ? .pause() : e.current ? .play()
+                            (!h || t) && m(!h), h ? e.current ?.pause() : e.current ?.play()
                         }, [h, t, e]),
                         j = (0, f.useCallback)(() => {
                             _(!g)
@@ -11373,10 +11373,10 @@
                         }, [e, n])]
                     }(P),
                     eP = (0, f.useCallback)(() => {
-                        ek(), B ? .()
+                        ek(), B ?.()
                     }, [ek, B]),
                     ej = (0, f.useCallback)(() => {
-                        eS(), z ? .()
+                        eS(), z ?.()
                     }, [eS, z]);
                 return (0, f.useImperativeHandle)(U, () => ({
                     videoHolderRef: q,
@@ -11436,10 +11436,10 @@
                             [h().visible]: ef && e
                         }),
                         onToggleFullScreen: em,
-                        isFullscreen: v ? ? eg,
+                        isFullscreen: v ?? eg,
                         exitFullScreen: T,
                         enableFullscreenButton: A
-                    }), r ? .poster_image ? .filename && r.poster_image.filename.length > 0 && !C && (0, u.jsx)(M.A, {
+                    }), r ?.poster_image ?.filename && r.poster_image.filename.length > 0 && !C && (0, u.jsx)(M.A, {
                         ref: $,
                         src: r.poster_image.filename,
                         srcDesktop: r.poster_image.filename,
@@ -12061,7 +12061,7 @@
                     let o = t || {},
                         s = e,
                         a;
-                    a && !n && (s = `${a}/${e}`), o.language = g().getLanguageByLocale(t ? .language);
+                    a && !n && (s = `${a}/${e}`), o.language = g().getLanguageByLocale(t ?.language);
                     try {
                         let e = await _.get(`${v.EO.Stories}/${s}`, { ...(0, p.U_)(r || y),
                             ...o
@@ -12076,7 +12076,7 @@
                     try {
                         let n = await w(r, { ...e
                             }, t, !1, !1),
-                            i = n ? .data ? .story ? .content ? .modules ? .find(e => "locations_blok" === e.component);
+                            i = n ?.data ?.story ?.content ?.modules ?.find(e => "locations_blok" === e.component);
                         return (0, p.vg)(i)
                     } catch (e) {
                         return Promise.reject(e)
@@ -12836,12 +12836,12 @@
                         (async () => {
                             let t = await u();
                             t && e.current && ([n.current] = t.create(e.current, {
-                                bounds: r ? .bounds ? .current,
-                                trigger: r ? .trigger ? .current,
+                                bounds: r ?.bounds ?.current,
+                                trigger: r ?.trigger ?.current,
                                 ...i.current
                             }))
                         })()
-                    }, [e, i, r ? .trigger, r ? .bounds]), (0, a.A)(() => n.current ? .kill()), n.current
+                    }, [e, i, r ?.trigger, r ?.bounds]), (0, a.A)(() => n.current ?.kill()), n.current
                 }
         },
         49780: (e, t, r) => {
@@ -13150,7 +13150,7 @@
                         ...t
                     },
                     u = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
-                return t ? .to === "left" && (u = "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"), t ? .to === "right" && (u = "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)"), t ? .to === "center-full" && (u = "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)"), t ? .to === "center" && (u = "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"), r.to(e, {
+                return t ?.to === "left" && (u = "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"), t ?.to === "right" && (u = "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)"), t ?.to === "center-full" && (u = "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)"), t ?.to === "center" && (u = "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"), r.to(e, {
                     webkitClipPath: u,
                     clipPath: u,
                     duration: i,
@@ -13396,7 +13396,7 @@
             let o = (e, t, r) => {
                 let i = n.Ay.parseEase(t),
                     o = n.Ay.parseEase(r);
-                return t => e.current ? .reversed() ? 1 - o(1 - t) : i(t)
+                return t => e.current ?.reversed() ? 1 - o(1 - t) : i(t)
             }
         },
         52412: (e, t, r) => {
@@ -13420,8 +13420,8 @@
                     }));
                     let r = t.current,
                         l = Object.keys(s.S4)[0],
-                        [c, f] = (0, i.useState)(!e && r ? .currentDeviceState ? .state ? r ? .currentDeviceState ? .state : s.S4[l]),
-                        [d, h] = (0, i.useState)(!e && r ? .currentDeviceState ? .name ? r ? .currentDeviceState ? .name : l),
+                        [c, f] = (0, i.useState)(!e && r ?.currentDeviceState ?.state ? r ?.currentDeviceState ?.state : s.S4[l]),
+                        [d, h] = (0, i.useState)(!e && r ?.currentDeviceState ?.name ? r ?.currentDeviceState ?.name : l),
                         p = (0, i.useCallback)(e => {
                             let {
                                 data: t
@@ -13429,9 +13429,9 @@
                             f(t.state), h(t.name)
                         }, []);
                     return (0, a.A)(() => {
-                        r ? .addEventListener(n.uO.STATE_UPDATE, p), e && (f(r ? .currentDeviceState ? .state ? ? s.S4[l]), h(r ? .currentDeviceState ? .name ? ? l))
+                        r ?.addEventListener(n.uO.STATE_UPDATE, p), e && (f(r ?.currentDeviceState ?.state ?? s.S4[l]), h(r ?.currentDeviceState ?.name ?? l))
                     }, [r]), (0, o.A)(() => {
-                        r ? .removeEventListener(n.uO.STATE_UPDATE, p)
+                        r ?.removeEventListener(n.uO.STATE_UPDATE, p)
                     }), {
                         deviceState: c,
                         deviceStateName: d
@@ -13562,7 +13562,7 @@
                         }
                     }
                 }
-                if (t.startsWith("/") && t.includes("?") && e.localPatterns ? .length === 1 && "**" === e.localPatterns[0].pathname && "" === e.localPatterns[0].search) throw Object.defineProperty(Error(`Image with src "${t}" is using a query string which is not configured in images.localPatterns.
+                if (t.startsWith("/") && t.includes("?") && e.localPatterns ?.length === 1 && "**" === e.localPatterns[0].pathname && "" === e.localPatterns[0].search) throw Object.defineProperty(Error(`Image with src "${t}" is using a query string which is not configured in images.localPatterns.
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-localpatterns`), "__NEXT_ERROR_CODE", {
                     value: "E871",
                     enumerable: !1,
@@ -14323,7 +14323,7 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-localpattern
                 (0, i.A)(() => {
                     o.current = t
                 }, [t]), (0, n.useEffect)(() => {
-                    let t = r ? .current || window;
+                    let t = r ?.current || window;
                     if (!(t && t.addEventListener)) return;
                     let n = e => o.current(e);
                     return t.addEventListener(e, n), () => {
@@ -14555,7 +14555,7 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-localpattern
                 else {
                     let e = [...U.deviceSizes, ...U.imageSizes].sort((e, t) => e - t),
                         t = U.deviceSizes.sort((e, t) => e - t),
-                        r = U.qualities ? .sort((e, t) => e - t);
+                        r = U.qualities ?.sort((e, t) => e - t);
                     F = { ...U,
                         allSizes: e,
                         deviceSizes: t,
@@ -14986,7 +14986,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
             }) {
                 if (!s) {
                     let o = (0, n.xy)(r);
-                    t ? .current && (e.fromTo(t.current, {
+                    t ?.current && (e.fromTo(t.current, {
                         scaleX: .4
                     }, {
                         duration: .5,
@@ -15000,7 +15000,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
             function s(e, {
                 elementRef: t
             }) {
-                t ? .current && (e.add((0, i._)(t.current, {
+                t ?.current && (e.add((0, i._)(t.current, {
                     duration: .4,
                     ease: "Expo.easeOut"
                 })), e.to(t.current, {
@@ -15015,7 +15015,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 contentRef: r,
                 backgroundHoverRef: n
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     yPercent: 400,
                     rotate: 30,
                     z: 1
@@ -15025,7 +15025,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                     z: 1,
                     duration: .45,
                     ease: "Power1.easeOut"
-                }, 0), r ? .current && e.fromTo(r.current, {
+                }, 0), r ?.current && e.fromTo(r.current, {
                     yPercent: 0,
                     rotate: 0,
                     z: 1
@@ -15035,7 +15035,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                     z: 1,
                     duration: .45,
                     ease: "Power1.easeIn"
-                }, 0), n ? .current && e.fromTo(n.current, {
+                }, 0), n ?.current && e.fromTo(n.current, {
                     yPercent: 75
                 }, {
                     yPercent: 0,
@@ -15531,7 +15531,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
             function eg(e, {
                 backgroundRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     scaleY: 0
                 }, {
                     duration: .4,
@@ -15543,7 +15543,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
             function e_(e, {
                 backgroundRef: t
             }) {
-                t ? .current && e.to(t.current, {
+                t ?.current && e.to(t.current, {
                     duration: .4,
                     ease: "Expo.easeOut",
                     scaleY: 0
@@ -15663,7 +15663,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                                 className: ei().topText,
                                 children: c.globalSettings.label_language_selection
                             })
-                        }), ef().locales ? .map(e => (0, i.jsx)("li", {
+                        }), ef().locales ?.map(e => (0, i.jsx)("li", {
                             className: ei().listItem,
                             children: (0, i.jsx)(eb, {
                                 disabled: e === u,
@@ -15823,7 +15823,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                             children: [(0, i.jsxs)("ul", {
                                 ref: a,
                                 className: s()(eF().socialList),
-                                children: [t ? .social_links ? .map((e, t) => (0, i.jsx)("li", {
+                                children: [t ?.social_links ?.map((e, t) => (0, i.jsx)("li", {
                                     ref: e => {
                                         c.current[t] = e
                                     },
@@ -15841,9 +15841,9 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                                 }, `social_${t}`)), (0, i.jsx)("li", {
                                     className: s()(eF().socialListItem),
                                     ref: e => {
-                                        c.current[t ? .social_links ? .length || 0] = e
+                                        c.current[t ?.social_links ?.length || 0] = e
                                     },
-                                    children: t ? .dentsu ? .[0].icon ? .filename && (0, i.jsx)("div", {
+                                    children: t ?.dentsu ?.[0].icon ?.filename && (0, i.jsx)("div", {
                                         ref: e => {
                                             f.current.push(e)
                                         },
@@ -15865,9 +15865,9 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                                 className: s()(eF().legalWrapper),
                                 children: (0, i.jsxs)("ul", {
                                     className: s()(eF().legalList),
-                                    children: [t ? .legal_links ? .filter(e => {
+                                    children: [t ?.legal_links ?.filter(e => {
                                         let t = !0;
-                                        return void 0 !== e.countries && e.countries ? .length > 0 && (t = e.exclude_countries ? !e.countries ? .includes(r) : e.countries ? .includes(r)), t
+                                        return void 0 !== e.countries && e.countries ?.length > 0 && (t = e.exclude_countries ? !e.countries ?.includes(r) : e.countries ?.includes(r)), t
                                     }).map((e, t) => (0, i.jsx)("li", {
                                         ref: e => {
                                             f.current[t] = e
@@ -15883,7 +15883,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                                             label: e.title,
                                             target: e.link.target
                                         })
-                                    }, `legal_${t}`)), t ? .copyright && (0, i.jsx)("li", {
+                                    }, `legal_${t}`)), t ?.copyright && (0, i.jsx)("li", {
                                         ref: e => {
                                             f.current.push(e)
                                         },
@@ -15906,7 +15906,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 let n = (0, k.xy)(r);
                 e.add((0, eo.m)(t.current, {
                     autoAlpha: !0
-                }), 0), e.add(n ? .getTimeline("in"), 0)
+                }), 0), e.add(n ?.getTimeline("in"), 0)
             }
 
             function eV(e, {
@@ -15922,7 +15922,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
             function eq(e, {
                 listItemsRef: t
             }) {
-                t ? .current && t ? .current ? .length > 0 && e.add((0, ea.ST)(t.current, {
+                t ?.current && t ?.current ?.length > 0 && e.add((0, ea.ST)(t.current, {
                     stagger: .05
                 }))
             }
@@ -16009,12 +16009,12 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 return (0, Q.s)(c, e), (0, i.jsxs)("ul", {
                     ref: a,
                     className: s()(eG().navigationList, t),
-                    children: [l ? .globalSettings ? .nav_items ? .map((e, t) => (0, i.jsx)("li", {
+                    children: [l ?.globalSettings ?.nav_items ?.map((e, t) => (0, i.jsx)("li", {
                         className: s()(eG().listItem),
                         ref: e => {
                             u.current[t] = e
                         },
-                        children: r ? a ? .current && (0, i.jsx)(eb, {
+                        children: r ? a ?.current && (0, i.jsx)(eb, {
                             link: {
                                 href: e.link.cached_url,
                                 uuid: e.link.id
@@ -16033,9 +16033,9 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                     }, `site_nav_link_${t}`)), (0, i.jsx)("li", {
                         className: s()(eG().localeSelectorContainer, eG().listItem),
                         ref: e => {
-                            u.current[l ? .globalSettings ? .nav_items ? .length || 0] = e
+                            u.current[l ?.globalSettings ?.nav_items ?.length || 0] = e
                         },
-                        children: a ? .current && (0, i.jsx)(eQ, {
+                        children: a ?.current && (0, i.jsx)(eQ, {
                             menu: r
                         })
                     })]
@@ -16078,7 +16078,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 return (0, Q.s)(c, e), (0, i.jsx)("button", {
                     type: "button",
                     "aria-label": "click to toggle menu",
-                    onClick: l ? .bind(a),
+                    onClick: l ?.bind(a),
                     ref: o,
                     className: s()(e1().hamburgerButton, t, "button", {
                         [e1().isOpen]: u
@@ -16096,7 +16096,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 ref: t
             }) {
                 let r = (0, d.useRef)(null),
-                    n = t.current ? .elementRef || r,
+                    n = t.current ?.elementRef || r,
                     o = (0, d.useRef)(null),
                     a = (0, h.o)(),
                     u = (0, Z.zW)(() => ({
@@ -16113,7 +16113,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                         setOffsetY: c
                     } = function(e, t) {
                         let [r, n] = (0, d.useState)(0), i = (0, d.useRef)(0), o = (0, d.useRef)(0), s = (0, d.useRef)(!1), a = (0, d.useRef)(!1), u = (0, d.useRef)(!1), l = (0, d.useRef)(!1), c = (0, e4.A)(), f = (0, d.useCallback)(() => {
-                            i.current = e ? .current ? .offsetHeight
+                            i.current = e ?.current ?.offsetHeight
                         }, [e]);
                         return (0, d.useEffect)(() => {
                             f()
@@ -16121,7 +16121,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                             (async () => {
                                 let n = Math.min(r, i.current);
                                 s.current = r < o.current;
-                                let c = r > i ? .current;
+                                let c = r > i ?.current;
                                 s.current ? (c && !a.current ? (a.current = !0, l.current = !1, u.current = !1, t.transitionIn(), e8.Ay.set(e.current, {
                                     y: 0
                                 })) : a.current || e8.Ay.set(e.current, {
@@ -16148,7 +16148,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                     className: s()(ez().siteHeader, "grid-gutter", {
                         [ez().noMixBlendMode]: v.asPath.includes(`/${P.fB.Cases}/`)
                     }),
-                    "aria-label": a ? .globalSettings ? .navigation_alt,
+                    "aria-label": a ?.globalSettings ?.navigation_alt,
                     children: [(0, eh.j)({
                         innerTemplate: (0, i.jsx)(ep.A, {
                             name: "logo",
@@ -16158,7 +16158,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                             link: {
                                 href: "/"
                             },
-                            "aria-label": a ? .globalSettings ? .logo_alt,
+                            "aria-label": a ?.globalSettings ?.logo_alt,
                             className: s()(ez().logo)
                         }
                     }), (0, i.jsx)("a", {
@@ -16169,7 +16169,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                             t && (t.setAttribute("tabindex", "-1"), t.focus(), t.removeAttribute("tabindex"))
                         },
                         className: "skip-link",
-                        children: a ? .globalSettings ? .skip_main_content
+                        children: a ?.globalSettings ?.skip_main_content
                     }), (0, i.jsx)(eZ, {
                         ref: o,
                         className: s()(ez().list)
@@ -16195,7 +16195,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 }), 0), e.add((0, eo.m)(r.current, {
                     duration: .3,
                     ease: tt.kO.easeInOut
-                }), 0), e.add(i ? .getTimeline("in"), .1)
+                }), 0), e.add(i ?.getTimeline("in"), .1)
             }
 
             function tn(e, {
@@ -16439,7 +16439,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                             name: "fake",
                             assets: []
                         }), () => {
-                            e && (s.current ? .dispose(), o.current ? .dispose())
+                            e && (s.current ?.dispose(), o.current ?.dispose())
                         }), []), (0, x.A)(() => ((async () => {
                             if (tx) {
                                 (tx = !1, s.current && tb.addTask(s.current), o.current) && (tb.addTask(o.current), new Promise(e => {
@@ -16447,7 +16447,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                                         duration: .01,
                                         onUpdate: () => {
                                             (e => {
-                                                o.current ? .setProgress(e)
+                                                o.current ?.setProgress(e)
                                             })(tw.progress)
                                         },
                                         progress: 100,
@@ -16509,7 +16509,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 elementRef: t,
                 titleRef: r
             }) {
-                t ? .current && (e.add((0, eo.m)(t.current, {
+                t ?.current && (e.add((0, eo.m)(t.current, {
                     duration: .01
                 })), e.add((0, es.HT)(t.current, {
                     from: "top",
@@ -16517,13 +16517,13 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                     ease: "Power2.easeOut"
                 }), 0));
                 let n = (0, k.xy)(r);
-                n && e.add(n ? .getTimeline("in"), .2)
+                n && e.add(n ?.getTimeline("in"), .2)
             }
 
             function tC(e, {
                 phoneRef: t
             }) {
-                t ? .current && e.to(t.current, {
+                t ?.current && e.to(t.current, {
                     rotate: -90,
                     duration: 2
                 }).to(t.current, {
@@ -16538,7 +16538,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 titleRef: r
             }) {
                 let n = (0, k.xy)(r);
-                n && e.add(n ? .getTimeline("out"), 0), t ? .current && (e.add((0, es.C5)(t.current, {
+                n && e.add(n ?.getTimeline("out"), 0), t ?.current && (e.add((0, es.C5)(t.current, {
                     to: "bottom",
                     duration: .5,
                     ease: "Power2.easeOut"
@@ -16635,9 +16635,9 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 return u.current = (0, eL.A)(tC, {
                     phoneRef: o
                 }), (0, d.useEffect)(() => {
-                    h ? (c(!0), f.transitionIn(), u ? .current ? .play()) : (f.transitionOut().then(() => {
+                    h ? (c(!0), f.transitionIn(), u ?.current ?.play()) : (f.transitionOut().then(() => {
                         c(!1)
-                    }), u ? .current ? .pause())
+                    }), u ?.current ?.pause())
                 }, [h]), (0, i.jsx)("div", {
                     ref: n,
                     className: s()(tA().rotateScreenModal, e, {
@@ -16754,7 +16754,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                         function e(e) {
                             "Escape" === e.code && y()
                         }
-                        return !p.current && r ? (h.current ? .showModal(), document.addEventListener("keyup", e), b()) : p.current && !r && (h.current ? .close(), document.removeEventListener("keyup", e)), p.current = r, () => {
+                        return !p.current && r ? (h.current ?.showModal(), document.addEventListener("keyup", e), b()) : p.current && !r && (h.current ?.close(), document.removeEventListener("keyup", e)), p.current = r, () => {
                             document.removeEventListener("keyup", e)
                         }
                     }, [r, n, h, y, b]), (0, i.jsxs)(i.Fragment, {
@@ -16805,9 +16805,9 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                             r && r(), v(!1), E(!1)
                         }, [r]),
                         O = (0, d.useCallback)(async e => {
-                            E(!0), x.current = e ? .options ? .onClose;
-                            let t = (0, tH.O)(e ? .video);
-                            w(t), "vimeo" === t ? y(e ? .video) : "file" === t && g(e ? .video)
+                            E(!0), x.current = e ?.options ?.onClose;
+                            let t = (0, tH.O)(e ?.video);
+                            w(t), "vimeo" === t ? y(e ?.video) : "file" === t && g(e ?.video)
                         }, []);
                     (0, ed.A)(() => {
                         a ? O(u) : A()
@@ -16816,7 +16816,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                             v(!1)
                         }, []),
                         k = (0, d.useCallback)(() => {
-                            o.closeVideoModal(), E(!1), v(!1), T().current ? .playerRef.current ? .seekTo(0), w(void 0), x.current && x.current()
+                            o.closeVideoModal(), E(!1), v(!1), T().current ?.playerRef.current ?.seekTo(0), w(void 0), x.current && x.current()
                         }, [T, o]),
                         S = (0, d.useCallback)(() => {
                             t && t(), v(!0)
@@ -16829,7 +16829,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                         onCloseStart: C,
                         onShow: S,
                         open: D,
-                        title: u ? .title,
+                        title: u ?.title,
                         children: D && (0, i.jsxs)(i.Fragment, {
                             children: [_ && (0, i.jsx)(tV.default, {
                                 ref: c,
@@ -16880,7 +16880,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 ref: t
             }) {
                 let [r, n] = (0, d.useState)(), [o, a] = (0, d.useState)(), u = (0, d.useRef)(void 0), l = (0, d.useRef)(null), c = (0, d.useCallback)(e => {
-                    "string" == typeof e ? .image ? (n(e.image), a(e.title)) : e && (n(e.image.filename), a(e.title)), u.current = e ? .options ? .onClose
+                    "string" == typeof e ?.image ? (n(e.image), a(e.title)) : e && (n(e.image.filename), a(e.title)), u.current = e ?.options ?.onClose
                 }, []);
                 (0, d.useImperativeHandle)(t, () => ({
                     open: c
@@ -17150,9 +17150,9 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 children: n,
                 seoTitle: o = t.seo_title,
                 seoDescription: a = t.seo_description,
-                seoImage: l = t.seo_image ? .filename,
-                seoImagePortrait: v = t.seo_image ? .filename,
-                seoVideo: m = t ? .seo_video ? .filename,
+                seoImage: l = t.seo_image ?.filename,
+                seoImagePortrait: v = t.seo_image ?.filename,
+                seoVideo: m = t ?.seo_video ?.filename,
                 noFollow: O = !1,
                 excludeFooter: R = !1
             }) => {
@@ -17176,16 +17176,16 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 (0, y.A)("orientationchange", en), (0, d.useEffect)(() => {
                     q(M || I || J)
                 }, [M, I, J]), (0, x.A)(() => {
-                    $.current && (W ? .current).documentElement.classList.add("has-smooth-scroll"), u().ios && (W ? .current).documentElement.classList.add("ios"), u().safari && (W ? .current).documentElement.classList.add("safari"), u().chrome && (W ? .current).documentElement.classList.add("chrome")
+                    $.current && (W ?.current).documentElement.classList.add("has-smooth-scroll"), u().ios && (W ?.current).documentElement.classList.add("ios"), u().safari && (W ?.current).documentElement.classList.add("safari"), u().chrome && (W ?.current).documentElement.classList.add("chrome")
                 }, [W]), (0, x.A)(() => {
                     z.setRenderLocaleListCallback(e => {
                         et(!0), $.current && Q(e)
                     }), (async () => {
-                        await U.current, (0, k.xy)(V ? .current ? .elementRef) ? .transitionIn()
+                        await U.current, (0, k.xy)(V ?.current ?.elementRef) ?.transitionIn()
                     })()
                 }, []);
                 let ei = (0, d.useCallback)(e => {
-                        V ? .current ? .setPageScrollOffsetY(e ? .offset ? .y)
+                        V ?.current ?.setPageScrollOffsetY(e ?.offset ?.y)
                     }, [V]),
                     eo = (0, j.OE)(H.asPath),
                     {
@@ -17231,7 +17231,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                                                 },
                                                 children: (0, i.jsx)(re.a.Provider, {
                                                     value: {
-                                                        siteHeaderElementRef: V ? .current ? .elementRef
+                                                        siteHeaderElementRef: V ?.current ?.elementRef
                                                     },
                                                     children: n
                                                 })
@@ -17274,7 +17274,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                         })
                     })() : n.current = !0
                 }, [e]), (0, i.jsx)(i.Fragment, {
-                    children: s ? .items.map(e => e)
+                    children: s ?.items.map(e => e)
                 })
             }
             async function rl() {
@@ -17334,12 +17334,12 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                                 locationsList: o,
                                 globalSettings: n,
                                 domain: a,
-                                seoTitle: t ? .story ? .content ? .seo_title || t ? .story ? .name,
-                                seoDescription: t ? .story ? .content ? .seo_description && t ? .story ? .content ? .seo_description.length > 0 ? t ? .story ? .content ? .seo_description : void 0,
-                                noFollow: t ? .story ? .content.no_follow,
-                                seoImage: t ? .story ? .content ? .key_image ? .[0] ? .image_landscape || t ? .story ? .content ? .seo_image ? .filename,
-                                seoVideo: t ? .story ? .content ? .seo_video ? .filename,
-                                seoImagePortrait: t ? .story ? .content ? .seo_image_portrait ? .filename,
+                                seoTitle: t ?.story ?.content ?.seo_title || t ?.story ?.name,
+                                seoDescription: t ?.story ?.content ?.seo_description && t ?.story ?.content ?.seo_description.length > 0 ? t ?.story ?.content ?.seo_description : void 0,
+                                noFollow: t ?.story ?.content.no_follow,
+                                seoImage: t ?.story ?.content ?.key_image ?.[0] ?.image_landscape || t ?.story ?.content ?.seo_image ?.filename,
+                                seoVideo: t ?.story ?.content ?.seo_video ?.filename,
+                                seoImagePortrait: t ?.story ?.content ?.seo_image_portrait ?.filename,
                                 excludeFooter: c,
                                 children: [(0, i.jsx)(ru, {
                                     children: (0, i.jsx)(e, { ...t,
@@ -17357,7 +17357,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 let t, r, {
                         locale: n
                     } = e.router,
-                    i = (0, j.yz)(e ? .ctx ? .req),
+                    i = (0, j.yz)(e ?.ctx ?.req),
                     o = await ro().getInitialProps(e);
                 try {
                     let {
@@ -17656,13 +17656,13 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
 
             function a(e) {
                 let [t, r] = (0, i.useState)(), s = (0, i.useRef)(Promise.resolve()), a = (0, i.useRef)(void 0), [u, l] = (0, i.useState)(!1), c = (0, i.useRef)(document.body), f = (0, i.useCallback)(() => {
-                    a ? .current && a ? .current()
+                    a ?.current && a ?.current()
                 }, [a]), d = (0, i.useCallback)(() => {
                     s.current = new Promise(e => {
                         a.current = e
                     })
                 }, []), h = (0, i.useCallback)(e => {
-                    c ? .current && (c.current.style.pointerEvents = e ? "none" : "all")
+                    c ?.current && (c.current.style.pointerEvents = e ? "none" : "all")
                 }, [c]), p = (0, i.useCallback)(e => {
                     e(), h(!1)
                 }, [h]), v = (0, i.useCallback)(async (e, t, n, i) => {
@@ -18017,15 +18017,15 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                         ...v
                     } = t,
                     m = { ...v,
-                        type: p ? .href ? null : t.type || "button",
+                        type: p ?.href ? null : t.type || "button",
                         disabled: t.disabled || !1,
-                        "aria-label": t ? .["aria-label"] ? ? t.label,
-                        target: p ? .href ? t.target || "_self" : null,
+                        "aria-label": t ?.["aria-label"] ?? t.label,
+                        target: p ?.href ? t.target || "_self" : null,
                         className: u()(v.className, "button")
                     };
-                return (i ? ._uid && (m = { ...m,
+                return (i ?._uid && (m = { ...m,
                     ...(0, l.m)(i)
-                }), p ? .href && "string" == typeof p.href && (p.href.startsWith("http") || p.href.startsWith("www.")) && !t.target && (m.target = "_blank"), "_blank" === m.target && (m.rel = "noopener noreferrer"), p ? .href && (d.href = (0, c.kD)(p.href, f)), "string" != typeof d.href || d.href.startsWith("/") || d.href.startsWith("http") || d.href.startsWith("www.") || d.href.includes("mailto:") || (d.href = `/${d.href}`), "string" == typeof d.href && d.href.startsWith("www.") && (d.href = `https://${d.href}`), p && !p.href.startsWith("http") && !p.href.startsWith("www.") && p.href.includes("@") && !p.href.includes("mailto:") && (d.href = `mailto:${p.href}`), p) ? (delete m.type, a = (0, n.jsx)(o(), { ...d,
+                }), p ?.href && "string" == typeof p.href && (p.href.startsWith("http") || p.href.startsWith("www.")) && !t.target && (m.target = "_blank"), "_blank" === m.target && (m.rel = "noopener noreferrer"), p ?.href && (d.href = (0, c.kD)(p.href, f)), "string" != typeof d.href || d.href.startsWith("/") || d.href.startsWith("http") || d.href.startsWith("www.") || d.href.includes("mailto:") || (d.href = `/${d.href}`), "string" == typeof d.href && d.href.startsWith("www.") && (d.href = `https://${d.href}`), p && !p.href.startsWith("http") && !p.href.startsWith("www.") && p.href.includes("@") && !p.href.includes("mailto:") && (d.href = `mailto:${p.href}`), p) ? (delete m.type, a = (0, n.jsx)(o(), { ...d,
                     ...m,
                     ref: r,
                     children: e
@@ -18688,7 +18688,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 },
                 tN = function e(t, r, n) {
                     var i = r >= 1 ? r : 1,
-                        o = (n || (t ? .3 : .45)) / (r < 1 ? r : 1),
+                        o = (n || (t ?.3 : .45)) / (r < 1 ? r : 1),
                         s = o / R * (Math.asin(1 / i) || 0),
                         a = function(e) {
                             return 1 === e ? 1 : i * Math.pow(2, -10 * e) * N((e - s) * o) + 1
@@ -20906,12 +20906,12 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
 
             function h(e, t) {
                 let r;
-                return e ? .cached_url && (r = c(e ? .cached_url, t)), r
+                return e ?.cached_url && (r = c(e ?.cached_url, t)), r
             }
 
             function p(e, t = "localhost:3000") {
                 let r = "https://www.dentsucreative.com".replace("https://", "");
-                return !r && (r = (e ? .headers ? e.headers.host : window.location.host) || t, e && e.headers.Host && "string" == typeof e.headers.Host && (r = e.headers.Host), e && e.headers["x-forwarded-host"] && "string" == typeof e.headers["x-forwarded-host"] && (r = e.headers["x-forwarded-host"]), e && e.headers[":authority"] && "string" == typeof e.headers[":authority"] && (r = e.headers[":authority"])), r
+                return !r && (r = (e ?.headers ? e.headers.host : window.location.host) || t, e && e.headers.Host && "string" == typeof e.headers.Host && (r = e.headers.Host), e && e.headers["x-forwarded-host"] && "string" == typeof e.headers["x-forwarded-host"] && (r = e.headers["x-forwarded-host"]), e && e.headers[":authority"] && "string" == typeof e.headers[":authority"] && (r = e.headers[":authority"])), r
             }
         },
         74169: (e, t, r) => {
@@ -21314,7 +21314,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                     this.countryCode = e
                 }
                 setAllCases(e = this.allCases) {
-                    this.countryCode ? this.allCases = e ? .filter(e => !(e.content.countries ? .length > 0) || (e.content.exclude_countries ? !e.content.countries ? .includes(this.countryCode) : e.content.countries ? .includes(this.countryCode))) : this.allCases = e
+                    this.countryCode ? this.allCases = e ?.filter(e => !(e.content.countries ?.length > 0) || (e.content.exclude_countries ? !e.content.countries ?.includes(this.countryCode) : e.content.countries ?.includes(this.countryCode))) : this.allCases = e
                 }
             }, [({
                 children: e
@@ -23973,7 +23973,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                                     }
                                 }
                         }(r, e => e && f(e), {
-                            root: e ? .current,
+                            root: e ?.current,
                             rootMargin: t
                         })
                     } else if (!c) {
@@ -24039,7 +24039,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
             });
             let n = e => {
                 let t;
-                return ("string" == typeof e ? t = e : (t = e ? .vimeo_url, e ? .hosted_video && e ? .hosted_video ? .filename ? .length > 0 && (t = e ? .hosted_video ? .filename)), t ? .includes("//vimeo.com/") && !t ? .includes("//vimeo.com/manage/")) ? "vimeo" : t ? .includes(".mp4") || t ? .includes(".webm") ? "file" : void 0
+                return ("string" == typeof e ? t = e : (t = e ?.vimeo_url, e ?.hosted_video && e ?.hosted_video ?.filename ?.length > 0 && (t = e ?.hosted_video ?.filename)), t ?.includes("//vimeo.com/") && !t ?.includes("//vimeo.com/manage/")) ? "vimeo" : t ?.includes(".mp4") || t ?.includes(".webm") ? "file" : void 0
             }
         },
         80830: (e, t, r) => {
@@ -25051,7 +25051,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 enableChineseTransitionFallback: n,
                 isChineseLanguage: i
             }) {
-                t ? .current && (n && i.current && "none" !== r ? e.add((0, h.z)(t.current, "fadeIn")) : e.add((0, h.z)(t.current, r)))
+                t ?.current && (n && i.current && "none" !== r ? e.add((0, h.z)(t.current, "fadeIn")) : e.add((0, h.z)(t.current, r)))
             }
 
             function v(e, {
@@ -25060,7 +25060,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 enableChineseTransitionFallback: n,
                 isChineseLanguage: i
             }) {
-                t ? .current && (n && i.current && "none" !== r ? e.add((0, h.z)(t.current, "fadeOut")) : e.add((0, h.z)(t.current, r)))
+                t ?.current && (n && i.current && "none" !== r ? e.add((0, h.z)(t.current, "fadeOut")) : e.add((0, h.z)(t.current, r)))
             }
             var m = r(89010),
                 g = r(39475),
@@ -25095,13 +25095,13 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                         width: M
                     } = (0, g.A)();
                 (0, s.useEffect)(() => {
-                    if (!j ? .current) return;
-                    a.Ay.set(j ? .current, {
+                    if (!j ?.current) return;
+                    a.Ay.set(j ?.current, {
                         clearProps: "fontSize"
                     });
-                    let e = j.current ? .clientWidth || 0,
+                    let e = j.current ?.clientWidth || 0,
                         t = 1;
-                    if (j.current ? .children && [...j.current.children].some(r => (r.scrollWidth > e && (t = r.scrollWidth), r.scrollWidth > e)), t > 1) {
+                    if (j.current ?.children && [...j.current.children].some(r => (r.scrollWidth > e && (t = r.scrollWidth), r.scrollWidth > e)), t > 1) {
                         let r = parseInt(window.getComputedStyle(j.current).fontSize, 10);
                         a.Ay.set(j.current, {
                             fontSize: r * e / t
@@ -26042,11 +26042,11 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 ref: p
             }) {
                 let v = (0, s.useRef)(null),
-                    m = p ? .current ? .elementRef || v,
+                    m = p ?.current ?.elementRef || v,
                     g = (0, s.useRef)(null),
                     _ = l[e],
                     [y, b] = (0, s.useState)(!1),
-                    [w, x] = (0, s.useState)(i ? ? !1),
+                    [w, x] = (0, s.useState)(i ?? !1),
                     [D, E] = (0, s.useState)(!1),
                     T = (0, s.useRef)(null),
                     A = (0, c.B)(T, {
@@ -26057,17 +26057,17 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 }, [i]), (0, s.useEffect)(() => {
                     E(w && (r && A || !r))
                 }, [w, A, r]), (0, s.useEffect)(() => {
-                    D ? g ? .current ? .play() : g ? .current ? .pause()
+                    D ? g ?.current ?.play() : g ?.current ?.pause()
                 }, [y, D, g]);
                 let O = (0, s.useCallback)(e => {
-                        let t = ((g ? .current ? .getDuration(!0) || 0) - 1) * e;
-                        (g ? .current ? .currentFrame || 0) !== t && g.current ? .goToAndStop(t, !0)
+                        let t = ((g ?.current ?.getDuration(!0) || 0) - 1) * e;
+                        (g ?.current ?.currentFrame || 0) !== t && g.current ?.goToAndStop(t, !0)
                     }, [g]),
                     C = (0, s.useCallback)(() => {
-                        x(!0), g.current ? .play()
+                        x(!0), g.current ?.play()
                     }, [g]),
                     k = (0, s.useCallback)(() => {
-                        x(!1), g.current ? .pause()
+                        x(!1), g.current ?.pause()
                     }, [g]);
                 return (0, s.useImperativeHandle)(p, () => ({
                     play: C,
@@ -26366,7 +26366,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                             }("A" === t.nodeName || "B" === t.nodeName || "I" === t.nodeName) && (u = "words")
                         }
                     let l = e.cloneNode(!0);
-                    if (l.className = "", l.classList.add("visually-hidden"), e.parentElement ? .insertBefore(l, e), l.childElementCount > 0)
+                    if (l.className = "", l.classList.add("visually-hidden"), e.parentElement ?.insertBefore(l, e), l.childElementCount > 0)
                         for (let e of l.children) "A" === e.nodeName && e.setAttribute("tabindex", "-1");
                     e.normalize();
                     let c = new(o())(e, {
@@ -26375,7 +26375,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                         wordsClass: `split-element split-words ${r?.wordsClass??""}`,
                         linesClass: `split-element split-lines ${r?.linesClass??""}`
                     });
-                    if (u.includes("lines") && r ? .linesClass === "mask-split-line" && !e.classList.contains("masked-line") && e.classList.add("masked-line"), e.setAttribute("aria-hidden", "true"), a = c[t], i) {
+                    if (u.includes("lines") && r ?.linesClass === "mask-split-line" && !e.classList.contains("masked-line") && e.classList.add("masked-line"), e.setAttribute("aria-hidden", "true"), a = c[t], i) {
                         let e = [];
                         a.forEach(t => {
                             let r = document.createElement("div");
@@ -27102,7 +27102,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                 return (0, n.useEffect)(() => {
                     e(r.current, s.current)
                 }, [e, s]), (0, o.A)(() => {
-                    r ? .current ? .kill()
+                    r ?.current ?.kill()
                 }), r.current
             }
         },
@@ -27291,7 +27291,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                     }
                 }, [e]), (0, n.jsx)(d.Provider, {
                     value: s,
-                    children: a ? .items.map(e => e)
+                    children: a ?.items.map(e => e)
                 })
             }
             var v = r(26276),
@@ -27315,7 +27315,7 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
                         transitionInDelay: e.scroll.transitionInDelay,
                         pin: e.scroll.pin,
                         endTrigger: e.scroll.endTrigger,
-                        disabled: e ? .scroll ? .disableTriggerInOnScroll,
+                        disabled: e ?.scroll ?.disableTriggerInOnScroll,
                         reverseOnLeaveBack: e.scroll.reverseOnLeaveBack
                     });
                 return {
@@ -27337,8 +27337,8 @@ Read more: https://nextjs.org/docs/messages/next-image-missing-loader`), "__NEXT
             function D(e, t) {
                 let r = h();
                 if (null == r && t) throw Error("Cannot find leaveTransitions context! Did you forget to wrap the component in a <TransitionPresence />?");
-                (0, u.A)(() => null == e ? x.l : (r ? .add(e), () => {
-                    r ? .delete(e)
+                (0, u.A)(() => null == e ? x.l : (r ?.add(e), () => {
+                    r ?.delete(e)
                 }), [])
             }
             var E = r(21429)

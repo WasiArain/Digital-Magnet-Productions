@@ -1,34 +1,10 @@
-@font-face {
-    font-family: StabilGrotesk;
-    src: url(../../../_next/static/media/StabilGrotesk-Black.916ac6dc.woff2) format("woff2"), url(../../../_next/static/media/StabilGrotesk-Black.daafab8b.woff) format("woff");
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap
-}
 
-@font-face {
-    font-family: StabilGrotesk;
-    src: url(../../../_next/static/media/StabilGrotesk-Bold.17f22d08.woff2) format("woff2"), url(../../../_next/static/media/StabilGrotesk-Bold.75178e10.woff) format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap
-}
 
-@font-face {
-    font-family: StabilGrotesk;
-    src: url(../../../_next/static/media/StabilGrotesk-Regular.f5a3e3dc.woff2) format("woff2"), url(../../../_next/static/media/StabilGrotesk-Regular.ba527753.woff) format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap
-}
 
-@font-face {
-    font-family: StabilGrotesk;
-    src: url(../../../_next/static/media/StabilGrotesk-Regular.f5a3e3dc.woff2) format("woff2"), url(../../../_next/static/media/StabilGrotesk-Regular.ba527753.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap
-}
+
+
+
+
 
 p {
     margin: 0

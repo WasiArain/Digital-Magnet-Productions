@@ -1255,7 +1255,7 @@
                 };
 
             function i2(e) {
-                return e < .04045 ? .0773993808 * e : Math.pow(.9478672986 * e + .0521327014, 2.4)
+                return e < .04045 ?.0773993808 * e : Math.pow(.9478672986 * e + .0521327014, 2.4)
             }
 
             function i3(e) {
@@ -12568,7 +12568,7 @@ void main() {
                     let h = r[o % a],
                         c = r[(o + 1) % a];
                     if (this.closed || o + 2 < a ? n = r[(o + 2) % a] : (hd.subVectors(r[a - 1], r[a - 2]).add(r[a - 1]), n = hd), "centripetal" === this.curveType || "chordal" === this.curveType) {
-                        let e = "chordal" === this.curveType ? .5 : .25,
+                        let e = "chordal" === this.curveType ?.5 : .25,
                             t = Math.pow(i.distanceToSquared(h), e),
                             r = Math.pow(h.distanceToSquared(c), e),
                             a = Math.pow(c.distanceToSquared(n), e);

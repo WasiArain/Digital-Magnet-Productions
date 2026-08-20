@@ -2707,7 +2707,7 @@ void main() {
                         return n.createElement("span", r, e)
                     },
                     [m]: function(e, t) {
-                        let r = t ? .color ? {
+                        let r = t ?.color ? {
                             style: {
                                 color: t.color
                             }
@@ -8369,7 +8369,7 @@ attempted value: ${i}
                                     o = t._style;
                                 if (s) {
                                     for (t._live && (r = b(t._target)) !== t._length && (n = r / t._length, t._length = r, t._offsetPT && (t._offsetPT.s *= n, t._offsetPT.c *= n), t._dashPT ? (t._dashPT.s *= n, t._dashPT.c *= n) : t._dash *= n); s;) s.r(e, s.d), s = s._next;
-                                    i = t._dash || e && 1 !== e && 1e-4 || 0, r = t._length - i + .1, a = t._offset, i && a && i + Math.abs(a % t._length) > t._length - .2 && (a += a < 0 ? .1 : -.1) && (r += .1), o.strokeDashoffset = i ? a : a + .001, o.strokeDasharray = r < .2 ? "none" : i ? i + "px," + (t._nowrap ? 999999 : r) + "px" : "0px, 999999px"
+                                    i = t._dash || e && 1 !== e && 1e-4 || 0, r = t._length - i + .1, a = t._offset, i && a && i + Math.abs(a % t._length) > t._length - .2 && (a += a < 0 ?.1 : -.1) && (r += .1), o.strokeDashoffset = i ? a : a + .001, o.strokeDasharray = r < .2 ? "none" : i ? i + "px," + (t._nowrap ? 999999 : r) + "px" : "0px, 999999px"
                                 }
                             } else t.styles.revert()
                         },

@@ -75,7 +75,7 @@
             function x(e, {
                 elementRef: t
             }) {
-                let r = Array.from(t.current ? .children ? ? []).filter(e => e instanceof HTMLElement);
+                let r = Array.from(t.current ?.children ?? []).filter(e => e instanceof HTMLElement);
                 r.length > 0 && e.add((0, h.HT)(r, {
                     from: "bottom",
                     duration: .5,
@@ -127,7 +127,7 @@
             }) {
                 let a = (0, P.xy)(r),
                     s = (0, P.xy)(n);
-                t ? .current && e.add((0, h.HT)(t.current, {
+                t ?.current && e.add((0, h.HT)(t.current, {
                     from: "bottom",
                     duration: .5
                 })), a && e.add(a.getTimeline("in")), s && e.add(s.getTimeline("in"), "<0.2")
@@ -169,8 +169,8 @@
                         setupTransitionOutTimeline: M
                     }), []);
                 return (0, y.s)(g, {
-                    onMount: e ? .onMount ? ? !0,
-                    value: (e ? .value ? ? !0) && u
+                    onMount: e ?.onMount ?? !0,
+                    value: (e ?.value ?? !0) && u
                 }), (0, i.jsxs)("div", {
                     ref: o,
                     className: l()(O().stickyNote, t),
@@ -345,8 +345,8 @@
                         t.disconnect()
                     }
                 }, [s]), (0, y.s)(v, {
-                    onMount: e ? .onMount ? ? !1,
-                    value: (e ? .value ? ? !0) && p
+                    onMount: e ?.onMount ?? !1,
+                    value: (e ?.value ?? !0) && p
                 }), (0, i.jsxs)("div", {
                     ref: s,
                     className: l()(V().storyCard, t),
@@ -396,7 +396,7 @@
                     s = (0, P.xy)(n),
                     l = (0, P.xy)(r),
                     o = (0, P.xy)(i);
-                a && e.add(a ? .getTimeline("in")), e.addLabel("startTopLeftMaskIn", "-=0"), s && e.add(s ? .getTimeline("in"), "<"), l && e.add(l ? .getTimeline("in"), "startTopLeftMaskIn+=0.2"), o && e.add(o ? .getTimeline("in"), "<0.1")
+                a && e.add(a ?.getTimeline("in")), e.addLabel("startTopLeftMaskIn", "-=0"), s && e.add(s ?.getTimeline("in"), "<"), l && e.add(l ?.getTimeline("in"), "startTopLeftMaskIn+=0.2"), o && e.add(o ?.getTimeline("in"), "<0.1")
             }
 
             function er(e, {
@@ -409,7 +409,7 @@
                     s = (0, P.xy)(n),
                     l = (0, P.xy)(r),
                     o = (0, P.xy)(i);
-                a && e.add(a ? .getTimeline("out")), e.addLabel("outComplete", "-=0"), l && e.add(l ? .getTimeline("out"), "outComplete"), s && e.add(s ? .getTimeline("out"), 0), o && e.add(o ? .getTimeline("out"), "outComplete")
+                a && e.add(a ?.getTimeline("out")), e.addLabel("outComplete", "-=0"), l && e.add(l ?.getTimeline("out"), "outComplete"), s && e.add(s ?.getTimeline("out"), 0), o && e.add(o ?.getTimeline("out"), "outComplete")
             }
             var en = r(15573),
                 ei = r(85843);
@@ -479,13 +479,13 @@
                         repeat: -1,
                         transformOrigin: "50% 50%"
                     }), () => {
-                        f.current ? .kill(), f.current = null, g.current ? .kill(), g.current = null
+                        f.current ?.kill(), f.current = null, g.current ?.kill(), g.current = null
                     }
                 }, []), (0, c.useEffect)(() => {
-                    "boolean" == typeof t && (t ? m.current ? .play() : m.current ? .reverse())
+                    "boolean" == typeof t && (t ? m.current ?.play() : m.current ?.reverse())
                 }, [t]);
                 let y = (0, c.useCallback)(e => {
-                    g.current && !(e <= 0) && (f.current ? .kill(), f.current = o.Ay.to(g.current, {
+                    g.current && !(e <= 0) && (f.current ?.kill(), f.current = o.Ay.to(g.current, {
                         timeScale: 180 / e,
                         duration: .4,
                         ease: "power2.out",
@@ -623,10 +623,10 @@
                             yoyo: !0,
                             transformOrigin: "50% 50%"
                         }), () => {
-                            x.current ? .kill(), x.current = null, h.current ? .kill(), h.current = null, f.current ? .kill(), f.current = null
+                            x.current ?.kill(), x.current = null, h.current ?.kill(), h.current = null, f.current ?.kill(), f.current = null
                         }
                     }, []), (0, c.useEffect)(() => {
-                        "boolean" == typeof t && (t ? p.current ? .play() : p.current ? .reverse())
+                        "boolean" == typeof t && (t ? p.current ?.play() : p.current ?.reverse())
                     }, [t]), (0, c.useImperativeHandle)(s, () => ({
                         elementRef: u,
                         revealTimelineRef: p
@@ -769,10 +769,10 @@
                             yoyo: !0,
                             transformOrigin: "50% 50%"
                         }), () => {
-                            y.current ? .kill(), y.current = null, b.current ? .kill(), b.current = null, v.current ? .kill(), v.current = null
+                            y.current ?.kill(), y.current = null, b.current ?.kill(), b.current = null, v.current ?.kill(), v.current = null
                         }
                     }, [r]), (0, c.useEffect)(() => {
-                        "boolean" == typeof t && (t ? h.current ? .play() : h.current ? .reverse())
+                        "boolean" == typeof t && (t ? h.current ?.play() : h.current ?.reverse())
                     }, [t]), (0, c.useImperativeHandle)(s, () => ({
                         elementRef: u,
                         revealTimelineRef: h
@@ -877,7 +877,7 @@
                                 r.style.removeProperty("overflow-block")
                             },
                             a = (0, ec.KE)(r, void 0, {
-                                scroller: t ? .hasSmoothScroll ? .current && t ? .scrollWrapperRef ? .current || void 0,
+                                scroller: t ?.hasSmoothScroll ?.current && t ?.scrollWrapperRef ?.current || void 0,
                                 start: "top-=1px top",
                                 end: "30%",
                                 onEnter: () => {
@@ -932,8 +932,8 @@
                         setupTransitionOutTimeline: er
                     }), [v]);
                 return F(s, e.use_accent_color, {
-                    foreground: e.accent_color_foreground ? .color || "",
-                    background: e.accent_color_background ? .color || ""
+                    foreground: e.accent_color_foreground ?.color || "",
+                    background: e.accent_color_background ?.color || ""
                 }), e_(s), (0, y.s)(N, {
                     onMount: !0,
                     value: w && j
@@ -958,13 +958,13 @@
                 }), (0, c.useLayoutEffect)(() => {
                     if (r) return;
                     let e = s.current,
-                        t = h.current ? .revealTimelineRef.current;
+                        t = h.current ?.revealTimelineRef.current;
                     if (!e || !t) return;
                     let n = e => {
                             t.pause(), t.progress(1 - e)
                         },
                         i = (0, ec.KE)(e, void 0, {
-                            scroller: x ? .hasSmoothScroll ? .current && x ? .scrollWrapperRef ? .current || void 0,
+                            scroller: x ?.hasSmoothScroll ?.current && x ?.scrollWrapperRef ?.current || void 0,
                             scrub: !0,
                             start: "top top",
                             end: "bottom top",
@@ -1005,7 +1005,7 @@
                     className: l()(ee().section, n.className, ee()[e.icon]),
                     id: "headerRotatingShape",
                     style: {
-                        "--icon-color": e ? .icon_color ? .color,
+                        "--icon-color": e ?.icon_color ?.color,
                         ...n.style
                     },
                     children: (0, i.jsx)("div", {
@@ -1015,17 +1015,17 @@
                             className: l()(ee().headerRotatingShape),
                             children: ["small" === e.icon && (0, i.jsx)(ed, {
                                 ref: h,
-                                iconColor: e ? .icon_color ? .color,
+                                iconColor: e ?.icon_color ?.color,
                                 isVisible: w,
                                 initialRotation: 220
                             }), "large" === e.icon && (0, i.jsx)(eo, {
                                 ref: h,
-                                iconColor: e ? .icon_color ? .color,
+                                iconColor: e ?.icon_color ?.color,
                                 isVisible: w,
                                 initialRotation: -25
                             }), "pinwheel" === e.icon && (0, i.jsx)(es, {
                                 ref: h,
-                                iconColor: e ? .icon_color ? .color,
+                                iconColor: e ?.icon_color ?.color,
                                 isVisible: w,
                                 revealDelay: 1.5,
                                 position: "center" === e.position ? {
@@ -1147,7 +1147,7 @@
                         setupTransitionOutTimeline: eI
                     }), []),
                     f = e => 6 === e ? "label-small" : `heading-0${e}`;
-                return ((0, y.s)(g, e), F(m, n.use_accent_color), n.text.content.length <= 1 && (0 === n.text.content.length || !n.text.content ? .[0].content)) ? (0, i.jsx)("div", {
+                return ((0, y.s)(g, e), F(m, n.use_accent_color), n.text.content.length <= 1 && (0 === n.text.content.length || !n.text.content ?.[0].content)) ? (0, i.jsx)("div", {
                     ref: m,
                     ...(0, a.m)(n)
                 }) : (0, i.jsx)(i.Fragment, {
@@ -1164,7 +1164,7 @@
                                     let {
                                         target: r
                                     } = t;
-                                    return t.href ? .startsWith("http") && (r = "_blank"), (0, i.jsx)(ev.A, {
+                                    return t.href ?.startsWith("http") && (r = "_blank"), (0, i.jsx)(ev.A, {
                                         link: {
                                             href: t.href
                                         },
@@ -1185,7 +1185,7 @@
                                     level: t
                                 }) => {
                                     let r = e;
-                                    return e ? .[0] && "object" == typeof e[0] && (r = e[0] ? .props ? .children ? ? e[0]), (0, i.jsx)(d.A, {
+                                    return e ?.[0] && "object" == typeof e[0] && (r = e[0] ?.props ?.children ?? e[0]), (0, i.jsx)(d.A, {
                                         as: `h${t}`,
                                         className: l()(ey()[f(t)]),
                                         size: f(t),
@@ -1319,11 +1319,11 @@
                                 })
                             }
                         }
-                    }), r.button ? .[0] && (0, i.jsx)(ez.A, {
+                    }), r.button ?.[0] && (0, i.jsx)(ez.A, {
                         className: l()(eP().button),
                         link: {
-                            href: r ? .button[0] ? .link ? .cached_url,
-                            uuid: r ? .button[0] ? .link ? .id
+                            href: r ?.button[0] ?.link ?.cached_url,
+                            uuid: r ?.button[0] ?.link ?.id
                         },
                         label: r.button[0].label,
                         disableTriggerInOnScroll: !1
@@ -1417,7 +1417,7 @@
                             placeholder: o,
                             spellCheck: "false",
                             autoComplete: "off",
-                            defaultValue: h ? .get(n) || void 0,
+                            defaultValue: h ?.get(n) || void 0,
                             required: d,
                             onChange: () => {
                                 eU(v)
@@ -1425,7 +1425,7 @@
                         })]
                     }), (0, i.jsx)("div", {
                         className: l()(eD().errorContainer),
-                        children: s ? .message && (0, i.jsxs)(i.Fragment, {
+                        children: s ?.message && (0, i.jsxs)(i.Fragment, {
                             children: [(0, i.jsx)(Z.A, {
                                 className: l()(eD().icon),
                                 name: "error"
@@ -1435,7 +1435,7 @@
                                 className: l()(eD().errorMessage),
                                 transitionInType: "none",
                                 children: (0, i.jsx)(i.Fragment, {
-                                    children: s ? .message
+                                    children: s ?.message
                                 })
                             })]
                         })
@@ -1959,7 +1959,7 @@
                     defaultProps: e = {},
                     ...t
                 }) => {
-                    let [r, n] = (0, c.useState)(""), a = e0.filter(e => e.alias ? .toLowerCase().includes(r.toLowerCase()) || e.value.toLowerCase().includes(r.toLowerCase())), {
+                    let [r, n] = (0, c.useState)(""), a = e0.filter(e => e.alias ?.toLowerCase().includes(r.toLowerCase()) || e.value.toLowerCase().includes(r.toLowerCase())), {
                         lock: s,
                         unLock: o
                     } = (0, $.d)(), {
@@ -1971,7 +1971,7 @@
                         selectItem: g
                     } = (0, eK.Bp)({
                         items: a,
-                        itemToString: e => e ? .value || "",
+                        itemToString: e => e ?.value || "",
                         inputValue: r,
                         onInputValueChange: ({
                             inputValue: e
@@ -1993,12 +1993,12 @@
                                 zIndex: 1e7 - (t.index || 0)
                             },
                             children: [(0, i.jsx)("input", { ..._({ ...e.inputProps,
-                                    ...t ? .register ? .(t.name || ""),
+                                    ...t ?.register ?.(t.name || ""),
                                     onBlur : e => {
-                                        a.length > 0 && r ? (n(a[0].value), g(a[0])) : (n(""), g(null)), t.register ? .(t.name || "").onBlur && t.register(t.name || "").onBlur(e), o()
+                                        a.length > 0 && r ? (n(a[0].value), g(a[0])) : (n(""), g(null)), t.register ?.(t.name || "").onBlur && t.register(t.name || "").onBlur(e), o()
                                     }
                                 }),
-                                className: l()(e2().dropdownInput, e.inputProps ? .className)
+                                className: l()(e2().dropdownInput, e.inputProps ?.className)
                             }), (0, i.jsx)("ul", { ...d({
                                     style: { ...e.menuStyle
                                     },
@@ -2049,7 +2049,7 @@
                         selectItem: g
                     } = (0, eK.Bp)({
                         items: a,
-                        itemToString: e => e ? .value || "",
+                        itemToString: e => e ?.value || "",
                         inputValue: r,
                         onInputValueChange: ({
                             inputValue: e
@@ -2071,12 +2071,12 @@
                                 zIndex: 1e7 - (t.index || 0)
                             },
                             children: [(0, i.jsx)("input", { ..._({ ...e.inputProps,
-                                    ...t ? .register ? .(t.name || ""),
+                                    ...t ?.register ?.(t.name || ""),
                                     onBlur : e => {
-                                        a.length > 0 && r ? (n(a[0].value), g(a[0])) : (n(""), g(null)), t.register ? .(t.name || "").onBlur && t.register(t.name || "").onBlur(e), o()
+                                        a.length > 0 && r ? (n(a[0].value), g(a[0])) : (n(""), g(null)), t.register ?.(t.name || "").onBlur && t.register(t.name || "").onBlur(e), o()
                                     }
                                 }),
-                                className: l()(e2().dropdownInput, e.inputProps ? .className)
+                                className: l()(e2().dropdownInput, e.inputProps ?.className)
                             }), (0, i.jsx)("ul", { ...d({
                                     style: { ...e.menuStyle
                                     },
@@ -2184,7 +2184,7 @@
                     selectItem: f
                 } = (0, eK.Bp)({
                     items: s,
-                    itemToString: e => e ? .value || "",
+                    itemToString: e => e ?.value || "",
                     inputValue: n,
                     onInputValueChange: ({
                         inputValue: e
@@ -2206,12 +2206,12 @@
                             zIndex: 1e7 - (r.index || 0)
                         },
                         children: [(0, i.jsx)("input", { ...m({ ...e.inputProps,
-                                ...r ? .register ? .(r.name || ""),
+                                ...r ?.register ?.(r.name || ""),
                                 onBlur : e => {
-                                    s.length > 0 && n ? (a(s[0].value), f(s[0])) : (a(""), f(null)), r.register ? .(r.name || "").onBlur && r.register(r.name || "").onBlur(e), u()
+                                    s.length > 0 && n ? (a(s[0].value), f(s[0])) : (a(""), f(null)), r.register ?.(r.name || "").onBlur && r.register(r.name || "").onBlur(e), u()
                                 }
                             }),
-                            className: l()(e2().dropdownInput, e.inputProps ? .className)
+                            className: l()(e2().dropdownInput, e.inputProps ?.className)
                         }), (0, i.jsx)("ul", { ..._({
                                 style: { ...e.menuStyle
                                 },
@@ -2257,10 +2257,10 @@
                         isDarkTheme: h
                     } = (0, B.u2)(),
                     x = {};
-                e.pardot_input_fields ? .forEach(e => {
+                e.pardot_input_fields ?.forEach(e => {
                     let t = eG.Yj();
                     e.required && (t = t.required(`${e.label} is required`)), "email" === e.type && (t = t.email("Email is invalid")), x[e.pardot_key] = t
-                }), e.pardot_checkboxes ? .forEach(e => {
+                }), e.pardot_checkboxes ?.forEach(e => {
                     e.required && (x[e.id] = eG.lc().oneOf([!0], e.error_message))
                 });
                 let v = eG.Ik().shape(x);
@@ -2291,9 +2291,9 @@
                 (0, eZ.A)(() => {
                     if (ej().refresh(), t) b.scrollTo(0, 0, 600);
                     else {
-                        let e = s.current ? .getBoundingClientRect(),
-                            t = b.scrollStatusRef.current ? .offset.y || 0;
-                        b.scrollTo(0, (e ? .top || 0) + t - 200, 600)
+                        let e = s.current ?.getBoundingClientRect(),
+                            t = b.scrollStatusRef.current ?.offset.y || 0;
+                        b.scrollTo(0, (e ?.top || 0) + t - 200, 600)
                     }
                 }, [m]);
                 let j = (0, c.useCallback)(async r => {
@@ -2302,11 +2302,11 @@
                             try {
                                 (await eQ.submitPdfForm(e.pardot_id, r)).data.success ? (e.linkedin_tracking_id && window.lintrk("track", {
                                     conversion_id: e.linkedin_tracking_id
-                                }), p(1), t ? .(1)) : (p(2), t ? .(2))
+                                }), p(1), t ?.(1)) : (p(2), t ?.(2))
                             } catch ({
                                 error: e
                             }) {
-                                p(2), t ? .(2)
+                                p(2), t ?.(2)
                             }
                             u.current = !1
                         }
@@ -2335,9 +2335,9 @@
                             children: [(0, i.jsxs)("div", {
                                 className: l()(eF().header),
                                 children: [0 === m && (0, i.jsxs)(i.Fragment, {
-                                    children: [e.imageFront ? .filename && (0, i.jsx)(tt, {
-                                        imgSrcBack: e.imageBack ? .filename,
-                                        imgSrcFront: e.imageFront ? .filename,
+                                    children: [e.imageFront ?.filename && (0, i.jsx)(tt, {
+                                        imgSrcBack: e.imageBack ?.filename,
+                                        imgSrcFront: e.imageFront ?.filename,
                                         width: "450px",
                                         height: "600px",
                                         style: {
@@ -2408,9 +2408,9 @@
                                 children: 0 === m && (0, i.jsxs)(i.Fragment, {
                                     children: [(0, i.jsxs)("fieldset", {
                                         className: l()(eF().fieldset),
-                                        children: [e.pardot_input_fields ? .map((e, t) => {
+                                        children: [e.pardot_input_fields ?.map((e, t) => {
                                             let r;
-                                            return "country" === e.type && (r = e7), "region" === e.type && (r = e9), (e.dropdown_options ? .length || 0) > 0 && (r = tr), (0, i.jsx)(e$, {
+                                            return "country" === e.type && (r = e7), "region" === e.type && (r = e9), (e.dropdown_options ?.length || 0) > 0 && (r = tr), (0, i.jsx)(e$, {
                                                 register: I,
                                                 error: k[e.pardot_key],
                                                 className: l()(eF().inputField),
@@ -2424,7 +2424,7 @@
                                                 index: t,
                                                 Autocomplete: r
                                             }, e.pardot_key)
-                                        }), e.pardot_checkboxes ? .map(e => (0, i.jsxs)("div", {
+                                        }), e.pardot_checkboxes ?.map(e => (0, i.jsxs)("div", {
                                             className: l()(eF().checkboxContainer, eF().inputContainer),
                                             children: [(0, i.jsx)("input", {
                                                 type: "checkbox",
@@ -2443,7 +2443,7 @@
                                                         })
                                                     }
                                                 })
-                                            }), k ? .[e.id] ? .message && (0, i.jsxs)("div", {
+                                            }), k ?.[e.id] ?.message && (0, i.jsxs)("div", {
                                                 className: l()(eF().errorContainer),
                                                 children: [(0, i.jsx)(Z.A, {
                                                     className: l()(eF().icon),
@@ -2454,7 +2454,7 @@
                                                     className: l()(eF().errorMessage),
                                                     transitionInType: "none",
                                                     children: (0, i.jsx)(i.Fragment, {
-                                                        children: k[e.id] ? .message
+                                                        children: k[e.id] ?.message
                                                     })
                                                 })]
                                             })]
@@ -2512,10 +2512,10 @@
                         isDarkTheme: h
                     } = (0, B.u2)(),
                     x = {};
-                e.input_fields ? .forEach(e => {
+                e.input_fields ?.forEach(e => {
                     let t = eG.Yj();
                     e.required && (t = t.required(`${e.label} is required`)), "email" === e.type && (t = t.email("Email is invalid")), x[e.id] = t
-                }), e.checkboxes ? .forEach(e => {
+                }), e.checkboxes ?.forEach(e => {
                     e.required && (x[e.id] = eG.lc().oneOf([!0], e.error_message))
                 });
                 let v = eG.Ik().shape(x);
@@ -2546,9 +2546,9 @@
                 (0, eZ.A)(() => {
                     if (ej().refresh(), t) b.scrollTo(0, 0, 600);
                     else {
-                        let e = s.current ? .getBoundingClientRect(),
-                            t = b.scrollStatusRef.current ? .offset.y || 0;
-                        b.scrollTo(0, (e ? .top || 0) + t - 200, 600)
+                        let e = s.current ?.getBoundingClientRect(),
+                            t = b.scrollStatusRef.current ?.offset.y || 0;
+                        b.scrollTo(0, (e ?.top || 0) + t - 200, 600)
                     }
                 }, [m]);
                 let j = (0, c.useCallback)(async () => {
@@ -2559,9 +2559,9 @@
                                 console.log("SUCCESS!", e.status, e.text)
                             }, e => {
                                 console.log("FAILED...", e)
-                            }), p(1), t ? .(1)
+                            }), p(1), t ?.(1)
                         } catch (e) {
-                            p(2), t ? .(2)
+                            p(2), t ?.(2)
                         } finally {
                             u.current = !1
                         }
@@ -2645,7 +2645,7 @@
                                             name: "email_to",
                                             defaultValue: e.email_to,
                                             hidden: !0
-                                        }), e.input_fields ? .map(e => {
+                                        }), e.input_fields ?.map(e => {
                                             let t;
                                             return "country" === e.type && (t = e7), "region" === e.type && (t = e9), (0, i.jsx)(e$, {
                                                 register: I,
@@ -2659,7 +2659,7 @@
                                                 required: e.required,
                                                 Autocomplete: t
                                             }, e.id)
-                                        }), e.checkboxes ? .map(e => (0, i.jsxs)("div", {
+                                        }), e.checkboxes ?.map(e => (0, i.jsxs)("div", {
                                             className: l()(tl().checkboxContainer, tl().inputContainer),
                                             children: [(0, i.jsx)("input", {
                                                 type: "checkbox",
@@ -2675,7 +2675,7 @@
                                                         children: [t, " ", e.required ? "*" : ""]
                                                     })
                                                 }
-                                            }), k ? .[e.id] ? .message && (0, i.jsxs)("div", {
+                                            }), k ?.[e.id] ?.message && (0, i.jsxs)("div", {
                                                 className: l()(tl().errorContainer),
                                                 children: [(0, i.jsx)(Z.A, {
                                                     className: l()(tl().icon),
@@ -2686,7 +2686,7 @@
                                                     className: l()(tl().errorMessage),
                                                     transitionInType: "none",
                                                     children: (0, i.jsx)(i.Fragment, {
-                                                        children: k[e.id] ? .message
+                                                        children: k[e.id] ?.message
                                                     })
                                                 })]
                                             })]
@@ -2728,20 +2728,20 @@
             function tf(e, {
                 elementRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {}, {})
+                t ?.current && e.fromTo(t.current, {}, {})
             }
 
             function th(e, {
                 elementRef: t
             }) {
-                t ? .current && e.add((0, S._)(t.current))
+                t ?.current && e.add((0, S._)(t.current))
             }
 
             function tx(e, {
                 backgroundRef: t,
                 iconRef: r
             }) {
-                t ? .current && (e.set(t.current, {
+                t ?.current && (e.set(t.current, {
                     opacity: 1
                 }), e.fromTo(t.current, {
                     scaleY: 0
@@ -2749,7 +2749,7 @@
                     scaleY: 1,
                     duration: .4,
                     ease: "Expo.easeOut"
-                })), r ? .current && e.fromTo(r.current, {
+                })), r ?.current && e.fromTo(r.current, {
                     opacity: 0
                 }, {
                     opacity: 1,
@@ -2762,12 +2762,12 @@
                 backgroundRef: t,
                 iconRef: r
             }) {
-                t ? .current && e.to(t.current, {
+                t ?.current && e.to(t.current, {
                     duration: .4,
                     ease: "Expo.easeOut",
                     scaleY: 0,
                     opacity: 0
-                }), r ? .current && e.to(r.current, {
+                }), r ?.current && e.to(r.current, {
                     duration: .4,
                     ease: "Expo.easeOut",
                     opacity: 0
@@ -2923,7 +2923,7 @@
                     className: l()(tL().personContactInfo, e),
                     children: [(0, i.jsx)("div", {
                         className: tL().locationContainer,
-                        children: t.location ? .story ? .name && (0, i.jsxs)(i.Fragment, {
+                        children: t.location ?.story ?.name && (0, i.jsxs)(i.Fragment, {
                             children: [t.label && (0, i.jsx)(d.A, {
                                 as: "span",
                                 size: "label-small",
@@ -2991,7 +2991,7 @@
                             className: l()(tS().leftContainer),
                             children: [(0, i.jsx)("div", {
                                 className: tS().imageContainer,
-                                children: r.portrait ? .filename && (0, i.jsx)(tO.A, {
+                                children: r.portrait ?.filename && (0, i.jsx)(tO.A, {
                                     src: r.portrait.filename,
                                     srcDesktop: r.portrait.filename,
                                     alt: r.portrait.alt
@@ -3039,11 +3039,11 @@
                                             transitionOutType: "fadeOut",
                                             children: r.job_title
                                         })]
-                                    }), r.contact ? .[0] && (0, i.jsx)(tE, {
+                                    }), r.contact ?.[0] && (0, i.jsx)(tE, {
                                         details: r.contact[0]
                                     })]
                                 })
-                            }), r.socials_links ? .length > 0 && (0, i.jsxs)("div", {
+                            }), r.socials_links ?.length > 0 && (0, i.jsxs)("div", {
                                 className: tS().socialLinksContainer,
                                 children: [(0, i.jsx)(d.A, {
                                     as: "h6",
@@ -3059,20 +3059,20 @@
                                     disableTriggerInOnScroll: !1,
                                     transitionInType: "splitLineRotateIn",
                                     label: e.title,
-                                    onClick: () => u ? .current ? .open({
-                                        image: e ? .image,
+                                    onClick: () => u ?.current ?.open({
+                                        image: e ?.image,
                                         title: e.title
                                     })
                                 }, e._uid) : (0, i.jsx)(ev.A, {
                                     textVariant: "body-standard",
                                     className: l()(tS().social),
                                     link: {
-                                        href: e ? .link.url || e ? .link.cached_url
+                                        href: e ?.link.url || e ?.link.cached_url
                                     },
                                     disableTriggerInOnScroll: !1,
                                     transitionInType: "splitLineRotateIn",
                                     label: e.title,
-                                    target: e ? .link.target
+                                    target: e ?.link.target
                                 }, e._uid))]
                             })]
                         }), (0, i.jsx)("div", {
@@ -3157,7 +3157,7 @@
                 let a = (0, P.xy)(r),
                     s = (0, P.xy)(i),
                     l = (0, P.xy)(n);
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     scaleX: 0,
                     transformOrigin: "left center"
                 }, {
@@ -3240,14 +3240,14 @@
                 headingRef: n
             }) {
                 let i = (0, P.xy)(n);
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     yPercent: 50
                 }, {
                     yPercent: 0,
                     clearProps: "yPercent",
                     ease: "Power2.easeOut",
                     duration: .5
-                }), r ? .current && e.fromTo(r.current, {
+                }), r ?.current && e.fromTo(r.current, {
                     scaleX: 0
                 }, {
                     scaleX: 1,
@@ -3324,14 +3324,14 @@
             }) {
                 let a = (0, P.xy)(t),
                     s = (0, P.xy)(r);
-                n ? .current && e.fromTo(n.current, {
+                n ?.current && e.fromTo(n.current, {
                     scaleX: 0,
                     transformOrigin: "left center"
                 }, {
                     duration: .5,
                     ease: "Quad.easeInOut",
                     scaleX: 1
-                }), i ? .current && e.fromTo(i.current, {
+                }), i ?.current && e.fromTo(i.current, {
                     opacity: 0,
                     scale: .4
                 }, {
@@ -3345,7 +3345,7 @@
 
             function rm(e, t, r, n = !1) {
                 o.Ay.to(e.current, {
-                    height: t ? e.current ? .scrollHeight : 0,
+                    height: t ? e.current ?.scrollHeight : 0,
                     duration: .6 * !n,
                     ease: "Quad.easeInOut",
                     clearProps: t ? "height" : "",
@@ -3358,7 +3358,7 @@
             function rp(e, {
                 headingRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     x: 0
                 }, {
                     duration: .4,
@@ -3370,7 +3370,7 @@
             function rg(e, {
                 headingRef: t
             }) {
-                t ? .current && e.to(t.current, {
+                t ?.current && e.to(t.current, {
                     duration: .4,
                     ease: "Power2.easeOut",
                     x: 0
@@ -3453,8 +3453,8 @@
                     S = (0, c.useCallback)(() => {
                         !e && y && k.transitionOut()
                     }, [k, e, y]),
-                    N = n.bullet_list ? .content[0],
-                    R = n.image ? .filename || N ? .content ? .length > 0 || n.long_description;
+                    N = n.bullet_list ?.content[0],
+                    R = n.image ?.filename || N ?.content ?.length > 0 || n.long_description;
                 return (0, i.jsxs)("div", {
                     ref: p,
                     className: l()(rd().accordionItem, u.className),
@@ -3508,7 +3508,7 @@
                                 size: "body-standard",
                                 disableTriggerInOnScroll: !1,
                                 children: n.long_description
-                            }), n ? .link ? .cached_url && (0, i.jsx)(ez.A, {
+                            }), n ?.link ?.cached_url && (0, i.jsx)(ez.A, {
                                 label: C.globalSettings.view_service,
                                 disableTriggerInOnScroll: !1,
                                 link: {
@@ -3516,7 +3516,7 @@
                                 },
                                 className: rd().cta
                             })]
-                        }), N && N ? .content ? .length > 0 && (0, i.jsx)("ul", {
+                        }), N && N ?.content ?.length > 0 && (0, i.jsx)("ul", {
                             ref: f,
                             className: l()(rd().list),
                             children: (0, ex.XX)(n.bullet_list, {
@@ -3550,7 +3550,7 @@
                     s = t || n,
                     [o, u] = (0, c.useState)(() => e.items.map(() => !1));
                 (0, c.useEffect)(() => {
-                    u(t => e.items.map((e, r) => t[r] ? ? !1))
+                    u(t => e.items.map((e, r) => t[r] ?? !1))
                 }, [e.items]), (0, T.mt)({
                     scroll: {
                         trigger: s,
@@ -3575,7 +3575,7 @@
                     ...(0, a.m)(e),
                     children: e.items.map((e, t) => (0, i.jsx)(rx, {
                         blok: e,
-                        isOpen: o[t] ? ? !1,
+                        isOpen: o[t] ?? !1,
                         onClick: () => d(t),
                         index: r.numbered ? t : void 0
                     }, e._uid))
@@ -3591,7 +3591,7 @@
                 let n = {
                     progress: 0
                 };
-                t ? .current ? .elementRef ? .current && (e.add((0, S.m)(t.current.elementRef.current, {
+                t ?.current ?.elementRef ?.current && (e.add((0, S.m)(t.current.elementRef.current, {
                     duration: .1
                 }), 0), e.fromTo(n, {
                     progress: 0
@@ -3600,7 +3600,7 @@
                     ease: "none",
                     duration: .33,
                     onUpdate: () => {
-                        t ? .current ? .setProgress(n.progress)
+                        t ?.current ?.setProgress(n.progress)
                     }
                 }, 0), e.fromTo(n, {
                     progress: .3592233009708738
@@ -3609,7 +3609,7 @@
                     ease: "none",
                     duration: .33,
                     onUpdate: () => {
-                        t ? .current ? .setProgress(n.progress)
+                        t ?.current ?.setProgress(n.progress)
                     }
                 }, .33), e.fromTo(n, {
                     progress: .7572815533980582
@@ -3618,9 +3618,9 @@
                     ease: "none",
                     duration: .25,
                     onUpdate: () => {
-                        t ? .current ? .setProgress(n.progress)
+                        t ?.current ?.setProgress(n.progress)
                     }
-                }, .66)), r && r ? .current ? .forEach((t, r) => {
+                }, .66)), r && r ?.current ?.forEach((t, r) => {
                     window.innerWidth < 1024 && e.fromTo(t.current, {
                         y: 0
                     }, {
@@ -3634,7 +3634,7 @@
             function rI(e, {
                 itemsRef: t
             }) {
-                e.addLabel("slide_-1"), t && t ? .current ? .forEach((t, r) => {
+                e.addLabel("slide_-1"), t && t ?.current ?.forEach((t, r) => {
                     let n = (0, P.xy)(t);
                     n && (e.add(n.getTimeline("in"), ">"), e.addLabel(`slide_${r}`), e.add(n.getTimeline("out"), ">"))
                 })
@@ -3653,7 +3653,7 @@
                     l = (0, P.xy)(n),
                     o = (0, P.xy)(i),
                     c = (0, P.xy)(a);
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     pointerEvents: "none"
                 }, {
                     pointerEvents: "all",
@@ -3760,7 +3760,7 @@
                 labelRef: r
             }) {
                 let n = (0, P.xy)(r);
-                e.add(n ? .getTimeline("in"), 0), t ? .current ? .forEach((t, r) => {
+                e.add(n ?.getTimeline("in"), 0), t ?.current ?.forEach((t, r) => {
                     let n = (0, P.xy)(t);
                     n && e.add(n.getTimeline("in"), .1 + .1 * r)
                 })
@@ -3800,12 +3800,12 @@
                         textVariant: "body-standard",
                         className: l()(rO().link),
                         link: {
-                            href: e ? .link ? .url || e ? .link ? .cached_url
+                            href: e ?.link ?.url || e ?.link ?.cached_url
                         },
                         label: e.title,
                         disableTriggerInOnScroll: !0,
                         transitionInType: "splitLineRotateIn",
-                        target: e ? .link ? .target
+                        target: e ?.link ?.target
                     }, e._uid))]
                 })
             }
@@ -3823,7 +3823,7 @@
                     l = (0, P.xy)(n),
                     o = (0, P.xy)(r),
                     c = (0, P.xy)(i);
-                a ? .current && e.add((0, h.HT)(a.current, {
+                a ?.current && e.add((0, h.HT)(a.current, {
                     clearProps: "clipPath, webkitClipPath"
                 }), 0), e.addLabel("startText", ">-0.2"), s && e.add(s.getTimeline("in"), "startText"), l && e.add(l.getTimeline("in"), "startText"), o && e.add(o.getTimeline("in"), "startText+=0.2"), c && e.add(c.getTimeline("in"), "startText+=0.2")
             }
@@ -3837,7 +3837,7 @@
             }) {
                 i && n && t && r && e.add((0, S._)([t.current, n.current, i.current, r.current], {
                     duration: .2
-                })), a ? .current && e.add((0, S._)(a ? .current, {
+                })), a ?.current && e.add((0, S._)(a ?.current, {
                     duration: .2
                 }), 0)
             }
@@ -3852,7 +3852,7 @@
                 i && n && t && r && e.add((0, S._)([t.current, i.current, n.current, r.current], {
                     to: 1,
                     duration: .3
-                })), a ? .current && e.add((0, S._)(a ? .current, {
+                })), a ?.current && e.add((0, S._)(a ?.current, {
                     to: 1,
                     duration: .3
                 }), 0)
@@ -3889,7 +3889,7 @@
                 shapeRef: a
             }) {
                 let s = window.innerWidth >= 768 ? 250 : -80;
-                a ? .current && e.fromTo(a.current, {
+                a ?.current && e.fromTo(a.current, {
                     y: s
                 }, {
                     y: -s,
@@ -3897,25 +3897,25 @@
                     duration: 1
                 }, 0);
                 let l = window.innerWidth >= 768 ? -150 : 20;
-                n ? .current && i ? .current && e.fromTo([n ? .current, i ? .current], {
+                n ?.current && i ?.current && e.fromTo([n ?.current, i ?.current], {
                     y: -s - l
                 }, {
                     y: s + l,
                     ease: "none",
                     duration: 1
-                }, 0), t ? .current && r ? .current && e.fromTo([t ? .current, r ? .current], {
+                }, 0), t ?.current && r ?.current && e.fromTo([t ?.current, r ?.current], {
                     y: -l
                 }, {
                     y: l,
                     ease: "none",
                     duration: 1
-                }, 0), t ? .current && n ? .current && e.fromTo([t.current, n ? .current], {
+                }, 0), t ?.current && n ?.current && e.fromTo([t.current, n ?.current], {
                     xPercent: -50
                 }, {
                     xPercent: 75,
                     ease: rQ,
                     duration: 1
-                }, 0), r ? .current && i ? .current && e.fromTo([r ? .current, i ? .current], {
+                }, 0), r ?.current && i ?.current && e.fromTo([r ?.current, i ?.current], {
                     xPercent: 50
                 }, {
                     xPercent: -75,
@@ -3930,18 +3930,18 @@
                 shapeInnerRef: n,
                 imageRef: i
             }) {
-                e.addLabel("slide_-1"), n ? .current && e.add((0, h.HT)(n.current, {
+                e.addLabel("slide_-1"), n ?.current && e.add((0, h.HT)(n.current, {
                     from: "center-full",
                     duration: .4,
                     ease: "Quad.easeInOut"
-                }), 0), i ? .current && e.fromTo(i.current, {
+                }), 0), i ?.current && e.fromTo(i.current, {
                     scale: 1.5
                 }, {
                     scale: 1,
                     clearProps: "scale",
                     ease: "Quad.easeInOut",
                     duration: .3
-                }, "-=0.2"), t ? .current && t ? .current.forEach((t, n) => {
+                }, "-=0.2"), t ?.current && t ?.current.forEach((t, n) => {
                     e.addLabel(`slide_${n}`), e.fromTo(t, {
                         xPercent: -100,
                         yPercent: 100
@@ -3950,7 +3950,7 @@
                         yPercent: 0,
                         ease: "Quad.easeInOut",
                         duration: .3
-                    }, ">"), r ? .current && e.fromTo(r.current[n], {
+                    }, ">"), r ?.current && e.fromTo(r.current[n], {
                         scale: 1.5
                     }, {
                         scale: 1,
@@ -3958,7 +3958,7 @@
                         ease: "Quad.easeInOut",
                         duration: .3
                     }, "<0.2")
-                }), e.addLabel("slide_4"), n ? .current && e.addLabel("slide_5")
+                }), e.addLabel("slide_4"), n ?.current && e.addLabel("slide_5")
             }
             var rK = r(52412),
                 r0 = r(42435),
@@ -3977,9 +3977,9 @@
                 imageRef: s,
                 containerRef: l
             }) {
-                if (t ? .current && n ? .current) {
+                if (t ?.current && n ?.current) {
                     let r = () => r2(t.current);
-                    e.fromTo([t.current, n ? .current], {
+                    e.fromTo([t.current, n ?.current], {
                         x: r
                     }, {
                         x: () => -(1.01 * r()),
@@ -3987,9 +3987,9 @@
                         duration: 1
                     }, "<")
                 }
-                if (r ? .current && i ? .current) {
+                if (r ?.current && i ?.current) {
                     let t = () => r2(r.current);
-                    e.fromTo([r ? .current, i ? .current], {
+                    e.fromTo([r ?.current, i ?.current], {
                         x: () => -t()
                     }, {
                         x: t,
@@ -3997,7 +3997,7 @@
                         duration: 1
                     }, "<")
                 }
-                a ? .current && e.fromTo(a.current, {
+                a ?.current && e.fromTo(a.current, {
                     clipPath: "inset(0% 0% 0% 0% round 4px)",
                     webkitClipPath: "inset(0% 0% 0% 0% round 4px)"
                 }, {
@@ -4005,13 +4005,13 @@
                     webkitClipPath: "inset(calc(50% - min(25vw, 25vh)) calc(50% - min(25vw, 25vh)) calc(50% - min(25vw, 25vh)) calc(50% - min(25vw, 25vh)) round min(25vw, 25vh))",
                     duration: .3,
                     ease: "Power1.easeInOut"
-                }, "<"), s ? .current && e.fromTo(s.current, {
+                }, "<"), s ?.current && e.fromTo(s.current, {
                     scale: 1.5
                 }, {
                     scale: .6,
                     ease: "Quad.easeInOut",
                     duration: .4
-                }, "<25%"), l ? .current && e.fromTo(l.current, {
+                }, "<25%"), l ?.current && e.fromTo(l.current, {
                     height: "80svh",
                     top: "10svh"
                 }, {
@@ -4041,14 +4041,14 @@
                 let s = (0, P.xy)(n),
                     l = (0, P.xy)(t),
                     o = (0, P.xy)(r);
-                a ? .current && e.fromTo(a.current, {
+                a ?.current && e.fromTo(a.current, {
                     scale: 1.2
                 }, {
                     scale: 1,
                     duration: .8,
                     ease: "Power3.easeInOut",
                     clearProps: "scale"
-                }, 0), i ? .current && e.add((0, h.HT)(i.current), 0), e.addLabel("startText", ">-0.4"), e.add(s ? .getTimeline("in"), "startText"), e.add(l ? .getTimeline("in"), "startText+=0.1"), e.add(o ? .getTimeline("in"), "<0.2")
+                }, 0), i ?.current && e.add((0, h.HT)(i.current), 0), e.addLabel("startText", ">-0.4"), e.add(s ?.getTimeline("in"), "startText"), e.add(l ?.getTimeline("in"), "startText+=0.1"), e.add(o ?.getTimeline("in"), "<0.2")
             }
 
             function ne({
@@ -4080,7 +4080,7 @@
                         },
                         setupTransitionInTimeline: r6
                     })
-                }), e ? .key_image && e.key_image.length > 0 && (a = e.key_image[0]), e ? .key_video && e.key_video.length > 0 && (s = e.key_video[0]), (0, i.jsxs)("div", {
+                }), e ?.key_image && e.key_image.length > 0 && (a = e.key_image[0]), e ?.key_video && e.key_video.length > 0 && (s = e.key_video[0]), (0, i.jsxs)("div", {
                     ref: u,
                     className: l()(r8().pageHeader, n.className),
                     children: [(0, i.jsxs)("div", {
@@ -4092,7 +4092,7 @@
                             size: "label-large",
                             transitionInType: "splitLineRotateIn",
                             className: l()(r8().category),
-                            children: e ? .category
+                            children: e ?.category
                         }), (0, i.jsx)(d.A, {
                             ref: m,
                             disableTriggerInOnScroll: !0,
@@ -4100,7 +4100,7 @@
                             size: "heading-02",
                             transitionInType: "splitCharsSlideInUp",
                             className: l()(r8().title),
-                            children: e ? .title
+                            children: e ?.title
                         }), (0, i.jsx)(_.A, {
                             ref: p,
                             disableTriggerInOnScroll: !0,
@@ -4108,9 +4108,9 @@
                             size: "body-large",
                             transitionInType: "splitLineRotateIn",
                             className: l()(r8().description),
-                            children: e ? .short_description
+                            children: e ?.short_description
                         })]
-                    }), (a ? .image_landscape || a ? .image_portrait || s) && (0, i.jsx)("div", {
+                    }), (a ?.image_landscape || a ?.image_portrait || s) && (0, i.jsx)("div", {
                         ref: f,
                         className: l()(r8().mediaWrapper),
                         children: (0, i.jsx)("div", {
@@ -4118,7 +4118,7 @@
                             children: (0, i.jsxs)("div", {
                                 ref: h,
                                 className: l()(r8().mediaInnerHolder, "abs-fill"),
-                                children: [(a ? .image_landscape || a ? .image_portrait) && !s && (0, i.jsx)(tO.A, {
+                                children: [(a ?.image_landscape || a ?.image_portrait) && !s && (0, i.jsx)(tO.A, {
                                     src: a.image_landscape || a.image_portrait,
                                     srcDesktop: a.image_landscape || a.image_portrait,
                                     className: l()(r8().image, "abs-fill"),
@@ -4126,7 +4126,7 @@
                                         type: "scaleUp"
                                     },
                                     layout: "fill",
-                                    alt: a ? .alt_text
+                                    alt: a ?.alt_text
                                 }), s && (0, i.jsx)(rD.default, {
                                     blok: s,
                                     objectFit: "cover",
@@ -4193,7 +4193,7 @@
                             enableChineseTransitionFallback: !0,
                             canTransitionIn: e,
                             children: t.title
-                        }), "string" != typeof t.title && t.title ? .content && (0, ex.XX)(t.title, {
+                        }), "string" != typeof t.title && t.title ?.content && (0, ex.XX)(t.title, {
                             nodeResolvers: {
                                 [ex.q0]: (t, {
                                     level: r
@@ -4235,7 +4235,7 @@
                             }
                         }), (0, i.jsx)("div", {
                             className: l()(nr().buttonHolder),
-                            children: t ? .buttons ? .map(t => {
+                            children: t ?.buttons ?.map(t => {
                                 let r = (0, rS.TE)(t.link, m.locale);
                                 return r ? (0, i.jsx)(ez.A, {
                                     className: l()(nr().button),
@@ -4267,17 +4267,17 @@
                 let l = (0, P.xy)(n),
                     o = (0, P.xy)(r),
                     c = (0, P.xy)(s);
-                i ? .current && e.add((0, no.Vd)(i.current, {
+                i ?.current && e.add((0, no.Vd)(i.current, {
                     from: 100,
                     duration: .5
-                }), 0), a ? .current && e.fromTo(a.current, {
+                }), 0), a ?.current && e.fromTo(a.current, {
                     scale: 1.3
                 }, {
                     scale: 1,
                     clearProps: "scale",
                     ease: "Quad.easeInOut",
                     duration: .5
-                }, 0), t ? .current && e.add((0, h.HT)(t.current, {
+                }, 0), t ?.current && e.add((0, h.HT)(t.current, {
                     from: "bottom",
                     duration: .5
                 }), 0), o && e.add(o.getTimeline("in"), .2), l && e.add(l.getTimeline("in"), .4), c && e.add(c.getTimeline("in"), .5)
@@ -4295,7 +4295,7 @@
                 ...s
             }) {
                 let u, m = (0, c.useRef)(null),
-                    p = a ? .current ? .elementRef || m,
+                    p = a ?.current ?.elementRef || m,
                     g = (0, c.useRef)(null),
                     f = (0, c.useRef)(null),
                     h = (0, c.useRef)(null),
@@ -4306,7 +4306,7 @@
                         canPlayWebm: y
                     } = (0, n_.O)(),
                     I = (0, t_.useRouter)();
-                t ? .buttons && (u = (0, rS.TE)(t ? .buttons[0] ? .link, I.locale)), (0, c.useImperativeHandle)(a, () => ({
+                t ?.buttons && (u = (0, rS.TE)(t ?.buttons[0] ?.link, I.locale)), (0, c.useImperativeHandle)(a, () => ({
                     imageRef: g,
                     elementRef: p
                 }), [g, p]), (0, T.mt)({
@@ -4331,9 +4331,9 @@
                 let [C, w] = (0, c.useState)(!1);
                 (0, c.useEffect)(() => {
                     ! function(e, t = !0, r = 1.1) {
-                        if (e ? .current) {
-                            let n = e ? .current;
-                            e ? .current ? .elementRef ? .current && (n = e.current.elementRef.current), o.Ay.to(n, {
+                        if (e ?.current) {
+                            let n = e ?.current;
+                            e ?.current ?.elementRef ?.current && (n = e.current.elementRef.current), o.Ay.to(n, {
                                 scale: t ? r : 1,
                                 ease: "Quad.easeInOut",
                                 duration: .5
@@ -4368,7 +4368,7 @@
                             children: (0, i.jsx)("div", {
                                 ref: v,
                                 className: l()(nl().imageContainer),
-                                children: t ? .animated_image ? .filename && y ? (0, i.jsx)("video", {
+                                children: t ?.animated_image ?.filename && y ? (0, i.jsx)("video", {
                                     src: t.animated_image.filename,
                                     autoPlay: !0,
                                     muted: !0,
@@ -4410,14 +4410,14 @@
                                         children: e
                                     })
                                 }
-                            }), t ? .buttons && t ? .buttons[0] && u && (0, i.jsx)(ev.A, {
+                            }), t ?.buttons && t ?.buttons[0] && u && (0, i.jsx)(ev.A, {
                                 ref: b,
                                 textVariant: "button-label-small",
                                 className: l()(nl().button),
                                 link: {
                                     href: u
                                 },
-                                label: t ? .buttons[0].label,
+                                label: t ?.buttons[0].label,
                                 disableTriggerInOnScroll: !0,
                                 transitionInType: "splitLineRotateIn",
                                 isActive: C
@@ -4446,14 +4446,14 @@
                                     children: e
                                 })
                             }
-                        }), t ? .buttons && t ? .buttons[0] && u && (0, i.jsx)(ev.A, {
+                        }), t ?.buttons && t ?.buttons[0] && u && (0, i.jsx)(ev.A, {
                             ref: b,
                             textVariant: "button-label-small",
                             className: l()(nl().button),
                             link: {
                                 href: u
                             },
-                            label: t ? .buttons[0].label,
+                            label: t ?.buttons[0].label,
                             disableTriggerInOnScroll: !0,
                             transitionInType: "splitLineRotateIn"
                         })]
@@ -4474,17 +4474,17 @@
                 let l = (0, P.xy)(n),
                     o = (0, P.xy)(r),
                     c = (0, P.xy)(s);
-                i ? .current && e.add((0, no.Vd)(i.current, {
+                i ?.current && e.add((0, no.Vd)(i.current, {
                     from: 100,
                     duration: .5
-                }), 0), a ? .current && e.fromTo(a.current, {
+                }), 0), a ?.current && e.fromTo(a.current, {
                     scale: 1.3
                 }, {
                     scale: 1,
                     clearProps: "scale",
                     ease: "Quad.easeInOut",
                     duration: .5
-                }, 0), t ? .current && e.add((0, h.HT)(t.current, {
+                }, 0), t ?.current && e.add((0, h.HT)(t.current, {
                     from: "bottom",
                     duration: .5
                 }), 0), o && e.add(o.getTimeline("in"), .2), l && e.add(l.getTimeline("in"), .4), c && e.add(c.getTimeline("in"), .5)
@@ -4512,7 +4512,7 @@
                         opacity: 1
                     }).to(e, {
                         width: r ? "clamp(200px, 100%, 300px)" : "100%",
-                        duration: r ? .5 : .3,
+                        duration: r ?.5 : .3,
                         ease: (0, nh.Vm)(d, "power2.inOut", "power2.in")
                     }, "<").fromTo(u.current, {
                         opacity: 0
@@ -4520,15 +4520,15 @@
                         opacity: 1,
                         ease: "power2.inOut"
                     }, "<");
-                    return n ? .(t), d.current = t, () => {
+                    return n ?.(t), d.current = t, () => {
                         t.kill()
                     }
                 }, [r, n]);
                 let m = (0, c.useCallback)(() => {
-                        d.current ? .play()
+                        d.current ?.play()
                     }, []),
                     p = (0, c.useCallback)(() => {
-                        d.current ? .reverse()
+                        d.current ?.reverse()
                     }, []);
                 return (0, c.useImperativeHandle)(e, () => ({
                     elementRef: s,
@@ -4537,7 +4537,7 @@
                 }), [m, p]), (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)("button", { ...a,
                         className: l()(nv().button, a.className),
-                        type: a.type ? ? "button",
+                        type: a.type ?? "button",
                         children: (0, i.jsx)(Z.A, {
                             name: "arrow-right-light",
                             className: l()(nv().icon)
@@ -4545,7 +4545,7 @@
                     }), (0, i.jsxs)("button", { ...a,
                         ref: s,
                         className: l()(nv().button, nv().animatedButton, a.className),
-                        type: a.type ? ? "button",
+                        type: a.type ?? "button",
                         children: [(0, i.jsx)(Z.A, {
                             name: "arrow-right-light",
                             className: l()(nv().icon)
@@ -4573,7 +4573,7 @@
                 ...u
             }) {
                 let m = (0, c.useRef)(null),
-                    p = s ? .current ? .elementRef || m,
+                    p = s ?.current ?.elementRef || m,
                     g = (0, c.useRef)(null),
                     f = (0, c.useRef)(null),
                     h = (0, c.useRef)(null),
@@ -4614,9 +4614,9 @@
                 let [S, N] = (0, c.useState)(!1);
                 (0, c.useEffect)(() => {
                     ! function(e, t = !0, r = 1.1) {
-                        if (e ? .current) {
-                            let n = e ? .current;
-                            e ? .current ? .elementRef ? .current && (n = e.current.elementRef.current), o.Ay.to(n, {
+                        if (e ?.current) {
+                            let n = e ?.current;
+                            e ?.current ?.elementRef ?.current && (n = e.current.elementRef.current), o.Ay.to(n, {
                                 scale: t ? r : 1,
                                 ease: "Quad.easeInOut",
                                 duration: .5
@@ -4634,7 +4634,7 @@
                     }).to({}, {
                         duration: .4
                     }), () => {
-                        y.current ? .kill(), y.current = null
+                        y.current ?.kill(), y.current = null
                     }
                 }, []);
                 let R = (0, c.useCallback)(() => {
@@ -4646,10 +4646,10 @@
                         }, 0)
                     }, []),
                     O = (0, c.useCallback)(() => {
-                        I.current ? .reverse(), y.current ? .reverse()
+                        I.current ?.reverse(), y.current ?.reverse()
                     }, []),
                     P = (0, c.useCallback)(() => {
-                        I.current ? .play(), y.current ? .play()
+                        I.current ?.play(), y.current ?.play()
                     }, []),
                     L = w ? ty() : "div";
                 return (0, i.jsx)(L, {
@@ -4672,7 +4672,7 @@
                             children: (0, i.jsx)("div", {
                                 ref: v,
                                 className: l()(ng().imageHolder),
-                                children: t ? .animated_image ? .filename && C ? (0, i.jsx)("video", {
+                                children: t ?.animated_image ?.filename && C ? (0, i.jsx)("video", {
                                     src: t.animated_image.filename,
                                     autoPlay: !0,
                                     muted: !0,
@@ -4719,7 +4719,7 @@
                                 })
                             }), w && (0, i.jsx)(nb, {
                                 ref: I,
-                                label: a ? ? "",
+                                label: a ?? "",
                                 className: ng().button
                             })]
                         })]
@@ -4754,7 +4754,7 @@
                                 })
                             }), w && (0, i.jsx)(nb, {
                                 ref: I,
-                                label: a ? ? "",
+                                label: a ?? "",
                                 className: ng().button
                             })]
                         })
@@ -4787,20 +4787,20 @@
                     u = (0, P.xy)(a),
                     d = (0, P.xy)(s),
                     _ = (0, P.xy)(o);
-                r ? .current && e.add((0, no.Vd)(r.current, {
+                r ?.current && e.add((0, no.Vd)(r.current, {
                     from: 100,
                     duration: .5
                 }), 0), t.current && e.add((0, h.HT)(t.current, {
                     from: "bottom",
                     duration: .5
-                }), 0), l ? .current && e.fromTo(l.current, {
+                }), 0), l ?.current && e.fromTo(l.current, {
                     scale: 1.3
                 }, {
                     scale: 1,
                     clearProps: "scale",
                     ease: "Quad.easeInOut",
                     duration: .5
-                }, 0), c && e.add(c.getTimeline("in"), .2), u && e.add(u.getTimeline("in"), .3), d && e.add(d.getTimeline("in"), .6), _ && e.add(_.getTimeline("in"), .6), n ? .current && e.fromTo(n ? .current, {
+                }, 0), c && e.add(c.getTimeline("in"), .2), u && e.add(u.getTimeline("in"), .3), d && e.add(d.getTimeline("in"), .6), _ && e.add(_.getTimeline("in"), .6), n ?.current && e.fromTo(n ?.current, {
                     scaleX: 0
                 }, {
                     scaleX: 1,
@@ -4862,7 +4862,7 @@
             var nL = r(71393);
 
             function nM(e) {
-                return !!(e && e.length > 0 && (e[0] ? .vimeo_url ? .length > 0 || e[0] ? .hosted_video && e[0] ? .hosted_video ? .filename ? .length > 0))
+                return !!(e && e.length > 0 && (e[0] ?.vimeo_url ?.length > 0 || e[0] ?.hosted_video && e[0] ?.hosted_video ?.filename ?.length > 0))
             }
 
             function nz(e, t) {
@@ -4870,7 +4870,7 @@
             }
 
             function nH(e, t) {
-                return t && !e ? .poster_image ? .filename ? { ...e,
+                return t && !e ?.poster_image ?.filename ? { ...e,
                     poster_image: {
                         filename: t
                     }
@@ -4891,7 +4891,7 @@
                     f = (0, c.useRef)(null),
                     h = (0, c.useRef)(null),
                     x = (0, c.useRef)(null),
-                    [v, b] = (0, c.useState)(nP(e ? .publish_date, "D MMM YYYY")),
+                    [v, b] = (0, c.useState)(nP(e ?.publish_date, "D MMM YYYY")),
                     y = (0, c.useRef)(null),
                     I = (0, c.useRef)(null),
                     C = (0, c.useRef)(null),
@@ -4934,10 +4934,10 @@
                         key_video: H,
                         thumbnail_video: B
                     } = e;
-                z && z ? .length > 0 && (u = (0, rS.YQ)(z[0].image_portrait), m = (0, rS.YQ)(z[0].image_landscape), u || (u = (0, rS.YQ)(z[0].image_landscape))), (0, nB.A)(() => {
-                    P ? .current && clearTimeout(P.current)
+                z && z ?.length > 0 && (u = (0, rS.YQ)(z[0].image_portrait), m = (0, rS.YQ)(z[0].image_landscape), u || (u = (0, rS.YQ)(z[0].image_landscape))), (0, nB.A)(() => {
+                    P ?.current && clearTimeout(P.current)
                 }), (0, nN.A)(() => {
-                    e ? .publish_date && b(nP(e ? .publish_date, "D MMM YYYY"))
+                    e ?.publish_date && b(nP(e ?.publish_date, "D MMM YYYY"))
                 }, [nP, e.publish_date]);
                 let F = (0, c.useCallback)(() => {
                         A(!0)
@@ -4966,9 +4966,9 @@
                             ease: "Power2.easeOut"
                         }),
                         function(e, t = !0, r = 1.1) {
-                            if (e ? .current) {
-                                let n = e ? .current;
-                                e ? .current ? .elementRef ? .current && (n = e.current.elementRef.current), o.Ay.to(n, {
+                            if (e ?.current) {
+                                let n = e ?.current;
+                                e ?.current ?.elementRef ?.current && (n = e.current.elementRef.current), o.Ay.to(n, {
                                     scale: t ? r : 1,
                                     ease: "Quad.easeInOut",
                                     duration: .5
@@ -4987,16 +4987,16 @@
                     openInModal: !1,
                     playing: M,
                     className: l()(nj().video, "abs-fill")
-                }) : z ? .[0] ? .animated_image ? .filename && L ? U = (0, i.jsx)("video", {
+                }) : z ?.[0] ?.animated_image ?.filename && L ? U = (0, i.jsx)("video", {
                     ref: k,
-                    src: z ? .[0] ? .animated_image.filename,
+                    src: z ?.[0] ?.animated_image.filename,
                     autoPlay: !0,
                     muted: !0,
                     controls: !1,
                     playsInline: !0,
                     loop: !0,
                     className: l()(nj().animatedImage)
-                }) : z ? .[0] && u && !nM(H) && !nM(B) && (U = (0, i.jsx)(tO.A, {
+                }) : z ?.[0] && u && !nM(H) && !nM(B) && (U = (0, i.jsx)(tO.A, {
                     ref: w,
                     src: u,
                     srcDesktop: m || u,
@@ -5068,7 +5068,7 @@
                         link: {
                             href: `${t}#download-pdf`
                         },
-                        label: e ? .pardot_download_label || N.globalSettings.form_pardot_pdf_download_label,
+                        label: e ?.pardot_download_label || N.globalSettings.form_pardot_pdf_download_label,
                         transitionInType: eC.CI ? "none" : "splitWordsSlideInUp",
                         icon: "download",
                         onMouseEnter: W,
@@ -5107,7 +5107,7 @@
                         content: p
                     } = e.news,
                     g = (0, c.useRef)(null),
-                    [f, h] = (0, c.useState)(nP(p ? .date || p ? .publish_date, "D MMM YYYY")),
+                    [f, h] = (0, c.useState)(nP(p ?.date || p ?.publish_date, "D MMM YYYY")),
                     x = (0, c.useRef)(null),
                     v = (0, c.useRef)(null),
                     b = (0, c.useRef)(null),
@@ -5151,8 +5151,8 @@
                         key_video: z,
                         thumbnail_video: H
                     } = p;
-                M && M ? .length > 0 && (s = (0, rS.YQ)(M[0].image_portrait), o = (0, rS.YQ)(M[0].image_landscape), s || (s = (0, rS.YQ)(M[0].image_landscape))), (0, nN.A)(() => {
-                    h(nP(p ? .date || p ? .publish_date, "D MMM YYYY"))
+                M && M ?.length > 0 && (s = (0, rS.YQ)(M[0].image_portrait), o = (0, rS.YQ)(M[0].image_landscape), s || (s = (0, rS.YQ)(M[0].image_landscape))), (0, nN.A)(() => {
+                    h(nP(p ?.date || p ?.publish_date, "D MMM YYYY"))
                 }, [nP, p.date, p.publish_date]);
                 let B = (0, c.useCallback)(() => {
                         O(!0)
@@ -5182,16 +5182,16 @@
                         }
                     },
                     className: l()(nW().video, "abs-fill")
-                }) : M ? .[0] ? .animated_image ? .filename && P ? W = (0, i.jsx)("video", {
+                }) : M ?.[0] ?.animated_image ?.filename && P ? W = (0, i.jsx)("video", {
                     ref: w,
-                    src: M ? .[0] ? .animated_image.filename,
+                    src: M ?.[0] ?.animated_image.filename,
                     autoPlay: !0,
                     muted: !0,
                     controls: !1,
                     playsInline: !0,
                     loop: !0,
                     className: l()(nW().animatedImage)
-                }) : M ? .[0] && s && !nM(z) && !nM(H) && (W = (0, i.jsx)(tO.A, {
+                }) : M ?.[0] && s && !nM(z) && !nM(H) && (W = (0, i.jsx)(tO.A, {
                     ref: C,
                     src: s,
                     srcDesktop: o || s,
@@ -5220,7 +5220,7 @@
                         onMouseLeave: F
                     },
                     innerTemplate: (0, i.jsxs)(i.Fragment, {
-                        children: [(M ? .[0] && s || z && nM(z) || H && nM(H)) && (0, i.jsx)("div", {
+                        children: [(M ?.[0] && s || z && nM(z) || H && nM(H)) && (0, i.jsx)("div", {
                             ref: g,
                             className: nW().imageHolder,
                             children: (0, i.jsx)(nU.A, {
@@ -5308,14 +5308,14 @@
                 lineRef: t,
                 topLineRef: r
             }) {
-                !eC.CI && (r ? .current && e.fromTo(r.current, {
+                !eC.CI && (r ?.current && e.fromTo(r.current, {
                     scaleX: 0
                 }, {
                     scaleX: 1,
                     duration: 1,
                     ease: "Quad.easeInOut",
                     clearProps: "scaleX"
-                }), t ? .current && e.fromTo(t.current, {
+                }), t ?.current && e.fromTo(t.current, {
                     scaleX: 0
                 }, {
                     scaleX: 1,
@@ -5326,7 +5326,7 @@
             }
 
             function nY(e, t) {
-                let r = t ? "auto" : e.current ? .offsetHeight;
+                let r = t ? "auto" : e.current ?.offsetHeight;
                 return o.Ay.to(e.current, {
                     height: r,
                     duration: .8 * !!t,
@@ -5339,7 +5339,7 @@
                 labelRef: r
             }) {
                 let n = (0, P.xy)(r);
-                t ? .current && (e.fromTo(t.current, {
+                t ?.current && (e.fromTo(t.current, {
                     scaleX: .4
                 }, {
                     duration: .5,
@@ -5357,7 +5357,7 @@
             var nZ = r(61123);
             let nK = function(e, t, r = "mousedown") {
                 (0, nZ.A)(r, r => {
-                    let n = e ? .current;
+                    let n = e ?.current;
                     !n || n.contains(r.target) || t(r)
                 })
             };
@@ -5410,10 +5410,10 @@
                     labelRef: v
                 });
                 let A = (0, c.useCallback)(() => {
-                        S || C ? .current ? .reverse()
+                        S || C ?.current ?.reverse()
                     }, [C, S]),
                     O = (0, c.useCallback)(() => {
-                        S || C ? .current ? .play()
+                        S || C ?.current ?.play()
                     }, [C, S]);
                 return nK(h, () => {
                     S && N()
@@ -5424,7 +5424,7 @@
                             duration: .3,
                             ease: "Quad.easeInOut"
                         })
-                    }(x, S), S || C ? .current ? .reverse()
+                    }(x, S), S || C ?.current ?.reverse()
                 }, [S]), (0, c.useEffect)(() => {
                     let e = o.Ay.getProperty(k.current, "width");
                     o.Ay.set(j.current, {
@@ -5503,7 +5503,7 @@
                 labelRef: r
             }) {
                 let n = (0, P.xy)(r);
-                t ? .current && (e.fromTo(t.current, {
+                t ?.current && (e.fromTo(t.current, {
                     scaleX: .4
                 }, {
                     duration: .5,
@@ -5516,7 +5516,7 @@
             function n8(e, {
                 elementRef: t
             }) {
-                t ? .current && (e.add((0, S._)(t.current, {
+                t ?.current && (e.add((0, S._)(t.current, {
                     duration: .4,
                     ease: "Expo.easeOut"
                 })), e.to(t.current, {
@@ -5550,10 +5550,10 @@
                     labelRef: g
                 });
                 let b = (0, c.useCallback)(() => {
-                        x ? .current ? .reverse()
+                        x ?.current ?.reverse()
                     }, [x]),
                     I = (0, c.useCallback)(() => {
-                        x ? .current ? .play()
+                        x ?.current ?.play()
                     }, [x]),
                     {
                         transitionController: C
@@ -5792,18 +5792,18 @@
                 titleRef: r,
                 backgroundRef: n
             }) {
-                if (n ? .current && e.fromTo(n.current, {
+                if (n ?.current && e.fromTo(n.current, {
                         scaleX: 0
                     }, {
                         scaleX: 1,
                         clearProps: "scaleX",
                         duration: .5,
                         ease: "Quad.easeInOut"
-                    }, 0), r ? .current) {
+                    }, 0), r ?.current) {
                     let t = (0, P.xy)(r);
-                    e.add(t ? .getTimeline("in"), .2)
+                    e.add(t ?.getTimeline("in"), .2)
                 }
-                t ? .current ? .forEach((t, r) => {
+                t ?.current ?.forEach((t, r) => {
                     let n = (0, P.xy)(t);
                     n && e.add(n.getTimeline("in"), .3 + .075 * r)
                 })
@@ -5817,7 +5817,7 @@
                 ref: s
             }) {
                 let o = (0, t_.useRouter)(),
-                    u = n.text_items.filter(e => (0, rS.TE)(e.button[0] ? .link, o.locale)),
+                    u = n.text_items.filter(e => (0, rS.TE)(e.button[0] ?.link, o.locale)),
                     _ = u.length,
                     m = (0, c.useRef)(null),
                     p = s || m,
@@ -5891,22 +5891,22 @@
                         a.current = e
                     }, []);
                 (0, rf.A)(() => {
-                    e && (s(n ? .current ? .map(e => ({
-                        left: e ? .elementRef ? .current ? .offsetLeft || 0,
-                        right: (e ? .elementRef ? .current ? .offsetLeft || 0) + (e ? .elementRef ? .current ? .offsetWidth || 0)
-                    }))), n ? .current ? .forEach(e => {
+                    e && (s(n ?.current ?.map(e => ({
+                        left: e ?.elementRef ?.current ?.offsetLeft || 0,
+                        right: (e ?.elementRef ?.current ?.offsetLeft || 0) + (e ?.elementRef ?.current ?.offsetWidth || 0)
+                    }))), n ?.current ?.forEach(e => {
                         o.Ay.set(e.imageRef.current, {
                             scale: 1.1
                         })
                     }))
                 });
                 let l = (0, c.useCallback)(() => {
-                        a ? .current ? .forEach((e, t) => {
-                            if (e.right > Math.abs(i.current) && e.left - Math.abs(i.current) < window.innerWidth && n ? .current[t] ? .imageRef ? .current) {
+                        a ?.current ?.forEach((e, t) => {
+                            if (e.right > Math.abs(i.current) && e.left - Math.abs(i.current) < window.innerWidth && n ?.current[t] ?.imageRef ?.current) {
                                 let a = e.right - e.left,
                                     s = e.left + a,
                                     l = Math.abs(i.current);
-                                o.Ay.set(n ? .current[t] ? .imageRef ? .current, {
+                                o.Ay.set(n ?.current[t] ?.imageRef ?.current, {
                                     scale: 1.1,
                                     xPercent: r / 2 + -(l / s * r)
                                 })
@@ -6054,7 +6054,7 @@
                                 }, e._uid))
                             }), (0, i.jsxs)("div", {
                                 className: iR().socialLinksContainer,
-                                children: [r.global_emails ? .length > 0 && (0, i.jsx)("ul", {
+                                children: [r.global_emails ?.length > 0 && (0, i.jsx)("ul", {
                                     className: iR().emailsContainer,
                                     children: r.global_emails.map(e => (0, i.jsx)(tF, {
                                         email: e
@@ -6073,20 +6073,20 @@
                                     disableTriggerInOnScroll: !1,
                                     transitionInType: "splitLineRotateIn",
                                     label: e.title,
-                                    onClick: () => u ? .current ? .open({
-                                        image: e ? .image,
+                                    onClick: () => u ?.current ?.open({
+                                        image: e ?.image,
                                         title: e.title
                                     })
                                 }, e._uid) : (0, i.jsx)(ev.A, {
                                     textVariant: "body-standard",
                                     className: l()(iR().social),
                                     link: {
-                                        href: e ? .link.url || e ? .link.cached_url
+                                        href: e ?.link.url || e ?.link.cached_url
                                     },
                                     disableTriggerInOnScroll: !1,
                                     transitionInType: "splitLineRotateIn",
                                     label: e.title,
-                                    target: e ? .link.target
+                                    target: e ?.link.target
                                 }, e._uid))]
                             })]
                         }), (0, i.jsx)("div", {
@@ -6150,7 +6150,7 @@
             function iG(e, {
                 imageHolderRef: t
             }) {
-                t ? .current && e.add((0, h.HT)(t.current), 0), e.addLabel("startText", ">-0.2")
+                t ?.current && e.add((0, h.HT)(t.current), 0), e.addLabel("startText", ">-0.2")
             }
             var iq = r(65364),
                 iY = r(11607),
@@ -6191,7 +6191,7 @@
                     c = (0, P.xy)(n),
                     u = (0, P.xy)(i),
                     d = (0, P.xy)(s);
-                a ? .current && e.fromTo(a ? .current, {
+                a ?.current && e.fromTo(a ?.current, {
                     scale: 1.1,
                     opacity: 0
                 }, {
@@ -6258,7 +6258,7 @@
                         setupTransitionOutTimeline: ao
                     }), []);
                 (0, y.s)(I, e);
-                let C = (0, rS.TE)(r ? .link, v.locale),
+                let C = (0, rS.TE)(r ?.link, v.locale),
                     w = (0, c.useCallback)(() => {
                         C && b && g(!0)
                     }, [b, C]),
@@ -6266,7 +6266,7 @@
                         b && g(!1)
                     }, [b]),
                     j = (0, c.useCallback)(() => {
-                        C && f ? .current && f.current.click()
+                        C && f ?.current && f.current.click()
                     }, [C]);
                 return (0, c.useEffect)(() => {
                     p ? o.Ay.fromTo(x.current, {
@@ -6281,7 +6281,7 @@
                             ease: "Power2.easeOut"
                         }),
                         function(e, t = !0, r = 1.1) {
-                            e ? .current && o.Ay.to(e.current, {
+                            e ?.current && o.Ay.to(e.current, {
                                 scale: t ? r : 1,
                                 ease: "Quad.easeInOut",
                                 duration: .5
@@ -6367,7 +6367,7 @@
             function ap(e, {
                 textRef: t
             }) {
-                t ? .current && e.add(function(e, t) {
+                t ?.current && e.add(function(e, t) {
                     let {
                         duration: r,
                         ease: n,
@@ -6406,7 +6406,7 @@
             function af(e, {
                 elementRef: t
             }) {
-                t ? .current && e.add((0, S.m)(t.current, {
+                t ?.current && e.add((0, S.m)(t.current, {
                     from: .1
                 }))
             }
@@ -6437,19 +6437,19 @@
                     [v, b] = (0, c.useState)(-1),
                     [y, T] = (0, c.useState)(""),
                     I = e => {
-                        T(e), s ? .(e)
+                        T(e), s ?.(e)
                     },
                     {
                         locationsList: C
                     } = (0, eJ.o)(),
                     w = [];
-                return y && (w = C ? .filter(e => ay(e, y)).sort((e, t) => e.city.localeCompare(t.city)) || []), (0, nZ.A)("keydown", ({
+                return y && (w = C ?.filter(e => ay(e, y)).sort((e, t) => e.city.localeCompare(t.city)) || []), (0, nZ.A)("keydown", ({
                     key: e
                 }) => {
                     let t = w.length || a.length;
-                    "ArrowDown" === e && b(e => (e + 1) % t), "ArrowUp" === e && b(e => -1 === e ? t - 1 : e - 1), "Enter" === e && v > -1 && (y ? x.push(w[v].office_link.cached_url) : x.push(a[v].full_slug)), "Escape" === e && (b(-1), setTimeout(() => f.current ? .blur(), 0))
+                    "ArrowDown" === e && b(e => (e + 1) % t), "ArrowUp" === e && b(e => -1 === e ? t - 1 : e - 1), "Enter" === e && v > -1 && (y ? x.push(w[v].office_link.cached_url) : x.push(a[v].full_slug)), "Escape" === e && (b(-1), setTimeout(() => f.current ?.blur(), 0))
                 }), (0, c.useEffect)(() => (document.activeElement === f.current && h.current.to(p.current, {
-                    maxHeight: (g.current ? .scrollHeight || 0) + 80,
+                    maxHeight: (g.current ?.scrollHeight || 0) + 80,
                     paddingBottom: 32 * (w.length > 0 || !y)
                 }), () => {
                     h.current.clear()
@@ -6476,7 +6476,7 @@
                                 onChange: e => I(e.target.value),
                                 onFocus: () => {
                                     h.current.to(p.current, {
-                                        maxHeight: (g.current ? .scrollHeight || 0) + 80,
+                                        maxHeight: (g.current ?.scrollHeight || 0) + 80,
                                         paddingBottom: 32 * (w.length > 0 || !y),
                                         overwrite: !0
                                     })
@@ -6565,14 +6565,14 @@
                 iconRef: n
             }) {
                 let i = (0, P.xy)(t);
-                r ? .current && e.fromTo(r.current, {
+                r ?.current && e.fromTo(r.current, {
                     scaleX: 0,
                     transformOrigin: "left center"
                 }, {
                     duration: .5,
                     ease: "Quad.easeInOut",
                     scaleX: 1
-                }), n ? .current && e.fromTo(n.current, {
+                }), n ?.current && e.fromTo(n.current, {
                     opacity: 0,
                     scale: .4
                 }, {
@@ -6600,13 +6600,13 @@
                 backgroundRef: t,
                 iconRef: r
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     scaleY: 0
                 }, {
                     duration: .4,
                     ease: "Expo.easeOut",
                     scaleY: 1
-                }), r ? .current && e.fromTo(r.current, {
+                }), r ?.current && e.fromTo(r.current, {
                     rotate: 0,
                     scale: 1
                 }, {
@@ -6621,11 +6621,11 @@
                 backgroundRef: t,
                 iconRef: r
             }) {
-                t ? .current && e.to(t.current, {
+                t ?.current && e.to(t.current, {
                     duration: .4,
                     ease: "Expo.easeOut",
                     scaleY: 0
-                }), r ? .current && e.to(r.current, {
+                }), r ?.current && e.to(r.current, {
                     duration: .4,
                     ease: "Power2.easeOut",
                     rotate: 0
@@ -6638,7 +6638,7 @@
                 index: n
             }) {
                 let i = (0, P.xy)(t);
-                i && e.add(i.getTimeline("in"), .05 * (n || 0)), r ? .current && e.fromTo(r.current, {
+                i && e.add(i.getTimeline("in"), .05 * (n || 0)), r ?.current && e.fromTo(r.current, {
                     scaleX: 0,
                     transformOrigin: "left center"
                 }, {
@@ -6654,13 +6654,13 @@
                 backgroundRef: t,
                 headingRef: r
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     scaleY: 0
                 }, {
                     duration: .4,
                     ease: "Expo.easeOut",
                     scaleY: 1
-                }), r ? .current && e.fromTo(r.current, {
+                }), r ?.current && e.fromTo(r.current, {
                     x: 0,
                     y: 0
                 }, {
@@ -6674,11 +6674,11 @@
                 backgroundRef: t,
                 headingRef: r
             }) {
-                t ? .current && e.to(t.current, {
+                t ?.current && e.to(t.current, {
                     duration: .4,
                     ease: "Expo.easeOut",
                     scaleY: 0
-                }), r ? .current && e.to(r.current, {
+                }), r ?.current && e.to(r.current, {
                     duration: .4,
                     ease: "Power2.easeOut",
                     x: 0
@@ -6813,8 +6813,8 @@
                         rotation: 180 * !!y,
                         duration: .4,
                         ease: "Power2.easeOut"
-                    }), e.iconRef.current ? .firstElementChild ? .firstElementChild && t.to(e.iconRef.current.firstElementChild.firstElementChild, {
-                        morphSVG: y ? e.iconMinusRef.current ? .firstElementChild ? .firstElementChild : e.iconPlusRef.current ? .firstElementChild ? .firstElementChild,
+                    }), e.iconRef.current ?.firstElementChild ?.firstElementChild && t.to(e.iconRef.current.firstElementChild.firstElementChild, {
+                        morphSVG: y ? e.iconMinusRef.current ?.firstElementChild ?.firstElementChild : e.iconPlusRef.current ?.firstElementChild ?.firstElementChild,
                         duration: .05,
                         ease: "none"
                     }, "<"))
@@ -6865,7 +6865,7 @@
                                 name: "plus",
                                 className: aC().icon
                             })]
-                        }), n ? .cached_url && (0, i.jsx)(ev.A, {
+                        }), n ?.cached_url && (0, i.jsx)(ev.A, {
                             textVariant: "label-small",
                             className: l()(aC().link),
                             link: {
@@ -6875,12 +6875,12 @@
                             disableTriggerInOnScroll: !1,
                             transitionInType: "splitCharsSlideInUp",
                             target: n.target,
-                            onClick: e => e ? .stopPropagation()
+                            onClick: e => e ?.stopPropagation()
                         })]
                     }), (0, i.jsx)("ul", {
                         ref: m,
                         className: l()(aC().list),
-                        children: C ? .filter(e => e.region.includes(t)).sort((e, t) => e.city.localeCompare(t.city)).map((e, t) => (0, i.jsx)(aM, {
+                        children: C ?.filter(e => e.region.includes(t)).sort((e, t) => e.city.localeCompare(t.city)).map((e, t) => (0, i.jsx)(aM, {
                             className: l()(aC().cityContainer),
                             location: e,
                             isOpen: y,
@@ -6900,7 +6900,7 @@
             }) {
                 let i = (0, P.xy)(t),
                     a = (0, P.xy)(r);
-                n ? .current && e.add((0, S.m)(n.current), 0), i && a && (e.add(i.getTimeline("in"), 0), e.add(a.getTimeline("in"), 0))
+                n ?.current && e.add((0, S.m)(n.current), 0), i && a && (e.add(i.getTimeline("in"), 0), e.add(a.getTimeline("in"), 0))
             }
 
             function aE(e, {
@@ -6913,7 +6913,7 @@
             function aW(e, {
                 titleHolderRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     transform: "translate3d(0, 0vh,0)"
                 }, {
                     duration: 1.5,
@@ -6929,7 +6929,7 @@
             function aD(e, {
                 subtitleHolderRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     transform: "translate3d(0, 0vh,0)"
                 }, {
                     duration: 1,
@@ -6950,7 +6950,7 @@
                 ...r
             }) {
                 let n = (0, c.useRef)(null),
-                    s = t.current ? .elementRef || n,
+                    s = t.current ?.elementRef || n,
                     o = (0, c.useRef)(null),
                     u = (0, c.useRef)(null),
                     _ = (0, c.useRef)(null),
@@ -7003,7 +7003,7 @@
                             disableTriggerInOnScroll: !0,
                             transitionOutType: "splitCharsSlideOutUp",
                             transitionOnMount: !0,
-                            children: e.background_title ? .split(" ").map(e => (0, i.jsx)("span", {
+                            children: e.background_title ?.split(" ").map(e => (0, i.jsx)("span", {
                                 className: l()(aB().line, "text-outline"),
                                 children: e
                             }, e))
@@ -7047,7 +7047,7 @@
             function aY(e, {
                 textContentRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     transform: "translate3d(0, 20vh,0)"
                 }, {
                     duration: 1,
@@ -7070,7 +7070,7 @@
                 ...r
             }) {
                 let n = (0, c.useRef)(null),
-                    s = t.current ? .elementRef || n,
+                    s = t.current ?.elementRef || n,
                     o = (0, c.useRef)(null),
                     u = (0, c.useRef)(null),
                     m = (0, c.useRef)(null),
@@ -7311,7 +7311,7 @@
                     setCurrentSlide: h
                 }), [x, f, h]), (0, aJ.D)(() => {
                     if (r.current > 0 && r.current < 1) {
-                        if (a.current && g.current[0] ? .progress) {
+                        if (a.current && g.current[0] ?.progress) {
                             let e = m.current[n.current],
                                 {
                                     progress: t
@@ -7319,7 +7319,7 @@
                                 r = 0;
                             t >= .3 && (r = (0, aU.ix)(t, .3, 1, 0, 1)), r < .3 && (e.position.y = (0, aU.ix)(r, 0, .3, -7, -.6), e.position.z = (0, aU.ix)(r, 0, .3, 20, 3), e.rotation.y = (0, aU.ix)(r, 0, .3, 0, 1.5 * Math.PI)), r >= .3 && r <= .7 && (e.position.y = (0, aU.ix)(r, .3, .7, -.61, .6), e.position.z = (0, aU.ix)(r, .3, .7, 3, -3), e.rotation.y = (0, aU.ix)(r, .3, .7, 1.5 * Math.PI, 2 * Math.PI)), r > .7 && (e.position.y = (0, aU.ix)(r, .7, 1, .6, 12), e.position.z = (0, aU.ix)(r, .7, 1, -3, -10), e.rotation.y = (0, aU.ix)(r, .7, 1, 2 * Math.PI, 3.5 * Math.PI))
                         }
-                        _.current && _.current ? .color.lerp(d.set(e[n.current].backgroundColor), .05), s.current && s.current.r.toFixed(6) !== d.r.toFixed(6) && s.current ? .lerp(d.set(e[n.current].backgroundColor), .05)
+                        _.current && _.current ?.color.lerp(d.set(e[n.current].backgroundColor), .05), s.current && s.current.r.toFixed(6) !== d.r.toFixed(6) && s.current ?.lerp(d.set(e[n.current].backgroundColor), .05)
                     }
                 }), (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsxs)(c.Suspense, {
@@ -7415,17 +7415,17 @@
                 ref: r
             }) {
                 let n = (0, c.useRef)(null),
-                    a = r.current ? .elementRef || n,
+                    a = r.current ?.elementRef || n,
                     s = (0, c.useRef)(null),
                     o = (0, c.useRef)(0),
                     u = (0, c.useCallback)(e => {
-                        s ? .current && s.current.setProgress(e)
+                        s ?.current && s.current.setProgress(e)
                     }, []),
                     d = (0, c.useCallback)(e => {
-                        o.current = e, s ? .current && s.current.setCurrentSlide(e)
+                        o.current = e, s ?.current && s.current.setCurrentSlide(e)
                     }, []),
                     _ = (0, c.useCallback)(e => {
-                        s ? .current && s.current.setProgressData(e)
+                        s ?.current && s.current.setProgressData(e)
                     }, []);
                 (0, c.useImperativeHandle)(r, () => ({
                     setProgress: u,
@@ -7486,7 +7486,7 @@
             function ss(e, {
                 elementRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {}, {})
+                t ?.current && e.fromTo(t.current, {}, {})
             }
             var sl = r(42820),
                 so = r.n(sl);
@@ -7494,13 +7494,13 @@
             function sc(e, {
                 elementRef: t
             }) {
-                t ? .current && e.add((0, S.m)(t.current), 0)
+                t ?.current && e.add((0, S.m)(t.current), 0)
             }
 
             function su(e, {
                 servicesRef: t
             }) {
-                e.addLabel("slide_-1"), t && t ? .current ? .forEach((t, r) => {
+                e.addLabel("slide_-1"), t && t ?.current ?.forEach((t, r) => {
                     let n = (0, P.xy)(t);
                     n && (e.add(n.getTimeline("in"), ">"), e.addLabel(`slide_${r}`), e.add(n.getTimeline("out"), ">"))
                 })
@@ -7509,7 +7509,7 @@
             function sd(e, {
                 imageContainers: t
             }) {
-                e.addLabel("slide_-1"), t ? .current && t ? .current.forEach((t, r) => {
+                e.addLabel("slide_-1"), t ?.current && t ?.current.forEach((t, r) => {
                     e.fromTo(t.current, {
                         opacity: 0
                     }, {
@@ -7531,13 +7531,13 @@
                 let r = {
                     progress: 0
                 };
-                if (t ? .current ? .elementRef ? .current)
+                if (t ?.current ?.elementRef ?.current)
                     for (let n = 0; n < 5; n++) e.to(r, {
                         progress: (n + 1) / 5,
                         ease: "none",
                         duration: 2,
                         onUpdate: () => {
-                            t ? .current ? .setProgress(r.progress)
+                            t ?.current ?.setProgress(r.progress)
                         }
                     }, "<"), e.addLabel(`slide_${n+1}`), e.to(r, {
                         progress: (n - 1) / 5,
@@ -7561,7 +7561,7 @@
                     u = (0, P.xy)(i),
                     d = (0, P.xy)(a),
                     _ = (0, P.xy)(s);
-                t ? .current && e.to(t.current, {
+                t ?.current && e.to(t.current, {
                     opacity: 1,
                     pointerEvents: "all",
                     onComplete: () => {
@@ -7590,7 +7590,7 @@
                     u = (0, P.xy)(i),
                     d = (0, P.xy)(a),
                     _ = (0, P.xy)(s);
-                t ? .current && e.to(t.current, {
+                t ?.current && e.to(t.current, {
                     clearProps: "pointerEvents",
                     opacity: 0,
                     onComplete: () => {
@@ -7636,7 +7636,7 @@
                         setupTransitionOutTimeline: sf
                     }), []);
                 (0, y.s)(b, e);
-                let I = (0, rS.TE)(r ? .link, v.locale);
+                let I = (0, rS.TE)(r ?.link, v.locale);
                 return (0, i.jsxs)("div", {
                     ref: u,
                     className: l()(sp().service, t),
@@ -7703,28 +7703,28 @@
             }) {
                 let s = o.Ay.quickSetter(t.current, eC.xl && ai().safari && 15.2 > parseFloat(`${ai().version}`) ? "left" : "x", "px"),
                     l = [];
-                if (i.current ? .forEach(e => {
+                if (i.current ?.forEach(e => {
                         l.push(o.Ay.quickSetter(e, "x", "%"))
-                    }), t ? .current) {
+                    }), t ?.current) {
                     let c = 0,
                         {
                             scrollWidth: u,
                             clientWidth: d
                         } = t.current;
-                    r ? .current && (c = r.current.clientWidth);
+                    r ?.current && (c = r.current.clientWidth);
                     let _ = {
                             from: 0,
                             to: u <= d ? 0 : `-${u-(d-c)}`
                         },
-                        m = n ? .current ? .map(e => ({
+                        m = n ?.current ?.map(e => ({
                             item: e,
-                            left: e ? .offsetLeft || 0,
-                            right: (e ? .offsetLeft || 0) + (e ? .offsetWidth || 0)
+                            left: e ?.offsetLeft || 0,
+                            right: (e ?.offsetLeft || 0) + (e ?.offsetWidth || 0)
                         })),
                         p = -(100 * (a - 1)),
                         g = () => {
-                            a > 1 && m ? .forEach((e, t) => {
-                                if (e.right > Math.abs(_.from) && e.left - Math.abs(_.from) < d && i ? .current) {
+                            a > 1 && m ?.forEach((e, t) => {
+                                if (e.right > Math.abs(_.from) && e.left - Math.abs(_.from) < d && i ?.current) {
                                     let r = e.right - e.left,
                                         n = e.left + r,
                                         i = Math.abs(_.from);
@@ -7732,7 +7732,7 @@
                                 }
                             })
                         };
-                    a > 1 && i ? .current ? .forEach(e => {
+                    a > 1 && i ?.current ?.forEach(e => {
                         o.Ay.set(e, {
                             scale: a
                         })
@@ -7760,10 +7760,10 @@
             let sC = (e, {
                 numberRef: t
             }) => {
-                if (!t ? .current || "0" === t.current.textContent) return;
-                let r = t.current.textContent ? .split("."),
-                    n = r ? .[0] ? .length || 0,
-                    i = r ? .[1] ? .length || 0,
+                if (!t ?.current || "0" === t.current.textContent) return;
+                let r = t.current.textContent ?.split("."),
+                    n = r ?.[0] ?.length || 0,
+                    i = r ?.[1] ?.length || 0,
                     a = 10 ** (-1 * i);
                 e.from(t.current, {
                     textContent: 0,
@@ -7833,7 +7833,7 @@
                 mediaInnerHolderRef: l,
                 setCanCitiesNavigationTransitionIn: o
             }) {
-                if ("previewNext" === i) s ? .current && e.add((0, h.HT)(s.current), 0), l.current && e.fromTo(l.current, {
+                if ("previewNext" === i) s ?.current && e.add((0, h.HT)(s.current), 0), l.current && e.fromTo(l.current, {
                     scale: 1.2
                 }, {
                     scale: 1,
@@ -7854,7 +7854,7 @@
                 else if (a) {
                     if (a) {
                         let t = (0, P.xy)(n);
-                        e.add(t ? .getTimeline("in"), 0)
+                        e.add(t ?.getTimeline("in"), 0)
                     }
                 } else {
                     let i = (0, P.xy)(n),
@@ -7867,7 +7867,7 @@
                         duration: .8,
                         ease: "Power3.easeInOut",
                         clearProps: "scale"
-                    }, 0), s ? .current && e.add((0, h.HT)(s.current), 0), e.addLabel("startText", ">-0.4"), e.add(i ? .getTimeline("in"), "startText"), e.add(a ? .getTimeline("in"), "startText+=0.1"), e.add(c ? .getTimeline("in"), "<0.2"), e.call(o, [!0], "<0.1")
+                    }, 0), s ?.current && e.add((0, h.HT)(s.current), 0), e.addLabel("startText", ">-0.4"), e.add(i ?.getTimeline("in"), "startText"), e.add(a ?.getTimeline("in"), "startText+=0.1"), e.add(c ?.getTimeline("in"), "<0.2"), e.call(o, [!0], "<0.1")
                 }
             }
             var sM = r(98894),
@@ -7885,10 +7885,10 @@
                 let l = (0, P.xy)(t),
                     o = (0, P.xy)(n),
                     c = (0, P.xy)(i);
-                e.add(l ? .getTimeline("in"), "<0.1"), r ? .current ? .forEach(t => {
+                e.add(l ?.getTimeline("in"), "<0.1"), r ?.current ?.forEach(t => {
                     let r = (0, P.xy)(t);
                     r && e.add(r.getTimeline("in"), "<0.1")
-                }), e.add(o ? .getTimeline("in"), "<0.1"), e.add(c ? .getTimeline("in"), "<0.1"), "function" == typeof s && e.call(s, void 0, ">")
+                }), e.add(o ?.getTimeline("in"), "<0.1"), e.add(c ?.getTimeline("in"), "<0.1"), "function" == typeof s && e.call(s, void 0, ">")
             }
             var sB = r(76155);
             let sF = function({
@@ -7940,7 +7940,7 @@
                             ref: p,
                             children: [x.globalSettings.label_case_created_by, ":"]
                         }), (0, i.jsx)("ul", {
-                            children: e.custom_locations ? .length ? e.custom_locations ? .map((e, r) => (0, i.jsx)("li", {
+                            children: e.custom_locations ?.length ? e.custom_locations ?.map((e, r) => (0, i.jsx)("li", {
                                 children: (0, i.jsx)(ev.A, {
                                     ref: h.current[r],
                                     textVariant: "button-label-large",
@@ -7952,14 +7952,14 @@
                                     transitionInType: `${a?"none":"splitLineRotateIn"}`,
                                     target: e.link.target
                                 })
-                            }, e._uid)) : e.locations ? .map((e, r) => e.full_slug && (0, i.jsx)("li", {
+                            }, e._uid)) : e.locations ?.map((e, r) => e.full_slug && (0, i.jsx)("li", {
                                 children: (0, i.jsx)(ev.A, {
                                     ref: h.current[r],
                                     textVariant: "button-label-large",
                                     link: {
                                         href: e.full_slug
                                     },
-                                    label: e ? .content ? .country || e ? .content ? .title || e ? .name,
+                                    label: e ?.content ?.country || e ?.content ?.title || e ?.name,
                                     disableTriggerInOnScroll: "previewNext" !== t,
                                     transitionInType: `${a?"none":"splitLineRotateIn"}`
                                 })
@@ -8005,7 +8005,7 @@
                     y = (0, c.useRef)(null),
                     I = (0, c.useRef)(null),
                     [C, w] = (0, c.useState)(!1);
-                return e ? .accent_color_foreground ? .color && e ? .accent_color_background ? .color && (m = {
+                return e ?.accent_color_foreground ?.color && e ?.accent_color_background ?.color && (m = {
                     foreground: e.accent_color_foreground.color,
                     background: e.accent_color_background.color
                 }), F(h, e.has_header_accent, m), (0, T.mt)({
@@ -8032,7 +8032,7 @@
                         },
                         setupTransitionInTimeline: sL
                     })
-                }), e ? .key_image && e.key_image.length > 0 && (p = e.key_image[0]), e ? .video && e.video.length > 0 && (g = e.video[0]), (0, i.jsxs)("div", {
+                }), e ?.key_image && e.key_image.length > 0 && (p = e.key_image[0]), e ?.video && e.video.length > 0 && (g = e.video[0]), (0, i.jsxs)("div", {
                     ref: h,
                     className: l()(sP().caseHeader, u.className, sP()[t]),
                     children: [(0, i.jsxs)("div", {
@@ -8044,7 +8044,7 @@
                             size: "label-large",
                             transitionInType: `${a?"none":"splitLineRotateIn"}`,
                             className: l()(sP().clientTitle),
-                            children: e ? .client
+                            children: e ?.client
                         }), (0, i.jsx)(d.A, {
                             ref: x,
                             disableTriggerInOnScroll: "previewNext" !== t,
@@ -8052,7 +8052,7 @@
                             size: "heading-02",
                             transitionInType: `${a?"splitCharsNone":"splitCharsSlideInUp"}`,
                             className: l()(sP().title),
-                            children: e ? .title
+                            children: e ?.title
                         }), (0, i.jsx)(_.A, {
                             ref: v,
                             as: "p",
@@ -8060,7 +8060,7 @@
                             disableTriggerInOnScroll: "previewNext" !== t,
                             transitionInType: `${a?"none":"splitLineRotateIn"}`,
                             className: l()(sP().description),
-                            children: e ? .short_description
+                            children: e ?.short_description
                         })]
                     }), (0, i.jsx)(sF, {
                         className: sP().citiesNavigation,
@@ -8077,7 +8077,7 @@
                             children: (0, i.jsxs)("div", {
                                 ref: I,
                                 className: l()(sP().mediaInnerHolder, "abs-fill"),
-                                children: [(p ? .image_landscape || p ? .image_portrait) && !g && (0, i.jsx)(tO.A, {
+                                children: [(p ?.image_landscape || p ?.image_portrait) && !g && (0, i.jsx)(tO.A, {
                                     src: p.image_landscape || p.image_portrait,
                                     srcDesktop: p.image_landscape || p.image_portrait,
                                     className: l()(sP().image, "abs-fill"),
@@ -8085,7 +8085,7 @@
                                         type: "scaleUp"
                                     },
                                     layout: "fill",
-                                    alt: p ? .alt_text
+                                    alt: p ?.alt_text
                                 }), g && (0, i.jsx)(rD.default, {
                                     blok: g,
                                     objectFit: "cover",
@@ -8100,7 +8100,7 @@
                                 })]
                             })
                         })
-                    }), !!e ? .tag_list ? .length && (0, i.jsx)("ul", {
+                    }), !!e ?.tag_list ?.length && (0, i.jsx)("ul", {
                         className: l()(sP().tagList, "grid-gutter"),
                         children: e.tag_list.map(e => (0, i.jsx)(_.A, {
                             disableTriggerInOnScroll: !1,
@@ -8119,7 +8119,7 @@
             function sU(e, {
                 contentRef: t
             }) {
-                t ? .current && e.add((0, S._)(t.current))
+                t ?.current && e.add((0, S._)(t.current))
             }
 
             function s$({
@@ -8152,7 +8152,7 @@
                         },
                         enableInView: !0
                     });
-                e ? .accent_color_foreground ? .color && e ? .accent_color_background ? .color && (s = {
+                e ?.accent_color_foreground ?.color && e ?.accent_color_background ?.color && (s = {
                     foreground: e.accent_color_foreground.color,
                     background: e.accent_color_background.color
                 }), F(m, e.has_header_accent, s, !0), (0, u.A)({
@@ -8189,14 +8189,14 @@
                     C && n && !v.current && (v.current = !0, y(), setTimeout(() => {
                         let e = 0;
                         if (!j.current) {
-                            let t = S.current ? .offset.y;
-                            "number" != typeof t && (t = 0), e = t + g.current ? .getBoundingClientRect().top
+                            let t = S.current ?.offset.y;
+                            "number" != typeof t && (t = 0), e = t + g.current ?.getBoundingClientRect().top
                         }
                         k(0, e, 500, {
                             target: g.current,
                             easing: r$.kO.easeInOut,
                             callback: () => {
-                                !eC.xl && b ? .current && (o.Ay.fromTo(b.current, {
+                                !eC.xl && b ?.current && (o.Ay.fromTo(b.current, {
                                     scaleX: 0
                                 }, {
                                     duration: .2,
@@ -8222,7 +8222,7 @@
                             size: "label-large",
                             disableTriggerInOnScroll: !1,
                             className: sD().kanjiVertical,
-                            children: e ? .vertical_text ? .replace(" ", "\xa0")
+                            children: e ?.vertical_text ?.replace(" ", "\xa0")
                         })
                     }), (0, i.jsx)(sE, {
                         ref: g,
@@ -8291,7 +8291,7 @@
                 imageContainerRef: t,
                 elementRef: r
             }) {
-                if (t ? .current && r ? .current) {
+                if (t ?.current && r ?.current) {
                     let n = r.current.offsetHeight,
                         i = t.current.offsetHeight;
                     e.fromTo(t.current, {
@@ -8310,12 +8310,12 @@
                 ctaRef: r,
                 ctaHolderRef: n
             }) {
-                if (t ? .current && (e.to(t.current, {
+                if (t ?.current && (e.to(t.current, {
                         duration: .3,
                         ease: "Quad.easeInOut",
                         xPercent: -50
-                    }, 0), n ? .current)) {
-                    let t = r ? .current ? .offsetWidth;
+                    }, 0), n ?.current)) {
+                    let t = r ?.current ?.offsetWidth;
                     e.fromTo(n.current, {
                         width: 0
                     }, {
@@ -8330,11 +8330,11 @@
                 dateHolderRef: t,
                 ctaHolderRef: r
             }) {
-                t ? .current && (e.to(t.current, {
+                t ?.current && (e.to(t.current, {
                     duration: .3,
                     ease: "Quad.easeInOut",
                     xPercent: 0
-                }), r ? .current && e.to(r.current, {
+                }), r ?.current && e.to(r.current, {
                     duration: .3,
                     ease: "Quad.easeInOut",
                     width: 0
@@ -8402,7 +8402,7 @@
                     key_video: M,
                     thumbnail_video: z
                 } = e;
-                L && L ? .length > 0 && (o = (0, rS.YQ)(L[0].image_portrait), m = (0, rS.YQ)(L[0].image_landscape), o || (o = (0, rS.YQ)(L[0].image_landscape)));
+                L && L ?.length > 0 && (o = (0, rS.YQ)(L[0].image_portrait), m = (0, rS.YQ)(L[0].image_landscape), o || (o = (0, rS.YQ)(L[0].image_landscape)));
                 let H = (0, i.jsx)(i.Fragment, {});
                 return M && nM(M) || z && nM(z) ? H = (0, i.jsx)(rD.default, {
                     ref: x,
@@ -8415,16 +8415,16 @@
                     openInModal: !1,
                     playing: R,
                     className: l()(le().video, "abs-fill")
-                }) : L ? .[0] ? .animated_image ? .filename && N ? H = (0, i.jsx)("video", {
+                }) : L ?.[0] ?.animated_image ?.filename && N ? H = (0, i.jsx)("video", {
                     ref: j,
-                    src: L ? .[0] ? .animated_image.filename,
+                    src: L ?.[0] ?.animated_image.filename,
                     autoPlay: !0,
                     muted: !0,
                     controls: !1,
                     playsInline: !0,
                     loop: !0,
                     className: l()(le().animatedImage)
-                }) : L ? .[0] && o && !nM(M) && !nM(z) && (H = (0, i.jsx)(tO.A, {
+                }) : L ?.[0] && o && !nM(M) && !nM(z) && (H = (0, i.jsx)(tO.A, {
                     ref: x,
                     src: o,
                     srcDesktop: m || o,
@@ -8434,7 +8434,7 @@
                     alt: L[0].alt_text
                 })), (0, nL.j)({
                     innerTemplate: (0, i.jsxs)(i.Fragment, {
-                        children: [!n && (L ? .[0] && o || M && nM(M) || z && nM(z)) && (0, i.jsx)("div", {
+                        children: [!n && (L ?.[0] && o || M && nM(M) || z && nM(z)) && (0, i.jsx)("div", {
                             ref: v,
                             className: l()(le().imageHolder, "abs-fill"),
                             children: (0, i.jsx)("div", {
@@ -8527,7 +8527,7 @@
                         children: r.title
                     }), (0, i.jsx)("div", {
                         className: s8().previewsContainer,
-                        children: o && o ? .slice(0, r.per_page).map(({
+                        children: o && o ?.slice(0, r.per_page).map(({
                             content: e,
                             published_at: n,
                             full_slug: a
@@ -8569,15 +8569,15 @@
                     d = (0, P.xy)(t),
                     _ = (0, P.xy)(o),
                     m = (0, P.xy)(c);
-                if (a ? .current && e.add((0, h.HT)(a.current), 0), s ? .current && e.add((0, h.HT)(s.current), 0), e.addLabel("startText", ">-0.2"), u && e.add(u ? .getTimeline("in"), "startText"), d && e.add(d ? .getTimeline("in"), "startText+=0.1"), n) {
+                if (a ?.current && e.add((0, h.HT)(a.current), 0), s ?.current && e.add((0, h.HT)(s.current), 0), e.addLabel("startText", ">-0.2"), u && e.add(u ?.getTimeline("in"), "startText"), d && e.add(d ?.getTimeline("in"), "startText+=0.1"), n) {
                     let t = (0, P.xy)(n);
-                    e.add(t ? .getTimeline("in"), "<0.2")
+                    e.add(t ?.getTimeline("in"), "<0.2")
                 }
                 if (i) {
                     let t = (0, P.xy)(i);
-                    e.add(t ? .getTimeline("in"), ">-=0.2")
+                    e.add(t ?.getTimeline("in"), ">-=0.2")
                 }
-                l ? .current && e.fromTo(l.current, {
+                l ?.current && e.fromTo(l.current, {
                     scaleX: 0,
                     transformOrigin: "left center"
                 }, {
@@ -8585,7 +8585,7 @@
                     clearProps: "scaleX",
                     ease: "Quad.easeOut",
                     duration: .5
-                }, ">-0.2"), _ && e.add(_ ? .getTimeline("in"), "<0.2"), m && e.add(m ? .getTimeline("in"), "<0.2")
+                }, ">-0.2"), _ && e.add(_ ?.getTimeline("in"), "<0.2"), m && e.add(m ?.getTimeline("in"), "<0.2")
             }
             var lc = r(56445),
                 lu = r.n(lc);
@@ -8703,7 +8703,7 @@
                     key_image: P,
                     key_video: L
                 } = t;
-                P && P ? .length > 0 && (a = (0, rS.YQ)(P[0].image_portrait), s = (0, rS.YQ)(P[0].image_landscape), a || (a = (0, rS.YQ)(P[0].image_landscape)));
+                P && P ?.length > 0 && (a = (0, rS.YQ)(P[0].image_portrait), s = (0, rS.YQ)(P[0].image_landscape), a || (a = (0, rS.YQ)(P[0].image_landscape)));
                 let {
                     scrollIntoView: M
                 } = (0, $.d)(), z = (0, i.jsx)(i.Fragment, {});
@@ -8725,16 +8725,16 @@
                         muted: !1,
                         className: l()(ll().video, "abs-fill")
                     })
-                }) : P ? .[0] ? .animated_image ? .filename && j ? z = (0, i.jsx)("video", {
+                }) : P ?.[0] ?.animated_image ?.filename && j ? z = (0, i.jsx)("video", {
                     ref: x,
-                    src: P ? .[0] ? .animated_image.filename,
+                    src: P ?.[0] ?.animated_image.filename,
                     autoPlay: !0,
                     muted: !0,
                     controls: !1,
                     playsInline: !0,
                     loop: !0,
                     className: l()(ll().animatedImage)
-                }) : P ? .[0] && a && (z = (0, i.jsxs)("div", {
+                }) : P ?.[0] && a && (z = (0, i.jsxs)("div", {
                     ref: h,
                     className: ll().imageHolder,
                     children: [S && (a.endsWith(".gif") || a.endsWith(".GIF")) && (0, i.jsxs)("div", {
@@ -8777,19 +8777,19 @@
                             transitionInType: "splitCharsSlideInUp",
                             className: ll().title,
                             children: t.title
-                        }), t ? .publish_date && (0, i.jsx)(_.A, {
+                        }), t ?.publish_date && (0, i.jsx)(_.A, {
                             ref: g,
                             as: "time",
                             size: "body-standard",
                             transitionInType: "splitLineRotateIn",
                             className: ll().publishDate,
                             children: w
-                        }), t ? .pardot_id && t.pardot_download_label && (0, i.jsx)(ez.A, {
+                        }), t ?.pardot_id && t.pardot_download_label && (0, i.jsx)(ez.A, {
                             ref: f,
                             className: l()(ll().headerButton),
                             label: t.pardot_download_label,
                             onClick: () => {
-                                let e = document ? .querySelector("[data-scroll-to=download-pdf]");
+                                let e = document ?.querySelector("[data-scroll-to=download-pdf]");
                                 e && M(e)
                             }
                         }), (0, i.jsx)("hr", {
@@ -8814,7 +8814,7 @@
                                         opacity: R ? "1" : "0"
                                     },
                                     children: "Link copied!"
-                                }), v && (navigator ? .share || navigator ? .clipboard) && (0, i.jsx)(lm, {
+                                }), v && (navigator ?.share || navigator ?.clipboard) && (0, i.jsx)(lm, {
                                     ref: I,
                                     icon: C ? "upload" : "link",
                                     onClick: () => {
@@ -8840,7 +8840,7 @@
                         })]
                     }), (0, i.jsxs)("figure", {
                         className: ll().titleImage,
-                        children: [z, P ? .[0] ? .image_caption && (0, i.jsx)(_.A, {
+                        children: [z, P ?.[0] ?.image_caption && (0, i.jsx)(_.A, {
                             as: "figcaption",
                             size: "body-standard",
                             transitionInType: "none",
@@ -8859,7 +8859,7 @@
                 buttons: r
             }) {
                 let n = (0, P.xy)(t);
-                n && e.add(n.getTimeline("in"), 0), r ? .current ? .forEach((t, r) => {
+                n && e.add(n.getTimeline("in"), 0), r ?.current ?.forEach((t, r) => {
                     let n = (0, P.xy)(t);
                     n && e.add(n.getTimeline("in"), .5 + .1 * r)
                 })
@@ -8870,7 +8870,7 @@
                 buttons: r
             }) {
                 let n = (0, P.xy)(t);
-                n && e.add(n.getTimeline("out")), e.addLabel("outComplete", "-=0"), r ? .current ? .forEach(t => {
+                n && e.add(n.getTimeline("out")), e.addLabel("outComplete", "-=0"), r ?.current ?.forEach(t => {
                     let r = (0, P.xy)(t);
                     r && e.add(r.getTimeline("out"), "outComplete")
                 })
@@ -9032,8 +9032,8 @@
                 tlRef: t,
                 elementRef: r
             }) {
-                let n = t ? .current,
-                    i = r ? .current;
+                let n = t ?.current,
+                    i = r ?.current;
                 n && i && (e.pause(0), e.progress(0), e.fromTo(n, {
                     progress: 0
                 }, {
@@ -9061,13 +9061,13 @@
                 }) {
                     let a = (0, P.xy)(t),
                         s = (0, P.xy)(r);
-                    a && e.add(a.getTimeline("in"), ""), s && e.add(s.getTimeline("in"), ">-0.3"), n ? .current && i ? .current && (e.fromTo(n ? .current, {
+                    a && e.add(a.getTimeline("in"), ""), s && e.add(s.getTimeline("in"), ">-0.3"), n ?.current && i ?.current && (e.fromTo(n ?.current, {
                         drawSVG: "0% 0%"
                     }, {
                         drawSVG: "0% -100%",
                         ease: "easeInOut",
                         duration: 1.1
-                    }, "<"), e.fromTo(i ? .current, {
+                    }, "<"), e.fromTo(i ?.current, {
                         drawSVG: "0% 0%"
                     }, {
                         drawSVG: "0% -100%",
@@ -9088,13 +9088,13 @@
                 }) {
                     let a = (0, P.xy)(t),
                         s = (0, P.xy)(r);
-                    n ? .current && i ? .current && (e.fromTo(n ? .current, {
+                    n ?.current && i ?.current && (e.fromTo(n ?.current, {
                         drawSVG: "0% 100%"
                     }, {
                         drawSVG: "0% 0%",
                         ease: "Quad.easeInOut",
                         duration: 1
-                    }, ">"), e.fromTo(i ? .current, {
+                    }, ">"), e.fromTo(i ?.current, {
                         drawSVG: "0% 100%"
                     }, {
                         drawSVG: "0% 0%",
@@ -9152,10 +9152,10 @@
                         onUpdate: ({
                             progress: e
                         }) => {
-                            h.current ? .progress(.6 + .4 * e)
+                            h.current ?.progress(.6 + .4 * e)
                         },
                         onLeaveBack: () => {
-                            h.current ? .progress(.6)
+                            h.current ?.progress(.6)
                         }
                     }
                 }), (0, i.jsx)("div", {
@@ -9216,7 +9216,7 @@
                 isInCenterChange: n,
                 imagesRef: i
             }) {
-                if (t ? .current) {
+                if (t ?.current) {
                     var a;
                     let s, l = t.current.map(e => e),
                         c = l[0].offsetWidth,
@@ -9226,7 +9226,7 @@
                     l.forEach((e, t) => {
                         var r, a, s;
                         let l, c;
-                        i ? .current && (l = i.current[t]), _.push((r = e, a = l, s = {
+                        i ?.current && (l = i.current[t]), _.push((r = e, a = l, s = {
                             startPosition: u,
                             endPosition: d,
                             index: t,
@@ -9299,7 +9299,7 @@
             }) {
                 let i = (0, P.xy)(r),
                     a = (0, P.xy)(n);
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     scaleX: 0,
                     transformOrigin: "left center"
                 }, {
@@ -9314,7 +9314,7 @@
                 backgroundRef: r
             }) {
                 let n = (0, P.xy)(t);
-                r ? .current && e.fromTo(r.current, {
+                r ?.current && e.fromTo(r.current, {
                     scaleY: 0
                 }, {
                     duration: .4,
@@ -9328,7 +9328,7 @@
                 backgroundRef: r
             }) {
                 let n = (0, P.xy)(t);
-                r ? .current && e.to(r.current, {
+                r ?.current && e.to(r.current, {
                     duration: .4,
                     ease: "Expo.easeOut",
                     scaleY: 0
@@ -9411,7 +9411,7 @@
                     })
                 }), (0, c.useEffect)(() => {
                     ! function(e, t = !1) {
-                        e.elementRef ? .current && (0, S._)(e.elementRef.current, {
+                        e.elementRef ?.current && (0, S._)(e.elementRef.current, {
                             to: +!t
                         })
                     }({
@@ -9455,8 +9455,8 @@
             }
 
             function or(e, t, r, n = !1) {
-                e ? .current && o.Ay.to(e.current, {
-                    height: t ? Math.max((r ? .elementRef ? .current).offsetHeight, (r ? .animationRef ? .current).offsetHeight) : 0,
+                e ?.current && o.Ay.to(e.current, {
+                    height: t ? Math.max((r ?.elementRef ?.current).offsetHeight, (r ?.animationRef ?.current).offsetHeight) : 0,
                     duration: .6 * !n,
                     ease: "Quad.easeInOut",
                     onComplete: () => {}
@@ -9470,7 +9470,7 @@
                 animationRef: r
             }) {
                 let n = (0, P.xy)(t);
-                n && e.add(n.getTimeline("in"), 0), r ? .current && (e.add((0, S.m)(r.current), 0), e.fromTo(r.current, {
+                n && e.add(n.getTimeline("in"), 0), r ?.current && (e.add((0, S.m)(r.current), 0), e.fromTo(r.current, {
                     scale: .7
                 }, {
                     scale: 1,
@@ -9485,7 +9485,7 @@
                 animationRef: r
             }) {
                 let n = (0, P.xy)(t);
-                n && e.add(n.getTimeline("out"), 0), r ? .current && (e.add((0, S._)(r.current), 0), e.to(r.current, {
+                n && e.add(n.getTimeline("out"), 0), r ?.current && (e.add((0, S._)(r.current), 0), e.to(r.current, {
                     scale: .7,
                     duration: .5,
                     ease: "Power2.easeOut"
@@ -9496,7 +9496,7 @@
                 titleRef: t,
                 isMobileViewport: r
             }) {
-                t ? .current && !r && e.fromTo([t.current], {
+                t ?.current && !r && e.fromTo([t.current], {
                     y: 80
                 }, {
                     y: 0,
@@ -9511,7 +9511,7 @@
                 ...n
             }) {
                 let a = (0, c.useRef)(null),
-                    s = r.current ? .elementRef || a,
+                    s = r.current ?.elementRef || a,
                     o = (0, c.useRef)(null),
                     _ = (0, c.useRef)(null),
                     [m, p] = (0, c.useState)(!1),
@@ -9533,7 +9533,7 @@
                         onUpdate: ({
                             progress: e
                         }) => {
-                            f.current && g ? .current ? .progress(e)
+                            f.current && g ?.current ?.progress(e)
                         }
                     }
                 }), (0, T.zW)(() => ({
@@ -9608,17 +9608,17 @@
                         setupTransitionInTimeline: ot
                     })
                 });
-                let p = (0, c.useMemo)(() => e ? t ? .indexOf(e) : -1, [e, t]);
+                let p = (0, c.useMemo)(() => e ? t ?.indexOf(e) : -1, [e, t]);
                 return (0, eZ.A)(() => {
                     let e = "number" == typeof p && p >= 0;
-                    or(o, e, e ? d ? .current[p] : void 0, !1), (async () => {
-                        if ("number" == typeof u ? .current && u ? .current >= 0) {
-                            let e = (0, T.xy)(d ? .current[u.current].elementRef);
-                            await e ? .transitionOut()
+                    or(o, e, e ? d ?.current[p] : void 0, !1), (async () => {
+                        if ("number" == typeof u ?.current && u ?.current >= 0) {
+                            let e = (0, T.xy)(d ?.current[u.current].elementRef);
+                            await e ?.transitionOut()
                         }
                         if (e) {
                             let e = (0, T.xy)(d.current[p].elementRef);
-                            e ? .transitionIn()
+                            e ?.transitionIn()
                         }
                     })(), u.current = p
                 }, [p]), (0, eZ.A)(() => {
@@ -9642,7 +9642,7 @@
                     children: (0, i.jsx)("div", {
                         ref: o,
                         className: l()(oe().container),
-                        children: t ? .map((e, t) => (0, i.jsx)(oo, {
+                        children: t ?.map((e, t) => (0, i.jsx)(oo, {
                             ref: e => {
                                 d.current[t] = e
                             },
@@ -9656,10 +9656,10 @@
             oo.displayName = "WorkFilterVisualItem";
             let ou = "location",
                 od = "category",
-                o_ = (e, t) => e.name === t || e.content.title === t || e.content.country === t || e.content.countries ? .includes(t);
+                o_ = (e, t) => e.name === t || e.content.title === t || e.content.country === t || e.content.countries ?.includes(t);
 
             function om(e, t, r, n = !1) {
-                e ? .current && o.Ay.to(e.current, {
+                e ?.current && o.Ay.to(e.current, {
                     height: t ? "auto" : 0,
                     duration: .6 * !n,
                     ease: "Quad.easeInOut",
@@ -9693,7 +9693,7 @@
                         innerTransition: r,
                         layout: "fill",
                         objectFit: "cover",
-                        alt: s ? ? ""
+                        alt: s ?? ""
                     })
                 })
             }
@@ -9716,7 +9716,7 @@
                     fullBleed: s
                 } = t, {
                     content: u = ov
-                } = t.case, m = (0, eJ.o)(), p = (0, c.useRef)(null), g = (0, c.useRef)(null), f = a ? .current ? .elementRef || p, h = (0, c.useRef)(null), x = (0, c.useRef)(null), v = (0, c.useRef)(null), b = (0, c.useRef)(null), y = (0, c.useRef)(null), T = (0, c.useRef)(null), I = (0, c.useRef)(null), C = (0, c.useRef)(null), w = (0, c.useRef)(null), k = (0, c.useRef)(null), j = (0, c.useRef)(null), S = (0, c.useRef)(null);
+                } = t.case, m = (0, eJ.o)(), p = (0, c.useRef)(null), g = (0, c.useRef)(null), f = a ?.current ?.elementRef || p, h = (0, c.useRef)(null), x = (0, c.useRef)(null), v = (0, c.useRef)(null), b = (0, c.useRef)(null), y = (0, c.useRef)(null), T = (0, c.useRef)(null), I = (0, c.useRef)(null), C = (0, c.useRef)(null), w = (0, c.useRef)(null), k = (0, c.useRef)(null), j = (0, c.useRef)(null), S = (0, c.useRef)(null);
                 (0, c.useImperativeHandle)(a, () => ({
                     mediaRef: h,
                     elementRef: f,
@@ -9731,7 +9731,7 @@
                     video: P,
                     short_description: L
                 } = u, M = null, z = null, H = null;
-                A ? .[0] ? (M = (0, rS.YQ)(A[0].image_portrait), z = (0, rS.YQ)(A[0].image_landscape), H = A[0].alt_text) : P ? .[0] ? .poster_image ? .filename && (M = (0, rS.YQ)(P[0] ? .poster_image.filename));
+                A ?.[0] ? (M = (0, rS.YQ)(A[0].image_portrait), z = (0, rS.YQ)(A[0].image_landscape), H = A[0].alt_text) : P ?.[0] ?.poster_image ?.filename && (M = (0, rS.YQ)(P[0] ?.poster_image.filename));
                 let F = (0, c.useCallback)(e => {
                     let t = k.current;
                     t && e.to(t, {
@@ -9767,7 +9767,7 @@
                                 f = m ? p : _;
                             g === f && o.Ay.set(n, {
                                 maxHeight: `${c(n)+Math.min(u,_)-Math.abs(u-_)}px`
-                            }), w.current ? .kill(), w.current = o.Ay.timeline({
+                            }), w.current ?.kill(), w.current = o.Ay.timeline({
                                 paused: !0
                             }).fromTo(n, {
                                 width: "100%"
@@ -9807,20 +9807,20 @@
                     });
                     d.observe(l), d.observe(e), d.observe(a);
                     let _ = document.fonts;
-                    return _ ? .ready.then(() => {
+                    return _ ?.ready.then(() => {
                         u()
                     }), () => {
-                        window.removeEventListener("resize", u), d.disconnect(), S.current && cancelAnimationFrame(S.current), w.current ? .kill()
+                        window.removeEventListener("resize", u), d.disconnect(), S.current && cancelAnimationFrame(S.current), w.current ?.kill()
                     }
                 }, []);
                 let E = (0, c.useCallback)(() => {
-                        C.current ? .reverse(), w.current ? .reverse()
+                        C.current ?.reverse(), w.current ?.reverse()
                     }, []),
                     W = (0, c.useCallback)(() => {
-                        C.current ? .play(), w.current ? .play()
+                        C.current ?.play(), w.current ?.play()
                     }, []);
                 if (!t.case || "string" == typeof t.case) return (0, i.jsx)(i.Fragment, {});
-                let D = n ? f.current ? .getBoundingClientRect().top ? ? 0 : 0;
+                let D = n ? f.current ?.getBoundingClientRect().top ?? 0 : 0;
                 return (0, i.jsx)(ty(), {
                     ref: I,
                     href: t.case.full_slug,
@@ -9925,11 +9925,11 @@
                 let o = (0, P.xy)(t),
                     c = (0, P.xy)(r),
                     u = (0, P.xy)(l),
-                    d = t ? .current ? .offsetHeight,
-                    _ = t ? .current ? .offsetTop || 0,
-                    m = i ? .current ? .offsetHeight,
+                    d = t ?.current ?.offsetHeight,
+                    _ = t ?.current ?.offsetTop || 0,
+                    m = i ?.current ?.offsetHeight,
                     p = 0;
-                if (e.add(o ? .getTimeline("in"), 0), e.add(c ? .getTimeline("in"), .1), e.addLabel("beforeTitleExpand", "-=0"), m && d && (p = m / 2 - d - 1.2 * _), t && r && a && s && ([a, s].forEach(e => {
+                if (e.add(o ?.getTimeline("in"), 0), e.add(c ?.getTimeline("in"), .1), e.addLabel("beforeTitleExpand", "-=0"), m && d && (p = m / 2 - d - 1.2 * _), t && r && a && s && ([a, s].forEach(e => {
                         (0, am.Xf)(e.current, "chars", {
                             linesClass: "mask-split-line"
                         }, !0)
@@ -9945,7 +9945,7 @@
                         y: 0,
                         duration: .5,
                         ease: "power3.easeIn"
-                    }, "beforeTitleExpand")), n ? .current && i ? .current) {
+                    }, "beforeTitleExpand")), n ?.current && i ?.current) {
                     let t = .5 * window.innerWidth,
                         r = i.current.getBoundingClientRect(),
                         a = n.current.getBoundingClientRect(),
@@ -9986,7 +9986,7 @@
                     duration: .2
                 })), e.add((0, S._)([i.current, a.current], {
                     duration: .2
-                }), .3), e.add(l ? .getTimeline("out"), 0)), s ? .current && e.add((0, S._)(s ? .current, {
+                }), .3), e.add(l ?.getTimeline("out"), 0)), s ?.current && e.add((0, S._)(s ?.current, {
                     duration: .2
                 }), 0)
             }
@@ -10003,7 +10003,7 @@
                 t && r && i && a && (e.add((0, S._)([t.current, r.current, i.current, a.current], {
                     to: 1,
                     duration: .3
-                })), e.add(l ? .getTimeline("in"), .2)), s ? .current && e.add((0, S._)(s ? .current, {
+                })), e.add(l ?.getTimeline("in"), .2)), s ?.current && e.add((0, S._)(s ?.current, {
                     to: 1,
                     duration: .3
                 }), 0)
@@ -10026,14 +10026,14 @@
                 caseCardsRef: t,
                 buttonsContainerRef: r
             }) {
-                t ? .current ? .length > 0 && t.current.forEach(t => {
-                    t ? .elementRef ? .current && e.add((0, h.HT)(t ? .elementRef ? .current, {
+                t ?.current ?.length > 0 && t.current.forEach(t => {
+                    t ?.elementRef ?.current && e.add((0, h.HT)(t ?.elementRef ?.current, {
                         from: "bottom",
                         duration: .5
                     }), "<25%")
                 });
-                let n = r ? .current ? .querySelectorAll("button");
-                n ? .length && e.add((0, S.m)(Array.from(n), {
+                let n = r ?.current ?.querySelectorAll("button");
+                n ?.length && e.add((0, S.m)(Array.from(n), {
                     duration: .4,
                     stagger: .08
                 }), "<")
@@ -10115,7 +10115,7 @@
             }) {
                 let i = (0, P.xy)(t),
                     a = (0, P.xy)(r);
-                n ? .current && e.add((0, S.m)(n.current), 0), i && a && (e.add(i.getTimeline("in"), 0), e.add(a.getTimeline("in"), 0))
+                n ?.current && e.add((0, S.m)(n.current), 0), i && a && (e.add(i.getTimeline("in"), 0), e.add(a.getTimeline("in"), 0))
             }
 
             function oU(e, {
@@ -10128,7 +10128,7 @@
             function o$(e, {
                 titleHolderRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     transform: "translate3d(0, 0vh,0)"
                 }, {
                     duration: 3,
@@ -10147,7 +10147,7 @@
                 ...r
             }) {
                 let n = (0, c.useRef)(null),
-                    s = t.current ? .elementRef || n,
+                    s = t.current ?.elementRef || n,
                     o = (0, c.useRef)(null),
                     u = (0, c.useRef)(null),
                     _ = (0, c.useRef)(null),
@@ -10197,7 +10197,7 @@
                             disableTriggerInOnScroll: !0,
                             transitionOutType: "splitCharsSlideOutUp",
                             transitionOnMount: !0,
-                            children: e.title ? .split(" ").map(e => (0, i.jsx)("span", {
+                            children: e.title ?.split(" ").map(e => (0, i.jsx)("span", {
                                 className: l()(oW().line),
                                 children: e
                             }, e))
@@ -10229,7 +10229,7 @@
             function oQ(e, {
                 textContentRef: t
             }) {
-                t ? .current && e.fromTo(t.current, {
+                t ?.current && e.fromTo(t.current, {
                     transform: "translate3d(0, 20vh,0)"
                 }, {
                     duration: 1,
@@ -10256,7 +10256,7 @@
                 ...r
             }) {
                 let n = (0, c.useRef)(null),
-                    s = t.current ? .elementRef || n,
+                    s = t.current ?.elementRef || n,
                     o = (0, c.useRef)(null),
                     u = (0, c.useRef)(null),
                     d = (0, c.useRef)(!1),
@@ -10282,7 +10282,7 @@
                 }), [h, s]), (0, nN.A)(() => {
                     setTimeout(() => {
                         let e;
-                        "u" > typeof document && (e = document.querySelector("#superpower-title") ? .getBoundingClientRect().height), p(e)
+                        "u" > typeof document && (e = document.querySelector("#superpower-title") ?.getBoundingClientRect().height), p(e)
                     }, 100)
                 }, []), (0, i.jsx)("div", {
                     ref: s,
@@ -10329,7 +10329,7 @@
                 (0, c.useEffect)(() => {
                     t.current && (s.current = new a5.AnimationMixer(t.current), s.current.clipAction(n[0]).play())
                 }, [n]), (0, aJ.D)(() => {
-                    if (s ? .current && e.progressRef && e.isCurrent && l.current && e.progressRef.current < 100) {
+                    if (s ?.current && e.progressRef && e.isCurrent && l.current && e.progressRef.current < 100) {
                         let t = e.progressRef.current,
                             r = (0, aU.a7)(t / 100, 0, .5, .5, 1) * n[0].duration,
                             i = t * n[0].duration / 100;
@@ -10358,7 +10358,7 @@
                     backsideResolution: eC.CI ? 6 : 32,
                     iridescenceThicknessRange: [0, 100],
                     clearcoat: 1,
-                    envMapIntensity: eC.CI ? .1 : .8,
+                    envMapIntensity: eC.CI ?.1 : .8,
                     opacity: .85,
                     transmission: 1,
                     backsideThickness: 0,
@@ -10370,9 +10370,9 @@
                     sheenColor: e.shapeColor || "#FFFFFF",
                     sheen: .5,
                     metalness: 0,
-                    ior: eC.CI ? .8 : 1.5,
+                    ior: eC.CI ?.8 : 1.5,
                     specularColor: "white",
-                    specularIntensity: eC.CI ? .1 : .5,
+                    specularIntensity: eC.CI ?.1 : .5,
                     attenuationColor: "white",
                     thickness: 0,
                     anisotropicBlur: .1 * !eC.CI,
@@ -10424,7 +10424,7 @@
                 (0, c.useEffect)(() => {
                     t.current && (s.current = new a5.AnimationMixer(t.current), s.current.clipAction(n[0]).play())
                 }, [n]), (0, aJ.D)(() => {
-                    if (s ? .current && e.progressRef && e.isCurrent && e.progressRef.current < 100) {
+                    if (s ?.current && e.progressRef && e.isCurrent && e.progressRef.current < 100) {
                         let t = e.progressRef.current,
                             r = (0, aU.a7)(t / 100, 0, .5, .5, 1) * n[0].duration,
                             i = t * n[0].duration / 100;
@@ -10453,7 +10453,7 @@
                     samples: 1,
                     roughness: .1 * !eC.CI,
                     iridescence: .8 * !eC.CI,
-                    iridescenceIOR: eC.CI ? .1 : .65,
+                    iridescenceIOR: eC.CI ?.1 : .65,
                     backsideResolution: 32,
                     iridescenceThicknessRange: [0, 100],
                     envMapIntensity: .7,
@@ -10470,7 +10470,7 @@
                     metalness: 0,
                     ior: 1.5,
                     specularColor: "white",
-                    specularIntensity: eC.CI ? .1 : .5,
+                    specularIntensity: eC.CI ?.1 : .5,
                     attenuationColor: "white",
                     thickness: 0,
                     anisotropicBlur: .1 * !eC.CI,
@@ -10522,7 +10522,7 @@
                 (0, c.useEffect)(() => {
                     t.current && (s.current = new a5.AnimationMixer(t.current), s.current.clipAction(n[0]).play())
                 }, [n]), (0, aJ.D)(() => {
-                    if (s ? .current && e.progressRef && e.isCurrent && l.current && e.progressRef.current < 100) {
+                    if (s ?.current && e.progressRef && e.isCurrent && l.current && e.progressRef.current < 100) {
                         let t = e.progressRef.current,
                             r = (0, aU.a7)(t / 100, 0, .5, .5, 1) * n[0].duration,
                             i = t * n[0].duration / 100;
@@ -10551,7 +10551,7 @@
                     backsideThickness: 0,
                     backsideResolution: eC.CI ? 256 : 512,
                     iridescenceThicknessRange: [0, 200],
-                    clearcoat: eC.CI ? .3 : .4,
+                    clearcoat: eC.CI ?.3 : .4,
                     envMapIntensity: eC.CI ? 1 : 2,
                     opacity: .85,
                     transmission: 1,
@@ -10559,15 +10559,15 @@
                     transmissionSampler: !1,
                     roughness: .2 * !!eC.CI,
                     clearcoatRoughness: 0,
-                    reflectivity: eC.CI ? .5 : 1,
+                    reflectivity: eC.CI ?.5 : 1,
                     sheenColor: "#f29a9a",
                     sheen: +!eC.CI,
                     metalness: 0,
                     ior: 1,
                     specularColor: "white",
-                    specularIntensity: eC.CI ? .2 : .3,
+                    specularIntensity: eC.CI ?.2 : .3,
                     attenuationColor: "white",
-                    thickness: eC.CI ? .05 : .1,
+                    thickness: eC.CI ?.05 : .1,
                     anisotropicBlur: .1 * !eC.CI,
                     distortion: 0,
                     distortionScale: 0,
@@ -10586,7 +10586,7 @@
                             name: "Moon",
                             position: [0, 0, -450],
                             rotation: [-.873, 0, 0],
-                            scale: Math.min(e.homepage ? .6 : .7, (0, aU.ix)(a, 320, 650, .3, e.homepage ? .6 : .7)),
+                            scale: Math.min(e.homepage ?.6 : .7, (0, aU.ix)(a, 320, 650, .3, e.homepage ?.6 : .7)),
                             children: [e.homepage && (0, i.jsx)("mesh", {
                                 visible: !1,
                                 geometry: r.Left.geometry,
@@ -10625,7 +10625,7 @@
                 (0, c.useEffect)(() => {
                     t.current && (s.current = new a5.AnimationMixer(t.current), s.current.clipAction(n[0]).play())
                 }, [n]), (0, aJ.D)(() => {
-                    if (s ? .current && e.progressRef && e.isCurrent && l.current && e.progressRef.current < 100) {
+                    if (s ?.current && e.progressRef && e.isCurrent && l.current && e.progressRef.current < 100) {
                         let t = e.progressRef.current,
                             r = (0, aU.a7)(t / 100, 0, .5, .5, 1) * n[0].duration,
                             i = t * n[0].duration / 100;
@@ -10655,7 +10655,7 @@
                     backsideResolution: eC.CI ? 128 : 512,
                     iridescenceThicknessRange: [0, 200],
                     clearcoat: 0,
-                    envMapIntensity: eC.CI ? .1 : 4,
+                    envMapIntensity: eC.CI ?.1 : 4,
                     opacity: .85,
                     transmission: 1,
                     chromaticAberration: 0,
@@ -10759,7 +10759,7 @@
                 }), [p, _, m]), (0, aJ.D)(() => {
                     if (!a.current) return;
                     let e = r.current;
-                    if (a.current.position.z = (0, aU.ix)(e, 0, 1, -200, -50), r.current > 0 && r.current < 1 && l.current && d.current[0] ? .progress) {
+                    if (a.current.position.z = (0, aU.ix)(e, 0, 1, -200, -50), r.current > 0 && r.current < 1 && l.current && d.current[0] ?.progress) {
                         let e = o.current[s.current],
                             {
                                 progress: t
@@ -10851,17 +10851,17 @@
                 className: r
             }) {
                 let n = (0, c.useRef)(null),
-                    a = e.current ? .elementRef || n,
+                    a = e.current ?.elementRef || n,
                     s = (0, c.useRef)(null),
                     o = (0, c.useRef)(0),
                     u = (0, c.useCallback)(e => {
-                        s ? .current && (s.current.setProgress(e), (0, aJ.m)())
+                        s ?.current && (s.current.setProgress(e), (0, aJ.m)())
                     }, []),
                     d = (0, c.useCallback)(e => {
-                        o.current = e, s ? .current && s.current.setCurrentSlide(e)
+                        o.current = e, s ?.current && s.current.setCurrentSlide(e)
                     }, []),
                     _ = (0, c.useCallback)(e => {
-                        s ? .current && s.current.setProgressData(e)
+                        s ?.current && s.current.setProgressData(e)
                     }, []);
                 return (0, c.useImperativeHandle)(e, () => ({
                     setProgress: u,
@@ -10901,7 +10901,7 @@
                         m = (0, c.useRef)(null),
                         g = (0, c.useRef)(0),
                         [f, h] = (0, c.useState)(0),
-                        x = e.items ? ? [],
+                        x = e.items ?? [],
                         v = (0, c.useMemo)(() => o.Ay.timeline({
                             paused: !0
                         }), []),
@@ -11032,8 +11032,8 @@
                             enableInView: !0
                         });
                     return (0, y.s)(m, {
-                        onMount: e ? .onMount ? ? !0,
-                        value: (e ? .value ? ? !0) && !!p
+                        onMount: e ?.onMount ?? !0,
+                        value: (e ?.value ?? !0) && !!p
                     }), (0, u.A)({
                         trigger: o,
                         animation: (0, w.A)(v, {
@@ -11083,8 +11083,8 @@
                             setupTransitionOutTimeline: R
                         }), []);
                     return (0, y.s)(u, e), F(o, r.use_accent_color, {
-                        foreground: r.accent_color_foreground ? .color || "",
-                        background: r.accent_color_background ? .color || ""
+                        foreground: r.accent_color_foreground ?.color || "",
+                        background: r.accent_color_background ?.color || ""
                     }), (0, i.jsx)("div", {
                         ref: o,
                         className: l()(j().stickyNotes, t),
@@ -11116,7 +11116,7 @@
                             unLock: y
                         } = (0, $.d)(),
                         T = (0, c.useCallback)(() => {
-                            if (!p ? .current) return;
+                            if (!p ?.current) return;
                             let {
                                 x: e,
                                 minX: t,
@@ -11138,16 +11138,16 @@
                     }, {
                         bounds: m
                     });
-                    let I = m ? .current ? .getBoundingClientRect().width || 0,
-                        C = u ? .current ? .getBoundingClientRect().width || 0;
+                    let I = m ?.current ?.getBoundingClientRect().width || 0,
+                        C = u ?.current ?.getBoundingClientRect().width || 0;
                     p.current && (I >= C ? p.current.disable() : p.current.enable());
                     let {
                         width: w
                     } = (0, U.A)();
                     (0, c.useEffect)(() => {
                         if (!_.current || !d.current) return;
-                        let e = m ? .current ? .getBoundingClientRect(),
-                            t = u ? .current ? .getBoundingClientRect();
+                        let e = m ?.current ?.getBoundingClientRect(),
+                            t = u ?.current ?.getBoundingClientRect();
                         e && t && (o.Ay.set(_.current, {
                             width: `${100*Math.min(1,e.width/t.width)}%`
                         }), o.Ay.set(d.current, {
@@ -11163,7 +11163,7 @@
                             width: 0
                         },
                         N = () => {
-                            if (!g.current[0] ? .current || !p.current) return S;
+                            if (!g.current[0] ?.current || !p.current) return S;
                             let e = o.Ay.getProperty(u.current, "x"),
                                 t = o.Ay.getProperty(g.current[0].current, "width"),
                                 r = o.Ay.getProperty(j.current, "width"),
@@ -11183,8 +11183,8 @@
                             maxX: A
                         } = N();
                     return F(s, t.use_accent_color, {
-                        foreground: t.accent_color_foreground ? .color || "",
-                        background: t.accent_color_background ? .color || ""
+                        foreground: t.accent_color_foreground ?.color || "",
+                        background: t.accent_color_background ?.color || ""
                     }), (0, i.jsxs)("div", {
                         ref: s,
                         className: l()(W().storyCards, e),
@@ -11300,7 +11300,7 @@
                             scaleY: p ? -1 : 1,
                             duration: .4
                         }), o.Ay.to(m.current, {
-                            height: p ? m.current ? .scrollHeight : 0,
+                            height: p ? m.current ?.scrollHeight : 0,
                             paddingBottom: p ? void 0 : 0,
                             ease: "Quad.easeInOut",
                             clearProps: p ? "height,paddingBottom" : "",
@@ -11395,7 +11395,7 @@
                         ...(0, a.m)(r),
                         children: [(0, i.jsx)(eH, {
                             blok: {
-                                title: u.current ? .formLayoutState === tn.SubmitSuccess ? r.title_submission_success : r.title,
+                                title: u.current ?.formLayoutState === tn.SubmitSuccess ? r.title_submission_success : r.title,
                                 button: r.button,
                                 use_accent_color: !1,
                                 _uid: "",
@@ -11482,7 +11482,7 @@
                                 className: tC().button,
                                 label: r.button_label,
                                 onClick: () => {
-                                    let e = document ? .querySelector("[data-scroll-to=download-pdf]");
+                                    let e = document ?.querySelector("[data-scroll-to=download-pdf]");
                                     e && m(e)
                                 }
                             })
@@ -11549,10 +11549,10 @@
                                     children: r.label_back_to
                                 })
                             })
-                        }), r ? .person_details ? .[0] && (0, i.jsx)(tW, {
+                        }), r ?.person_details ?.[0] && (0, i.jsx)(tW, {
                             blok: r.person_details[0],
                             className: l()(tU().personDetails)
-                        }), r.sections ? .map(t => (0, i.jsx)(cr, {
+                        }), r.sections ?.map(t => (0, i.jsx)(cr, {
                             blok: t,
                             canTransitionIn: e
                         }, t._uid)), (0, i.jsx)(td(), {
@@ -11661,18 +11661,18 @@
                         ...(0, a.m)(e),
                         children: [(0, i.jsxs)("div", {
                             className: l()(t0().header, "grid-gutter"),
-                            children: [e ? .title && (0, i.jsx)(d.A, {
+                            children: [e ?.title && (0, i.jsx)(d.A, {
                                 disableTriggerInOnScroll: !1,
                                 as: "h2",
                                 size: "heading-01",
                                 className: l()(t0().title),
-                                children: e ? .title
-                            }), e ? .description && (0, i.jsx)(_.A, {
+                                children: e ?.title
+                            }), e ?.description && (0, i.jsx)(_.A, {
                                 disableTriggerInOnScroll: !1,
                                 as: "p",
                                 size: "body-large",
                                 className: l()(t0().description),
-                                children: e ? .description
+                                children: e ?.description
                             })]
                         }), o && (0, i.jsx)("ul", {
                             className: l()(t0().list),
@@ -11813,7 +11813,7 @@
                         height: x
                     } = (0, U.A)(0);
                     return (0, c.useEffect)(() => {
-                        let e = Math.max(...p.current.map(e => e ? .current ? .offsetHeight || 0));
+                        let e = Math.max(...p.current.map(e => e ?.current ?.offsetHeight || 0));
                         o.Ay.set(g.current, {
                             minHeight: `${e}px`
                         })
@@ -11831,7 +11831,7 @@
                                 progress: e
                             }) => {
                                 let t;
-                                e <= 0 && (t = -1), e > 0 && e < .33 ? t = 0 : e > .33 && e < .66 ? t = 1 : e > .66 && (t = 2), "number" == typeof t && _.current !== t && f ? .current ? .tweenTo(`slide_${t}`), _.current = t
+                                e <= 0 && (t = -1), e > 0 && e < .33 ? t = 0 : e > .33 && e < .66 ? t = 1 : e > .66 && (t = 2), "number" == typeof t && _.current !== t && f ?.current ?.tweenTo(`slide_${t}`), _.current = t
                             }
                         }
                     }), (0, u.A)({
@@ -11943,15 +11943,15 @@
                                     duration: .4,
                                     ease: "Quad.easeInOut",
                                     onUpdate: () => {
-                                        _ ? .current ? .updateVideoSize()
+                                        _ ?.current ?.updateVideoSize()
                                     }
                                 }) : (o.Ay.set(d.current, {
                                     height: e
-                                }), _ ? .current ? .updateVideoSize())
+                                }), _ ?.current ?.updateVideoSize())
                             }
                             let C = (0, c.useCallback)((e = !1) => {
-                                let t = l ? .current ? .getBoundingClientRect(),
-                                    r = s ? .current ? .getBoundingClientRect(),
+                                let t = l ?.current ?.getBoundingClientRect(),
+                                    r = s ?.current ?.getBoundingClientRect(),
                                     n = 0,
                                     i = 0,
                                     a = 0;
@@ -11974,7 +11974,7 @@
                                     let t, r;
                                     y(C(p), !0), I(T(p), !0), e = () => {
                                         b.kill(), v.restart(), k.current = p
-                                    }, "number" != typeof(t = x.scrollStatusRef.current ? .offset.y) && (t = 0), (r = t + l.current ? .getBoundingClientRect().top) === t ? e() : x.scrollTo(0, r, 400, {
+                                    }, "number" != typeof(t = x.scrollStatusRef.current ?.offset.y) && (t = 0), (r = t + l.current ?.getBoundingClientRect().top) === t ? e() : x.scrollTo(0, r, 400, {
                                         easing: r$.kO.easeInOut,
                                         callback: () => {
                                             e()
@@ -12211,8 +12211,8 @@
                         width: A,
                         height: O
                     } = (0, U.A)(), P = (0, c.useCallback)(() => {
-                        let e = v ? .current ? .getBoundingClientRect();
-                        return (e ? .width || 0) / 799
+                        let e = v ?.current ?.getBoundingClientRect();
+                        return (e ?.width || 0) / 799
                     }, [v]), L = (0, c.useCallback)(e => {
                         o.Ay.set(x.current, {
                             attr: {
@@ -12238,7 +12238,7 @@
                                 progress: e
                             }) => {
                                 let t;
-                                e > 0 && (t = -1), e > .1 && (t = 0), e > .25 && (t = 1), e > .4 && (t = 2), e > .55 && (t = 3), e > .7 && (t = 4), e > .9 && (t = 5), "number" == typeof t && M.current !== t && j ? .current ? .tweenTo(`slide_${t}`), M.current = t
+                                e > 0 && (t = -1), e > .1 && (t = 0), e > .25 && (t = 1), e > .4 && (t = 2), e > .55 && (t = 3), e > .7 && (t = 4), e > .9 && (t = 5), "number" == typeof t && M.current !== t && j ?.current ?.tweenTo(`slide_${t}`), M.current = t
                             }
                         }
                     }), (0, u.A)({
@@ -12427,8 +12427,8 @@
                         width: j,
                         height: S
                     } = (0, U.A)(), N = (0, c.useCallback)(() => {
-                        let e = v ? .current ? .getBoundingClientRect();
-                        return (e ? .width || 0) / 799
+                        let e = v ?.current ?.getBoundingClientRect();
+                        return (e ?.width || 0) / 799
                     }, [v]), R = (0, c.useCallback)(e => {
                         o.Ay.set(x.current, {
                             attr: {
@@ -12507,8 +12507,8 @@
                                                 className: l()(r1().imageHolder),
                                                 children: (0, i.jsx)(tO.A, {
                                                     ref: T,
-                                                    src: e.image ? .filename,
-                                                    srcDesktop: e.image ? .filename,
+                                                    src: e.image ?.filename,
+                                                    srcDesktop: e.image ?.filename,
                                                     className: l()(r1().image, "abs-fill"),
                                                     layout: "fill",
                                                     objectFit: "cover",
@@ -12566,7 +12566,7 @@
                     let {
                         modules: d,
                         ..._
-                    } = e, m = _.intro_description ? .content[0], p = {
+                    } = e, m = _.intro_description ?.content[0], p = {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [{
@@ -12594,7 +12594,7 @@
                             children: [(0, i.jsx)(ne, {
                                 blok: _,
                                 canTransitionIn: t
-                            }), (_ ? .intro_button && _ ? .intro_button ? .length > 0 && _ ? .intro_button[0] || _.intro_title || m && m ? .content ? .length > 0) && (0, i.jsx)(ni, {
+                            }), (_ ?.intro_button && _ ?.intro_button ?.length > 0 && _ ?.intro_button[0] || _.intro_title || m && m ?.content ?.length > 0) && (0, i.jsx)(ni, {
                                 blok: {
                                     _uid: _._uid,
                                     component: "intro_column_text",
@@ -12602,7 +12602,7 @@
                                     description: _.intro_description,
                                     buttons: _.intro_button
                                 }
-                            }), d ? .map(e => (0, i.jsx)(cr, {
+                            }), d ?.map(e => (0, i.jsx)(cr, {
                                 blok: e,
                                 canTransitionIn: t
                             }, e._uid))]
@@ -12642,7 +12642,7 @@
                     let {
                         modules: d,
                         ..._
-                    } = e, m = _.intro_description ? .content[0], p = {
+                    } = e, m = _.intro_description ?.content[0], p = {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [{
@@ -12665,7 +12665,7 @@
                             children: [(0, i.jsx)(ne, {
                                 blok: _,
                                 canTransitionIn: t
-                            }), (_ ? .intro_button && _ ? .intro_button ? .length > 0 && _ ? .intro_button[0] || _.intro_title || m && m ? .content ? .length > 0) && (0, i.jsx)(ni, {
+                            }), (_ ?.intro_button && _ ?.intro_button ?.length > 0 && _ ?.intro_button[0] || _.intro_title || m && m ?.content ?.length > 0) && (0, i.jsx)(ni, {
                                 blok: {
                                     _uid: _._uid,
                                     component: "intro_column_text",
@@ -12673,7 +12673,7 @@
                                     description: _.intro_description,
                                     buttons: _.intro_button
                                 }
-                            }), d ? .map(e => (0, i.jsx)(cr, {
+                            }), d ?.map(e => (0, i.jsx)(cr, {
                                 blok: e,
                                 canTransitionIn: t
                             }, e._uid))]
@@ -12743,7 +12743,7 @@
                             [v, b] = (0, c.useState)(!1),
                             y = (0, $.d)(),
                             T = (0, c.useMemo)(() => a ? +r.mobile_items_per_page : +r.desktop_items_per_page, [r.desktop_items_per_page, r.mobile_items_per_page, a]),
-                            I = (0, c.useCallback)(e => Math.ceil((e ? .length || 0) / T), [T]),
+                            I = (0, c.useCallback)(e => Math.ceil((e ?.length || 0) / T), [T]),
                             C = (0, t_.useRouter)(),
                             w = (0, n$.A)(),
                             k = (0, c.useCallback)(e => {
@@ -12772,10 +12772,10 @@
                             }, [r.news_category_all, C.pathname, C.query, w]);
                         (0, c.useEffect)(() => {
                             let e;
-                            e = o === r.news_category_all ? s ? .filter(e => !l ? .map(e => e.news.slug).includes(e.slug)) : s ? .filter(e => e.content.category === o), d !== r.news_country_all && (e = e ? .filter(e => e.content.location === d));
+                            e = o === r.news_category_all ? s ?.filter(e => !l ?.map(e => e.news.slug).includes(e.slug)) : s ?.filter(e => e.content.category === o), d !== r.news_country_all && (e = e ?.filter(e => e.content.location === d));
                             let n = g * T,
-                                i = e ? .slice(n, n + T);
-                            p(i), b(i ? .length === 0), x(I(e)), (async () => {
+                                i = e ?.slice(n, n + T);
+                            p(i), b(i ?.length === 0), x(I(e)), (async () => {
                                 await nY(t, !0), ej().refresh()
                             })()
                         }, [l, o, s, r.news_category_all, d, r.news_country_all, g, T, I, t]);
@@ -12800,9 +12800,9 @@
                             t === r.news_category_all ? n = o : t === r.news_country_all && (n = d), e !== n && (await N(), p([]), f(0), R()), t === r.news_category_all ? j(e) : t === r.news_country_all && _(e)
                         }
                         return (0, eZ.A)(() => {
-                            let t = e.current ? .getBoundingClientRect(),
-                                r = y.scrollStatusRef.current ? .offset.y || 0;
-                            y.scrollTo(0, (t ? .top || 0) + r - 100, 600)
+                            let t = e.current ?.getBoundingClientRect(),
+                                r = y.scrollStatusRef.current ?.offset.y || 0;
+                            y.scrollTo(0, (t ?.top || 0) + r - 100, 600)
                         }, [g]), (0, c.useEffect)(() => {
                             ej().refresh()
                         }, [m]), {
@@ -12863,7 +12863,7 @@
                             children: [(0, i.jsx)("div", {
                                 ref: u,
                                 className: l()(nG().grid),
-                                children: x ? .map((e, t) => (0, i.jsx)(nF, {
+                                children: x ?.map((e, t) => (0, i.jsx)(nF, {
                                     transitionInDelay: d ? 0 : t % 3 * .15,
                                     className: l()(nG().newsItem),
                                     blok: { ...e.content
@@ -12895,10 +12895,10 @@
                         f = (0, c.useCallback)(() => {
                             if (p.current > 0 && p.current < .1 && m.current) {
                                 let e = (0, T.xy)(o);
-                                e ? .transitionIn(), m.current = !1
+                                e ?.transitionIn(), m.current = !1
                             } else if (p.current >= .1 && !m.current) {
                                 let e = (0, T.xy)(o);
-                                e ? .transitionOut(), m.current = !0
+                                e ?.transitionOut(), m.current = !0
                             }
                         }, [p, m]),
                         h = (0, c.useCallback)(() => {
@@ -12943,7 +12943,7 @@
                             })
                         }), (0, i.jsx)("div", {
                             className: l()(io().contentFrame, "grid-gutter", "max-content-width"),
-                            children: r.blok ? .news_items ? .map((t, r) => (0, i.jsx)(nX, {
+                            children: r.blok ?.news_items ?.map((t, r) => (0, i.jsx)(nX, {
                                 canTransitionIn: e,
                                 className: l()(io().newsItem),
                                 blok: { ...t
@@ -12976,24 +12976,24 @@
                             setupTransitionOutTimeline: i_
                         }), []);
                     return (0, y.s)(f, e), (0, nN.A)(() => {
-                        _ ? .current && _ ? .current ? .scrollWidth <= _ ? .current ? .offsetWidth && p(0)
+                        _ ?.current && _ ?.current ?.scrollWidth <= _ ?.current ?.offsetWidth && p(0)
                     }, [g]), (0, nN.A)(() => {
-                        if (!_ ? .current) return;
-                        let e = _ ? .current.querySelectorAll(".split-words"),
+                        if (!_ ?.current) return;
+                        let e = _ ?.current.querySelectorAll(".split-words"),
                             t = 0;
-                        if (e ? .forEach(e => {
+                        if (e ?.forEach(e => {
                                 e.offsetWidth > t && (t = e.offsetWidth)
-                            }), t > _ ? .current ? .offsetWidth) {
-                            let e = window ? .getComputedStyle(_.current, null).getPropertyValue("font-size");
+                            }), t > _ ?.current ?.offsetWidth) {
+                            let e = window ?.getComputedStyle(_.current, null).getPropertyValue("font-size");
                             p(_.current.offsetWidth / t * parseInt(e, 10))
                         }
-                    }, [_ ? .current ? .offsetWidth, m]), (0, i.jsx)("div", {
+                    }, [_ ?.current ?.offsetWidth, m]), (0, i.jsx)("div", {
                         ref: u,
                         className: l()(iu().headerTitleH1, t),
                         ...(0, a.m)(n),
                         style: n.use_accent_color ? {
-                            background: n.background_color ? .color,
-                            color: n.foreground_color ? .color
+                            background: n.background_color ?.color,
+                            color: n.foreground_color ?.color
                         } : {},
                         children: (0, i.jsx)(d.A, {
                             as: "h1",
@@ -13076,7 +13076,7 @@
                         u = (0, c.useRef)(null),
                         _ = (0, c.useRef)(null),
                         m = (0, c.useRef)(null),
-                        p = t.assets.every(e => e ? .image ? .filename),
+                        p = t.assets.every(e => e ?.image ?.filename),
                         g = t.assets.length,
                         f = (0, c.useRef)(null),
                         {
@@ -13092,7 +13092,7 @@
                             unLock: j
                         } = (0, $.d)(),
                         S = (0, c.useCallback)(() => {
-                            if (!v ? .current) return;
+                            if (!v ?.current) return;
                             let {
                                 x: e,
                                 minX: t,
@@ -13101,7 +13101,7 @@
                             I(e >= r), w(e <= t), m.current && o.Ay.set(m.current, {
                                 left: `${100*n}%`,
                                 translateX: `${-100*n}%`
-                            }), x(Number(u ? .current ? o.Ay.getProperty(u ? .current, "x") : 0))
+                            }), x(Number(u ?.current ? o.Ay.getProperty(u ?.current, "x") : 0))
                         }, [v, x]);
                     v.current = (0, D.P)(u, {
                         type: "x",
@@ -13114,16 +13114,16 @@
                     }, {
                         bounds: f
                     });
-                    let N = f ? .current ? .getBoundingClientRect().width || 0,
-                        R = u ? .current ? .getBoundingClientRect().width || 0;
+                    let N = f ?.current ?.getBoundingClientRect().width || 0,
+                        R = u ?.current ?.getBoundingClientRect().width || 0;
                     v.current && (N >= R ? v.current.disable() : v.current.enable());
                     let {
                         width: A
                     } = (0, U.A)();
                     (0, c.useEffect)(() => {
                         if (!m.current || !_.current) return;
-                        let e = f ? .current ? .getBoundingClientRect(),
-                            t = u ? .current ? .getBoundingClientRect();
+                        let e = f ?.current ?.getBoundingClientRect(),
+                            t = u ?.current ?.getBoundingClientRect();
                         e && t && (o.Ay.set(m.current, {
                             width: `${100*Math.min(1,e.width/t.width)}%`
                         }), o.Ay.set(_.current, {
@@ -13131,7 +13131,7 @@
                         }))
                     }, [f, u, m, _, A]), (0, c.useEffect)(() => {
                         let e = 0;
-                        [...s.current ? .querySelectorAll("figcaption")].forEach(t => {
+                        [...s.current ?.querySelectorAll("figcaption")].forEach(t => {
                             e = Math.max(e, t.clientHeight)
                         }), y(e)
                     }, [s]);
@@ -13162,7 +13162,7 @@
                             width: 0
                         },
                         W = () => {
-                            if (!h ? .current ? .[0] || !v.current) return E;
+                            if (!h ?.current ?.[0] || !v.current) return E;
                             let e = o.Ay.getProperty(u.current, "x"),
                                 t = o.Ay.getProperty(h.current[0].imageRef.current, "width"),
                                 r = o.Ay.getProperty(P.current, "width"),
@@ -13273,7 +13273,7 @@
                                 onMouseLeave: j,
                                 children: t.assets.map((e, t) => (0, i.jsx)(nm, {
                                     ref: e => {
-                                        h ? .current ? .[t] && e && (h.current[t] = e)
+                                        h ?.current ?.[t] && e && (h.current[t] = e)
                                     },
                                     blok: e,
                                     includeImage: !0,
@@ -13290,7 +13290,7 @@
                                 }),
                                 children: t.assets.map((e, t) => (0, i.jsx)(nm, {
                                     ref: e => {
-                                        h ? .current ? .[t] && (h.current[t] = e)
+                                        h ?.current ?.[t] && (h.current[t] = e)
                                     },
                                     blok: e,
                                     includeImage: !1,
@@ -13310,7 +13310,7 @@
                         u = (0, c.useRef)(null),
                         _ = (0, c.useRef)(null),
                         m = (0, c.useRef)(null),
-                        p = t.assets.every(e => e ? .image ? .filename),
+                        p = t.assets.every(e => e ?.image ?.filename),
                         g = t.assets.length,
                         f = (0, c.useRef)(null),
                         h = (0, c.useRef)(null),
@@ -13327,7 +13327,7 @@
                             unLock: S
                         } = (0, $.d)(),
                         N = (0, c.useCallback)(() => {
-                            if (!b ? .current) return;
+                            if (!b ?.current) return;
                             let {
                                 x: e,
                                 minX: t,
@@ -13336,7 +13336,7 @@
                             C(e >= r), k(e <= t), m.current && o.Ay.set(m.current, {
                                 left: `${100*n}%`,
                                 translateX: `${-100*n}%`
-                            }), v(Number(u ? .current ? o.Ay.getProperty(u ? .current, "x") : 0))
+                            }), v(Number(u ?.current ? o.Ay.getProperty(u ?.current, "x") : 0))
                         }, [b, v]);
                     b.current = (0, D.P)(u, {
                         type: "x",
@@ -13349,16 +13349,16 @@
                     }, {
                         bounds: f
                     });
-                    let R = f ? .current ? .getBoundingClientRect().width || 0,
-                        A = u ? .current ? .getBoundingClientRect().width || 0;
+                    let R = f ?.current ?.getBoundingClientRect().width || 0,
+                        A = u ?.current ?.getBoundingClientRect().width || 0;
                     b.current && (R >= A ? b.current.disable() : b.current.enable());
                     let {
                         width: O
                     } = (0, U.A)();
                     (0, c.useEffect)(() => {
                         if (!m.current || !_.current) return;
-                        let e = f ? .current ? .getBoundingClientRect(),
-                            t = u ? .current ? .getBoundingClientRect();
+                        let e = f ?.current ?.getBoundingClientRect(),
+                            t = u ?.current ?.getBoundingClientRect();
                         e && t && (o.Ay.set(m.current, {
                             width: `${100*Math.min(1,e.width/t.width)}%`
                         }), o.Ay.set(_.current, {
@@ -13366,7 +13366,7 @@
                         }))
                     }, [f, u, m, _, O]), (0, c.useEffect)(() => {
                         let e = 0;
-                        [...s.current ? .querySelectorAll("#identityDetails")].forEach(t => {
+                        [...s.current ?.querySelectorAll("#identityDetails")].forEach(t => {
                             e = Math.max(e, t.clientHeight)
                         }), T(e)
                     }, [s]);
@@ -13397,7 +13397,7 @@
                             width: 0
                         },
                         X = () => {
-                            if (!x ? .current ? .[0] || !b.current) return W;
+                            if (!x ?.current ?.[0] || !b.current) return W;
                             let e = o.Ay.getProperty(u.current, "x"),
                                 t = o.Ay.getProperty(x.current[0].imageRef.current, "width"),
                                 r = o.Ay.getProperty(L.current, "width"),
@@ -13506,7 +13506,7 @@
                                 onMouseLeave: S,
                                 children: t.assets.map((e, r) => (0, i.jsx)(ny, {
                                     ref: e => {
-                                        x ? .current ? .[r] && e && (x.current[r] = e)
+                                        x ?.current ?.[r] && e && (x.current[r] = e)
                                     },
                                     blok: e,
                                     includeImage: !0,
@@ -13524,7 +13524,7 @@
                                 }),
                                 children: t.assets.map((e, t) => (0, i.jsx)(ny, {
                                     ref: e => {
-                                        x ? .current ? .[t] && (x.current[t] = e)
+                                        x ?.current ?.[t] && (x.current[t] = e)
                                     },
                                     blok: e,
                                     includeImage: !1,
@@ -13555,7 +13555,7 @@
                         ref: o,
                         className: l()(iB().imageText, "max-content-width", t),
                         ...(0, a.m)(r),
-                        children: [r.image ? .filename && (0, i.jsx)("div", {
+                        children: [r.image ?.filename && (0, i.jsx)("div", {
                             className: l()(iB().imageContainer, {
                                 [iB().right]: "right" === r.image_position
                             }),
@@ -13688,10 +13688,10 @@
                                 disableTriggerInOnScroll: !1,
                                 children: t.title
                             })
-                        }), t ? .office_details ? .[0] && (0, i.jsx)(iz, {
+                        }), t ?.office_details ?.[0] && (0, i.jsx)(iz, {
                             blok: t.office_details[0],
                             className: l()(iV().officeDetails)
-                        }), t.sections ? .map(e => (0, i.jsx)(cr, {
+                        }), t.sections ?.map(e => (0, i.jsx)(cr, {
                             blok: e,
                             canTransitionIn: r
                         }, e._uid)), (0, i.jsx)(td(), {
@@ -13815,7 +13815,7 @@
                                     i = Math.max(-1, t > 0 ? Math.floor(t / n) : -1);
                                 i > r - 1 && (i = -1);
                                 let a = (t - i * n) / n;
-                                _ !== i && (m(i), p ? .current && p.current.setCurrentSlide(i)), i > -1 && (h.current[i].progress = a, p ? .current && p.current.setProgressData(h.current), g ? .current && g.current.setProgress(a, i), f ? .current && f.current.setProgress(a, i)), p.current && p.current.setProgress(t)
+                                _ !== i && (m(i), p ?.current && p.current.setCurrentSlide(i)), i > -1 && (h.current[i].progress = a, p ?.current && p.current.setProgressData(h.current), g ?.current && g.current.setProgress(a, i), f ?.current && f.current.setProgress(a, i)), p.current && p.current.setProgress(t)
                             }
                         }
                     }), (0, i.jsx)("div", {
@@ -13900,7 +13900,7 @@
                                     i = Math.max(-1, t > 0 ? Math.floor(t / n) : -1);
                                 i > r - 1 && (i = -1);
                                 let a = (t - i * n) / n;
-                                _ !== i && (m(i), p ? .current && p.current.setCurrentSlide(i)), i > -1 && (h.current[i].progress = a, p ? .current && p.current.setProgressData(h.current), g ? .current && g.current.setProgress(a, i), f ? .current && f.current.setProgress(a, i)), p.current && p.current.setProgress(t)
+                                _ !== i && (m(i), p ?.current && p.current.setCurrentSlide(i)), i > -1 && (h.current[i].progress = a, p ?.current && p.current.setProgressData(h.current), g ?.current && g.current.setProgress(a, i), f ?.current && f.current.setProgress(a, i)), p.current && p.current.setProgress(t)
                             }
                         }
                     });
@@ -13965,7 +13965,7 @@
                         o = (0, c.useRef)(null),
                         u = (0, c.useRef)(null),
                         _ = (0, c.useRef)(null),
-                        m = (0, c.useRef)(t ? .buttons.map(() => (0, c.createRef)())),
+                        m = (0, c.useRef)(t ?.buttons.map(() => (0, c.createRef)())),
                         p = (0, $.d)();
                     (0, T.mt)({
                         scroll: {
@@ -13987,9 +13987,9 @@
                             setupTransitionOutTimeline: lb
                         })
                     }), (0, c.useEffect)(() => {
-                        if (!s.current || !_.current ? .revealTimelineRef.current) return;
+                        if (!s.current || !_.current ?.revealTimelineRef.current) return;
                         let e = (0, ec.KE)(s.current, _.current.revealTimelineRef.current, {
-                            scroller: p ? .hasSmoothScroll ? .current && p ? .scrollWrapperRef ? .current || void 0,
+                            scroller: p ?.hasSmoothScroll ?.current && p ?.scrollWrapperRef ?.current || void 0,
                             scrub: !0,
                             start: "center-=20% bottom",
                             end: "bottom bottom"
@@ -13999,11 +13999,11 @@
                         }
                     }, [s, p]);
                     let g = () => {
-                        _.current ? .setRotationDuration(180)
+                        _.current ?.setRotationDuration(180)
                     };
                     return F(o, t.use_accent_color, {
-                        foreground: t.accent_color_foreground ? .color,
-                        background: t.accent_color_background ? .color
+                        foreground: t.accent_color_foreground ?.color,
+                        background: t.accent_color_background ?.color
                     }), (0, i.jsx)("div", {
                         ref: s,
                         className: l()(lx().blackholeCta, r.className),
@@ -14015,13 +14015,13 @@
                             children: [(0, i.jsx)("div", {
                                 className: l()(lx().canvasContainer),
                                 onMouseDown: () => {
-                                    _.current ? .setRotationDuration(.25)
+                                    _.current ?.setRotationDuration(.25)
                                 },
                                 onMouseUp: g,
                                 onMouseLeave: g,
                                 children: (0, i.jsx)(es, {
                                     ref: _,
-                                    iconColor: t ? .icon_color ? .color,
+                                    iconColor: t ?.icon_color ?.color,
                                     position: {
                                         top: "50%",
                                         left: "50%"
@@ -14039,11 +14039,11 @@
                                 })
                             }), (0, i.jsx)("div", {
                                 className: l()(lx().buttonHolder),
-                                children: t ? .buttons && t ? .buttons ? .map((e, t) => (0, i.jsx)(ez.A, {
+                                children: t ?.buttons && t ?.buttons ?.map((e, t) => (0, i.jsx)(ez.A, {
                                     ref: m.current[t],
                                     className: l()(lx().button),
                                     link: {
-                                        href: e ? .link ? .cached_url
+                                        href: e ?.link ?.cached_url
                                     },
                                     label: e.title,
                                     disableTriggerInOnScroll: !0
@@ -14076,7 +14076,7 @@
                         f = (0, c.useRef)(null),
                         [, h] = (0, c.useState)(0);
                     return (0, nN.A)(() => {
-                        if (!g ? .current ? .clientWidth || !f ? .current ? .offsetWidth || !p ? .current) return;
+                        if (!g ?.current ?.clientWidth || !f ?.current ?.offsetWidth || !p ?.current) return;
                         let e = g.current.clientWidth / f.current.offsetWidth;
                         (!e || Number.isNaN(e)) && (e = 1);
                         let t = window.getComputedStyle(p.current, null).getPropertyValue("font-size"),
@@ -14086,7 +14086,7 @@
                         p.current.style.fontSize = `${i}px`, (e > 1.01 || e < .99) && document.fonts.ready.then(() => {
                             h(i)
                         })
-                    }, [g ? .current ? .clientWidth, f ? .current ? .offsetWidth, _, r.title]), F(o, r.use_accent_color), (0, i.jsx)("div", {
+                    }, [g ?.current ?.clientWidth, f ?.current ?.offsetWidth, _, r.title]), F(o, r.use_accent_color), (0, i.jsx)("div", {
                         ref: o,
                         className: l()(i0().fullWidthTitle, t),
                         ...(0, a.m)(r),
@@ -14190,7 +14190,7 @@
                             vars: {
                                 start: "top center",
                                 onEnter: () => {
-                                    v ? .current ? .tweenTo("slide_0"), b ? .current ? .tweenTo("slide_0")
+                                    v ?.current ?.tweenTo("slide_0"), b ?.current ?.tweenTo("slide_0")
                                 }
                             }
                         },
@@ -14216,14 +14216,14 @@
                             }) => {
                                 let t = r.services.length,
                                     n = Math.floor(t * e);
-                                g ? .current && g ? .current ? .setProgress(e * (t - 1) / 6 % 1), "number" == typeof n && f.current !== n && e < 1 && (x ? .current ? .tweenTo(`slide_${n}`), v ? .current ? .tweenTo(`slide_${n}`)), f.current = n
+                                g ?.current && g ?.current ?.setProgress(e * (t - 1) / 6 % 1), "number" == typeof n && f.current !== n && e < 1 && (x ?.current ?.tweenTo(`slide_${n}`), v ?.current ?.tweenTo(`slide_${n}`)), f.current = n
                             }
                         }
                     });
                     let [y, I] = (0, c.useState)(0);
                     return (0, c.useEffect)(() => {
-                        m ? .current[0].current ? .clientHeight && I(m ? .current[0].current ? .clientHeight)
-                    }, [m ? .current[0] ? .current ? .clientHeight]), (0, c.useEffect)(() => {
+                        m ?.current[0].current ?.clientHeight && I(m ?.current[0].current ?.clientHeight)
+                    }, [m ?.current[0] ?.current ?.clientHeight]), (0, c.useEffect)(() => {
                         ej().refresh(), ej().isTouch && ej().normalizeScroll(!0)
                     }, [y]), (0, i.jsxs)("div", {
                         "data-block": "services",
@@ -14309,7 +14309,7 @@
                         });
                     (0, c.useEffect)(() => {
                         k || y(!1)
-                    }, [k]), F(m, !!e ? .use_accent_color);
+                    }, [k]), F(m, !!e ?.use_accent_color);
                     let {
                         siteHeaderElementRef: j
                     } = (0, c.useContext)(rU.a);
@@ -14336,8 +14336,8 @@
                     let S = (0, c.useCallback)(e => {
                         (e || 0) && y(e), C(e)
                     }, []);
-                    e ? .video && e.video.length > 0 && (s = e.video[0]), e ? .image ? .filename && !s ? .poster_image ? .filename && (s = { ...s,
-                        poster_image: { ...e ? .image
+                    e ?.video && e.video.length > 0 && (s = e.video[0]), e ?.image ?.filename && !s ?.poster_image ?.filename && (s = { ...s,
+                        poster_image: { ...e ?.image
                         }
                     });
                     let N = (0, eC.qJ)(),
@@ -14346,7 +14346,7 @@
                         O = (0, c.useCallback)(() => {
                             if (N) {
                                 let e, t;
-                                "number" != typeof(e = A.scrollStatusRef.current ? .offset.y) && (e = 0), (t = e + m.current ? .getBoundingClientRect().top) === e ? (() => y(!0))() : A.scrollTo(0, t, 400, {
+                                "number" != typeof(e = A.scrollStatusRef.current ?.offset.y) && (e = 0), (t = e + m.current ?.getBoundingClientRect().top) === e ? (() => y(!0))() : A.scrollTo(0, t, 400, {
                                     easing: r$.kO.easeInOut,
                                     callback: () => {
                                         (() => y(!0))()
@@ -14370,7 +14370,7 @@
                     }) => {
                         I && "Escape" === e && y(!1)
                     });
-                    let L = !!(s ? .vimeo_url || s ? .hosted_video ? .filename),
+                    let L = !!(s ?.vimeo_url || s ?.hosted_video ?.filename),
                         M = e => e ? `heading-0${e}` : "heading-02";
                     return (0, i.jsxs)("div", {
                         ref: m,
@@ -14378,7 +14378,7 @@
                             [i7().noFullHeight]: e.no_full_height
                         }),
                         ...(0, a.m)(e),
-                        children: [(e ? .image ? .filename || L) && (0, i.jsxs)("div", {
+                        children: [(e ?.image ?.filename || L) && (0, i.jsxs)("div", {
                             ref: f,
                             className: l()(i7().mediaHolder, "abs-fill"),
                             children: [L && (0, i.jsx)(rD.default, {
@@ -14399,7 +14399,7 @@
                                 exitFullScreen: () => {
                                     y(!1)
                                 }
-                            }), e ? .image ? .filename && !L && (0, i.jsx)(tO.A, {
+                            }), e ?.image ?.filename && !L && (0, i.jsx)(tO.A, {
                                 src: e.image.filename,
                                 srcDesktop: e.image.filename,
                                 className: l()(i7().image, "abs-fill"),
@@ -14429,7 +14429,7 @@
                                     trigger: m
                                 },
                                 children: e.title
-                            }), "string" != typeof e.title && e.title ? .content && (0, ex.XX)(e.title, {
+                            }), "string" != typeof e.title && e.title ?.content && (0, ex.XX)(e.title, {
                                 nodeResolvers: {
                                     [ex.q0]: (t, {
                                         level: r
@@ -14448,7 +14448,7 @@
                                             className: l()(i7()[M(r)], i7().title),
                                             size: M(r),
                                             children: [t, (0, i.jsx)("br", {})]
-                                        }, t ? .[0])
+                                        }, t ?.[0])
                                     })
                                 }
                             }), e.description && (0, i.jsx)(_.A, {
@@ -14464,14 +14464,14 @@
                                 disableTriggerInOnScroll: !0,
                                 className: l()(i7().description),
                                 children: e.description
-                            }), e ? .link && e ? .link.length > 0 && e ? .link[0] && (0, i.jsx)(ez.A, {
+                            }), e ?.link && e ?.link.length > 0 && e ?.link[0] && (0, i.jsx)(ez.A, {
                                 ref: w,
                                 className: l()(i7().button),
                                 link: {
-                                    href: e ? .link[0] ? .link ? .cached_url,
-                                    uuid: e ? .link[0] ? .link ? .id
+                                    href: e ?.link[0] ?.link ?.cached_url,
+                                    uuid: e ?.link[0] ?.link ?.id
                                 },
-                                label: e ? .link[0].title,
+                                label: e ?.link[0].title,
                                 disableTriggerInOnScroll: !0
                             }), L && (0, i.jsx)(rW.default, {
                                 ref: p,
@@ -14580,7 +14580,7 @@
                                 disableTriggerInOnScroll: !1,
                                 children: (0, i.jsx)("a", {
                                     href: `mailto:${e?.email_link?.email||e?.email_link?.url}`,
-                                    children: e ? .email_address
+                                    children: e ?.email_address
                                 })
                             })]
                         }, e._uid))
@@ -14599,7 +14599,7 @@
                             locationsList: m
                         } = (0, eJ.o)(),
                         p = (0, c.useMemo)(() => {
-                            if (!m ? .length) return [];
+                            if (!m ?.length) return [];
                             let e = [];
                             return m.forEach(t => {
                                 let r = t.region[0];
@@ -14644,7 +14644,7 @@
                         }) : p.map(e => (0, i.jsx)(az, {
                             region: e,
                             iconColor: d,
-                            link: t.regions.find(t => t.label.toLowerCase() === e.toLowerCase()) ? .button ? .[0].link,
+                            link: t.regions.find(t => t.label.toLowerCase() === e.toLowerCase()) ?.button ?.[0].link,
                             region_link_label: t.region_link_label
                         }, e))]
                     })
@@ -14694,7 +14694,7 @@
                         props: {
                             className: l()(tB().office, tB().resetButtonStyle, e),
                             link: {
-                                href: t ? .office_link ? .cached_url || t ? .office_link ? .url || "",
+                                href: t ?.office_link ?.cached_url || t ?.office_link ?.url || "",
                                 uuid: t._uid
                             },
                             "aria-label": "Go to location details"
@@ -14758,7 +14758,7 @@
                         h = (0, c.useRef)([]),
                         x = (0, c.useRef)([]);
                     return (0, c.useEffect)(() => {
-                        if (p ? .current) {
+                        if (p ?.current) {
                             let e = p.current.offsetHeight;
                             o.Ay.set(m.current, {
                                 paddingBottom: `${e}px`
@@ -14776,7 +14776,7 @@
                                 start: "top top",
                                 pinType: "transform",
                                 anticipatePin: 1,
-                                onUpdate: e ? .onUpdate,
+                                onUpdate: e ?.onUpdate,
                                 end: () => `+=${(e?.carouselRef?.current?.scrollWidth||0)-(e?.carouselRef?.current?.offsetWidth||0)}`,
                                 ...void 0
                             },
@@ -14815,7 +14815,7 @@
                         }), (0, i.jsx)("div", {
                             ref: m,
                             className: l()(sv().carouselWrapper, "grid-gutter"),
-                            children: e ? .assets ? .map((e, t) => (0, i.jsxs)("div", {
+                            children: e ?.assets ?.map((e, t) => (0, i.jsxs)("div", {
                                 ref: e => {
                                     h.current[t] = e
                                 },
@@ -14861,7 +14861,7 @@
                         ref: s,
                         className: l()(i8().imageGridFluid, r.className, "grid-gutter", "max-content-width"),
                         ...(0, a.m)(e),
-                        children: e ? .images ? .map((t, r) => (0, i.jsx)(tO.A, {
+                        children: e ?.images ?.map((t, r) => (0, i.jsx)(tO.A, {
                             src: t.filename,
                             srcDesktop: t.filename,
                             sizes: "40vw",
@@ -14908,7 +14908,7 @@
                         if (!e) return;
                         let t = !0;
                         (async () => {
-                            _.countries ? .length > 0 && (t = _.exclude_countries ? !_.countries ? .includes(e) : _.countries ? .includes(e)), t || (v(!1), await p.push("/work"))
+                            _.countries ?.length > 0 && (t = _.exclude_countries ? !_.countries ?.includes(e) : _.countries ?.includes(e)), t || (v(!1), await p.push("/work"))
                         })()
                     }, [m.countryCode]), (0, u.A)({
                         trigger: o,
@@ -14944,13 +14944,13 @@
                                         })
                                     })
                                 })
-                            }), d ? .map(e => (0, i.jsx)(cr, {
+                            }), d ?.map(e => (0, i.jsx)(cr, {
                                 blok: e,
                                 canTransitionIn: t
                             }, e._uid)), (0, i.jsx)(sF, {
                                 blok: _
                             })]
-                        }), (f && m.fromPath ? .startsWith(sB.fB.Work) || m.fromPath ? .startsWith(sB.fB.Cases) || ["", "/", "?"].includes(m.fromPath)) && (0, i.jsx)("section", {
+                        }), (f && m.fromPath ?.startsWith(sB.fB.Work) || m.fromPath ?.startsWith(sB.fB.Cases) || ["", "/", "?"].includes(m.fromPath)) && (0, i.jsx)("section", {
                             children: g && (0, i.jsx)(s$, {
                                 blok: g.content,
                                 full_slug: g.full_slug,
@@ -15084,13 +15084,13 @@
                             modules: u,
                             ...d
                         } = t,
-                        _ = (0, c.useMemo)(() => u ? .find(e => "pardot_pdf_form" === e.component), [u]),
+                        _ = (0, c.useMemo)(() => u ?.find(e => "pardot_pdf_form" === e.component), [u]),
                         m = (0, t_.useRouter)(),
                         p = {
                             "@context": "https://schema.org",
                             "@type": "Article",
                             headline: t.title,
-                            image: [t.key_image ? .[0] ? .image_portrait, t.key_image ? .[0] ? .image_landscape].filter(e => e),
+                            image: [t.key_image ?.[0] ?.image_portrait, t.key_image ?.[0] ?.image_landscape].filter(e => e),
                             datePublished: nP(t.publish_date, "YYYY-MM-DD"),
                             publisher: {
                                 "@type": "Organization",
@@ -15230,7 +15230,7 @@
                             onUpdate: ({
                                 progress: e
                             }) => {
-                                h ? .current ? .progress(e)
+                                h ?.current ?.progress(e)
                             }
                         }
                     });
@@ -15261,7 +15261,7 @@
                                 ref: m,
                                 children: (0, i.jsx)("div", {
                                     className: l()(lE().carouselContainer),
-                                    children: t ? .blok ? .items ? .map((e, t) => (0, i.jsxs)("div", { ...(0, a.m)(e),
+                                    children: t ?.blok ?.items ?.map((e, t) => (0, i.jsxs)("div", { ...(0, a.m)(e),
                                         ref: e => {
                                             p.current[t] = e
                                         },
@@ -15387,7 +15387,7 @@
                         ref: n,
                         className: l()(lX().servicesCtaItem, t.className),
                         ...(0, a.m)(t.blok),
-                        children: [t ? .blok ? .link ? .id && (0, nL.j)({
+                        children: [t ?.blok ?.link ?.id && (0, nL.j)({
                             innerTemplate: b,
                             props: {
                                 label: t.blok.title,
@@ -15398,7 +15398,7 @@
                                 className: l()(lX().anchor)
                             },
                             elementRef: s
-                        }), !t ? .blok ? .link ? .id && (0, i.jsx)("div", {
+                        }), !t ?.blok ?.link ?.id && (0, i.jsx)("div", {
                             ref: s,
                             className: l()(lX().anchor),
                             children: b
@@ -15500,12 +15500,12 @@
                     return (0, i.jsxs)("div", {
                         ref: e || r,
                         className: l()(lQ().servicesCta, t.className, {
-                            [lQ().hasNoCopy]: !t ? .blok ? .title && !t ? .blok ? .description
+                            [lQ().hasNoCopy]: !t ?.blok ?.title && !t ?.blok ?.description
                         }),
                         ...(0, a.m)(t.blok),
                         children: [(0, i.jsxs)("div", {
                             className: l()(lQ().header, "grid-gutter"),
-                            children: [t ? .blok ? .title && (0, i.jsx)(d.A, {
+                            children: [t ?.blok ?.title && (0, i.jsx)(d.A, {
                                 disableTriggerInOnScroll: !1,
                                 as: "h2",
                                 size: "heading-03",
@@ -15514,14 +15514,14 @@
                                 children: t.blok.title.split("\n").map((e, t) => (0, i.jsx)("div", {
                                     children: e
                                 }, `${e}-${t}`))
-                            }), t ? .blok ? .description && (0, i.jsx)(_.A, {
+                            }), t ?.blok ?.description && (0, i.jsx)(_.A, {
                                 disableTriggerInOnScroll: !1,
                                 as: "p",
                                 size: "body-large",
                                 className: l()(lQ().description),
-                                children: t ? .blok ? .description
+                                children: t ?.blok ?.description
                             })]
-                        }), t.blok.accordion ? .[0] && (0, i.jsx)(rv, {
+                        }), t.blok.accordion ?.[0] && (0, i.jsx)(rv, {
                             blok: t.blok.accordion[0],
                             className: lQ().accordion,
                             numbered: !0
@@ -15572,8 +15572,8 @@
                         className: l()(lR().headerIntro, n.className),
                         ...(0, a.m)(r),
                         children: [(0, i.jsx)(lB, {
-                            title: r ? .title,
-                            kanjiText: r ? .kanjiText,
+                            title: r ?.title,
+                            kanjiText: r ?.kanjiText,
                             ref: _
                         }), (0, i.jsx)("div", {
                             className: l()(lR().content),
@@ -15588,8 +15588,8 @@
                                         "--container-min-height": "calc(var(--vh) * 100)"
                                     },
                                     blok: {
-                                        topTitle: r ? .topLeftTitle,
-                                        bottomTitle: r ? .bottomRightTitle,
+                                        topTitle: r ?.topLeftTitle,
+                                        bottomTitle: r ?.bottomRightTitle,
                                         icon: "pinwheel",
                                         ...r
                                     }
@@ -15623,8 +15623,8 @@
                             })
                         });
                     return (0, c.useEffect)(() => {
-                        let e = u ? .current ? .map(e => e);
-                        s ? .current && (d.current = ((e, t, r = 3) => {
+                        let e = u ?.current ?.map(e => e);
+                        s ?.current && (d.current = ((e, t, r = 3) => {
                             let n = o.Ay.timeline({
                                     repeat: -1
                                 }),
@@ -15634,21 +15634,21 @@
                                 a = 0,
                                 s = t.offsetWidth || 0;
                             e.forEach(e => {
-                                a += e ? .offsetWidth || 0
+                                a += e ?.offsetWidth || 0
                             });
                             let l = 0,
                                 c = 0,
                                 u = 0;
                             return [, , , ].fill(0).forEach((t, n) => {
                                 l = 0, e.forEach((e, t) => {
-                                    let o = e ? .offsetWidth || 0,
+                                    let o = e ?.offsetWidth || 0,
                                         u = l,
                                         d = r * Math.min(100, Math.max(30, .1 * s)),
                                         _ = s - u,
                                         m = -o - u,
                                         p = Math.abs(m - _),
                                         g = (u + a * n) / d;
-                                    l = (e ? .offsetLeft || 0) + o, i.fromTo(e, {
+                                    l = (e ?.offsetLeft || 0) + o, i.fromTo(e, {
                                         x: `${_/o*100}%`
                                     }, {
                                         duration: p / d,
@@ -15665,12 +15665,12 @@
                             }), n
                         })(e, s.current))
                     }, [s, d, u]), (0, c.useEffect)(() => {
-                        _ ? d ? .current ? .play() : d ? .current ? .pause()
+                        _ ? d ?.current ?.play() : d ?.current ?.pause()
                     }, [_, s]), (0, i.jsx)("div", {
                         ref: s,
                         className: l()(lZ().tickerText, e),
                         ...(0, a.m)(t),
-                        children: t ? .items ? .map((e, t) => (0, i.jsx)(l2, {
+                        children: t ?.items ?.map((e, t) => (0, i.jsx)(l2, {
                             ref: e => {
                                 u.current[t] = e
                             },
@@ -15692,7 +15692,7 @@
                         } = (0, eJ.o)(),
                         m = (0, c.useMemo)(() => {
                             let e = [];
-                            return _ ? e = t.cards ? .filter(e => "string" == typeof e.case || !(e.case.content.countries ? .length > 0) || (e.case.content.exclude_countries ? !e.case.content.countries ? .includes(_) : e.case.content.countries ? .includes(_))) : t.cards
+                            return _ ? e = t.cards ?.filter(e => "string" == typeof e.case || !(e.case.content.countries ?.length > 0) || (e.case.content.exclude_countries ? !e.case.content.countries ?.includes(_) : e.case.content.countries ?.includes(_))) : t.cards
                         }, [t.cards, _]),
                         {
                             cases: p,
@@ -15701,9 +15701,9 @@
                             activeLocationFilter: h
                         } = function(e, t) {
                             let r = (0, t_.useRouter)(),
-                                n = (0, c.useCallback)((e, t) => e ? .find(e => (0, rS.O7)(e) === t), []),
-                                [i, a] = (0, c.useState)(n(e ? .category_filters, r.query.category) || e.category_all),
-                                [s, l] = (0, c.useState)(n(e ? .locations_filter ? .map(e => e.content.country), r.query.location) || e.location_all),
+                                n = (0, c.useCallback)((e, t) => e ?.find(e => (0, rS.O7)(e) === t), []),
+                                [i, a] = (0, c.useState)(n(e ?.category_filters, r.query.category) || e.category_all),
+                                [s, l] = (0, c.useState)(n(e ?.locations_filter ?.map(e => e.content.country), r.query.location) || e.location_all),
                                 o = (0, c.useCallback)((t, r) => {
                                     let n, i;
                                     r === ou && t !== e.location_all && (n = e.category_all), s !== e.location_all && r === od && (i = e.location_all), r === ou && (i = t), r === od && (n = t), n && a(n), i && l(i)
@@ -15711,7 +15711,7 @@
                             return {
                                 cases: (0, c.useMemo)(() => {
                                     let r;
-                                    return r = s !== e.location_all ? t : e.cards.map(e => e.case), i !== e.category_all && (r = r ? .filter(e => e.content.category.includes(i))), s !== e.location_all && (r = r ? .filter(e => (e.content.locations || []).some(e => o_(e, s)))), r
+                                    return r = s !== e.location_all ? t : e.cards.map(e => e.case), i !== e.category_all && (r = r ?.filter(e => e.content.category.includes(i))), s !== e.location_all && (r = r ?.filter(e => (e.content.locations || []).some(e => o_(e, s)))), r
                                 }, [i, s, t, e.cards, e.category_all, e.location_all]),
                                 activeCategoryFilter: i,
                                 onFilterClick: o,
@@ -15724,12 +15724,12 @@
                         [b, y] = (0, c.useState)(12),
                         T = (0, c.useRef)(null),
                         I = (0, c.useRef)(null),
-                        C = (0, c.useMemo)(() => x ? .filter(e => e.uuid) ? ? [], [x]),
+                        C = (0, c.useMemo)(() => x ?.filter(e => e.uuid) ?? [], [x]),
                         w = (0, c.useMemo)(() => C.slice(0, b), [C, b]),
                         k = b < C.length;
                     (0, eZ.A)(() => {
                         (async () => {
-                            T ? .current && (await (0, S._)(T.current, {
+                            T ?.current && (await (0, S._)(T.current, {
                                 duration: .2,
                                 to: 0
                             }), v(p), y(12), (0, S.m)(T.current, {
@@ -15754,26 +15754,26 @@
                                 r = [{
                                     filter: t.category_all
                                 }],
-                                n = t ? .category_filters ? .map(t => e.includes((0, rS.O7)(t)) ? {
+                                n = t ?.category_filters ?.map(t => e.includes((0, rS.O7)(t)) ? {
                                     icon: (0, rS.O7)(t),
                                     filter: t
                                 } : {
                                     filter: t
                                 });
                             return r.concat(n)
-                        }, [t.category_all, t ? .category_filters]),
+                        }, [t.category_all, t ?.category_filters]),
                         R = (0, c.useMemo)(() => {
                             let e = [];
-                            return t.locations_filter ? .forEach(t => {
-                                if (t.content.countries ? .length) t.content.countries.forEach(t => {
+                            return t.locations_filter ?.forEach(t => {
+                                if (t.content.countries ?.length) t.content.countries.forEach(t => {
                                     try {
-                                        u ? .some(e => e.content ? .locations ? .some(e => o_(e, t))) && e.push(t)
+                                        u ?.some(e => e.content ?.locations ?.some(e => o_(e, t))) && e.push(t)
                                     } catch (r) {
                                         console.error(r), e.push(t)
                                     }
                                 });
                                 else try {
-                                    u ? .some(e => e.content ? .locations ? .some(e => o_(e, t.content.country || t.content.title))) && e.push(t.content.country || t.content.title)
+                                    u ?.some(e => e.content ?.locations ?.some(e => o_(e, t.content.country || t.content.title))) && e.push(t.content.country || t.content.title)
                                 } catch (r) {
                                     console.error(r), e.push(t.content.country || t.content.title)
                                 }
@@ -15804,7 +15804,7 @@
                                     colorVariation: "dark7",
                                     type: od,
                                     className: l()(l3().categoryFilter)
-                                }), t.locations_filter ? .length && t.location_all && (0, i.jsx)(n1, {
+                                }), t.locations_filter ?.length && t.location_all && (0, i.jsx)(n1, {
                                     className: l()(l3().locationFilter),
                                     filters: [t.location_all, ...R],
                                     activeFilter: h,
@@ -15829,7 +15829,7 @@
                             className: l()(l3().listContainer, {
                                 "grid-row": !s
                             }),
-                            children: [t.highlighted_case ? .[0] && (0, i.jsx)(ob, {
+                            children: [t.highlighted_case ?.[0] && (0, i.jsx)(ob, {
                                 className: l()(l3().cardItem, {
                                     [l3().fullBleed]: !0
                                 }),
@@ -15890,10 +15890,10 @@
                                     width: s,
                                     height: l
                                 } = (0, U.A)(), u = (0, c.useCallback)((e = !1) => {
-                                    let n = t ? .current ? .getBoundingClientRect(),
+                                    let n = t ?.current ?.getBoundingClientRect(),
                                         i = {
-                                            width: r ? .current ? .offsetWidth || 0,
-                                            height: r ? .current ? .offsetHeight || 0
+                                            width: r ?.current ?.offsetWidth || 0,
+                                            height: r ?.current ?.offsetHeight || 0
                                         },
                                         a = i.width / i.height,
                                         s = 0,
@@ -15957,9 +15957,9 @@
                                 title2Ref: l,
                                 siteHeaderElementRef: m
                             }), v = (0, $.d)(), b = (0, c.useCallback)(() => {
-                                let t = v.scrollStatusRef.current ? .offset.y;
+                                let t = v.scrollStatusRef.current ?.offset.y;
                                 "number" != typeof t && (t = 0);
-                                let r = t + e.current ? .getBoundingClientRect().top,
+                                let r = t + e.current ?.getBoundingClientRect().top,
                                     n = () => {
                                         p.current = !0, x.kill(), h.restart(), g(!0)
                                     };
@@ -16148,7 +16148,7 @@
                             unLock: w
                         } = (0, $.d)(),
                         k = (0, c.useCallback)(() => {
-                            if (!h ? .current) return;
+                            if (!h ?.current) return;
                             let {
                                 x: e,
                                 minX: t,
@@ -16170,8 +16170,8 @@
                     }, {
                         bounds: g
                     });
-                    let j = g ? .current ? .getBoundingClientRect().width || 0,
-                        S = u ? .current ? .getBoundingClientRect().width || 0;
+                    let j = g ?.current ?.getBoundingClientRect().width || 0,
+                        S = u ?.current ?.getBoundingClientRect().width || 0;
                     h.current && (j >= S ? h.current.disable() : h.current.enable());
                     let [N, R] = (0, c.useState)(!1);
                     (0, c.useEffect)(() => {
@@ -16207,8 +16207,8 @@
                     } = (0, U.A)();
                     (0, c.useEffect)(() => {
                         if (!p.current || !m.current) return;
-                        let e = g ? .current ? .getBoundingClientRect(),
-                            t = u ? .current ? .getBoundingClientRect();
+                        let e = g ?.current ?.getBoundingClientRect(),
+                            t = u ?.current ?.getBoundingClientRect();
                         e && t && (o.Ay.set(p.current, {
                             width: `${100*Math.min(1,e.width/t.width)}%`
                         }), o.Ay.set(m.current, {
@@ -16229,7 +16229,7 @@
                         maxX: 0,
                         width: 0
                     }, W = () => {
-                        if (!_ ? .current ? .[0] || !h.current) return E;
+                        if (!_ ?.current ?.[0] || !h.current) return E;
                         let e = o.Ay.getProperty(u.current, "x"),
                             t = o.Ay.getProperty(_.current[0].mediaRef.current, "width"),
                             r = o.Ay.getProperty(L.current, "width"),
@@ -16250,9 +16250,9 @@
                         countryCode: G
                     } = (0, eJ.o)(), q = (0, c.useMemo)(() => {
                         let e = [],
-                            r = t ? .cards;
-                        return G ? e = r ? .filter(e => "string" == typeof e.case || !(e.case.content.countries ? .length > 0) || (e.case.content.exclude_countries ? !e.case.content.countries ? .includes(G) : e.case.content.countries ? .includes(G))) : r
-                    }, [t ? .cards, G]);
+                            r = t ?.cards;
+                        return G ? e = r ?.filter(e => "string" == typeof e.case || !(e.case.content.countries ?.length > 0) || (e.case.content.exclude_countries ? !e.case.content.countries ?.includes(G) : e.case.content.countries ?.includes(G))) : r
+                    }, [t ?.cards, G]);
                     return (0, i.jsxs)("div", {
                         ref: s,
                         className: l()(oA().imageSliderDraggable, e),
@@ -16342,7 +16342,7 @@
                                     }
                                 },
                                 onMouseLeave: w,
-                                children: q ? .map((e, t) => (0, i.jsx)(ob, {
+                                children: q ?.map((e, t) => (0, i.jsx)(ob, {
                                     ref: e => {
                                         _.current[t] = e
                                     },
@@ -16368,7 +16368,7 @@
                         id: "main-content",
                         ...(0, a.m)(r),
                         key: r._uid
-                    }, r ? .modules ? .map(e => (0, i.jsx)(cr, {
+                    }, r ?.modules ?.map(e => (0, i.jsx)(cr, {
                         blok: e,
                         canTransitionIn: t
                     }, e._uid)))
@@ -16984,21 +16984,21 @@
                         } = { ...I,
                             ...r
                         }, c = (0, s.useRef)(C), u = (0, T.d)(), d = (0, s.useRef)(void 0), m = (0, s.useRef)(0), p = (0, x.A)(), [g, f] = (0, s.useState)(!1), w = (0, s.useCallback)(() => {
-                            let e = u ? .scrollStatusRef.current;
+                            let e = u ?.scrollStatusRef.current;
                             return {
-                                x: "number" != typeof e ? .offset.x ? 0 : e ? .offset.x,
-                                y: "number" != typeof e ? .offset.y ? 0 : e ? .offset.y
+                                x: "number" != typeof e ?.offset.x ? 0 : e ?.offset.x,
+                                y: "number" != typeof e ?.offset.y ? 0 : e ?.offset.y
                             }
-                        }, [u ? .scrollStatusRef.current]), k = (0, s.useCallback)(() => {
+                        }, [u ?.scrollStatusRef.current]), k = (0, s.useCallback)(() => {
                             if (e && n) {
                                 let e = w(),
-                                    r = t.element.current ? .getBoundingClientRect();
+                                    r = t.element.current ?.getBoundingClientRect();
                                 d.current = {
-                                    width: r ? .width || 0,
-                                    height: r ? .height || 0,
-                                    top: (r ? .top || 0) + e.y,
-                                    left: (r ? .left || 0) + e.x
-                                }, m.current = (d ? .current ? .width || 0) * l
+                                    width: r ?.width || 0,
+                                    height: r ?.height || 0,
+                                    top: (r ?.top || 0) + e.y,
+                                    left: (r ?.left || 0) + e.x
+                                }, m.current = (d ?.current ?.width || 0) * l
                             }
                         }, [m, d, t.element.current, l, w, e, n]), j = (e, t, r) => {
                             _.Ay.to(e, {
@@ -17012,8 +17012,8 @@
                             })
                         }, S = (0, s.useCallback)(() => {
                             let e = t.element.current,
-                                r = t.innerElement ? .current,
-                                n = t.scaleElement ? .current,
+                                r = t.innerElement ?.current,
+                                n = t.scaleElement ?.current,
                                 i = c.current;
                             _.Ay.set(e, {
                                 x: i.x.previous,
@@ -17024,21 +17024,21 @@
                             }), n && _.Ay.set(n, {
                                 scale: i.scale.previous
                             })
-                        }, [t.element.current, t.scaleElement ? .current, t.innerElement ? .current, c.current]), N = (0, s.useCallback)(t => {
+                        }, [t.element.current, t.scaleElement ?.current, t.innerElement ?.current, c.current]), N = (0, s.useCallback)(t => {
                             if (n && e) {
                                 let e = w(),
                                     r = {
                                         x: t.clientX,
                                         y: t.clientY
                                     },
-                                    n = d ? .current ? .left || 0,
-                                    s = d ? .current ? .width || 0,
-                                    l = d ? .current ? .top || 0,
-                                    u = d ? .current ? .height || 0,
+                                    n = d ?.current ?.left || 0,
+                                    s = d ?.current ?.width || 0,
+                                    l = d ?.current ?.top || 0,
+                                    u = d ?.current ?.height || 0,
                                     _ = (0, y.Io)(r.x + e.x, r.y + e.y, n + s / 2, l + u / 2),
                                     p = 0,
                                     x = 0;
-                                _ < m.current ? (g || (c.current.scale.current = o, f(!0)), p = (r.x + e.x - (n + s / 2)) * a, x = (r.y + e.y - (l + u / 2)) * a, c.current.x.current = p, c.current.y.current = x, c.current.x.previous = h()(c.current.x.previous, c.current.x.current, i ? .x), c.current.y.previous = h()(c.current.y.previous, c.current.y.current, i ? .y), c.current.scale.previous = h()(c.current.scale.previous, c.current.scale.current, i ? .scale), S()) : g && (f(!1), j([c.current.scale], 1), j([c.current.x, c.current.y], 0, () => {
+                                _ < m.current ? (g || (c.current.scale.current = o, f(!0)), p = (r.x + e.x - (n + s / 2)) * a, x = (r.y + e.y - (l + u / 2)) * a, c.current.x.current = p, c.current.y.current = x, c.current.x.previous = h()(c.current.x.previous, c.current.x.current, i ?.x), c.current.y.previous = h()(c.current.y.previous, c.current.y.current, i ?.y), c.current.scale.previous = h()(c.current.scale.previous, c.current.scale.current, i ?.scale), S()) : g && (f(!1), j([c.current.scale], 1), j([c.current.x, c.current.y], 0, () => {
                                     S()
                                 }))
                             }
@@ -17218,8 +17218,8 @@
                 P: () => i
             });
             var n = r(76155);
-            let i = (e, t) => !!(e ? .includes(`${n.fB.Cases}/`) && t ? .includes(`${n.fB.Cases}/`)),
-                a = (e, t) => !!((e ? .includes(`${n.fB.Location}/`) || e ? .includes(`${n.fB.Locations}`)) && (t ? .includes(`${n.fB.Location}/`) || t ? .includes(`${n.fB.Locations}`)))
+            let i = (e, t) => !!(e ?.includes(`${n.fB.Cases}/`) && t ?.includes(`${n.fB.Cases}/`)),
+                a = (e, t) => !!((e ?.includes(`${n.fB.Location}/`) || e ?.includes(`${n.fB.Locations}`)) && (t ?.includes(`${n.fB.Location}/`) || t ?.includes(`${n.fB.Locations}`)))
         },
         32212: e => {
             e.exports = {
@@ -17590,7 +17590,7 @@
             }) {
                 n() && r.current ? e.add((0, p.m)(r.current, {
                     duration: .2
-                })) : !t && r ? .current && e.fromTo(r.current, {
+                })) : !t && r ?.current && e.fromTo(r.current, {
                     y: 300
                 }, {
                     duration: .5,
@@ -17604,9 +17604,9 @@
                 skipWipeOut: r,
                 hasFadeTransition: n
             }) {
-                n() && t ? .current ? e.add((0, p._)(t.current, {
+                n() && t ?.current ? e.add((0, p._)(t.current, {
                     duration: .2
-                })) : !r() && t ? .current ? (e.to(t.current, {
+                })) : !r() && t ?.current ? (e.to(t.current, {
                     duration: .5,
                     y: -300,
                     ease: "Quad.easeOut"
@@ -17638,25 +17638,25 @@
                 }, [n, s]), (0, a.useEffect)(() => {
                     let e;
                     Array.from(u).forEach(t => {
-                        let r = t.accentColor ? ? o.current,
+                        let r = t.accentColor ?? o.current,
                             n = t.useAccent ? r : c.current;
-                        e || (e = c.current), (e ? .foreground !== n ? .foreground || e ? .background !== n ? .background) && m.current.push({
+                        e || (e = c.current), (e ?.foreground !== n ?.foreground || e ?.background !== n ?.background) && m.current.push({
                             previousTheme: e,
                             theme: n,
                             ref: t.ref
                         }), e = n
                     }), i.Ay.set(l.current, {
-                        "--background-color": c ? .current ? .background,
-                        "--foreground-color": c ? .current ? .foreground
+                        "--background-color": c ?.current ?.background,
+                        "--foreground-color": c ?.current ?.foreground
                     }), m.current.forEach(e => {
                         let t = e.previousTheme || e.theme,
                             r = {
-                                background: t ? .background,
-                                foreground: t ? .foreground
+                                background: t ?.background,
+                                foreground: t ?.foreground
                             },
                             n = {
-                                background: t ? .background,
-                                foreground: t ? .foreground
+                                background: t ?.background,
+                                foreground: t ?.foreground
                             };
                         _.current.push(i.Ay.fromTo(r, { ...t
                         }, { ...e.theme,
@@ -17667,17 +17667,17 @@
                                     scrub: !0,
                                     start: "top 60%",
                                     end: "top 20%",
-                                    scroller: p ? .hasSmoothScroll ? .current ? p ? .scrollWrapperRef ? .current : void 0
+                                    scroller: p ?.hasSmoothScroll ?.current ? p ?.scrollWrapperRef ?.current : void 0
                                 }),
                                 onUpdate() {
-                                    r ? .background !== n.background && (g.current(r ? .background), n.background = r.background), r ? .foreground !== n ? .foreground && (f.current(r ? .foreground), n.foreground = r.foreground)
+                                    r ?.background !== n.background && (g.current(r ?.background), n.background = r.background), r ?.foreground !== n ?.foreground && (f.current(r ?.foreground), n.foreground = r.foreground)
                                 }
                             }
                         }))
                     })
-                }, [u, o, c, m, l, p.scrollWrapperRef, p ? .hasSmoothScroll, d]), (0, h.A)(() => {
-                    _ ? .current.forEach(e => {
-                        e ? .kill()
+                }, [u, o, c, m, l, p.scrollWrapperRef, p ?.hasSmoothScroll, d]), (0, h.A)(() => {
+                    _ ?.current.forEach(e => {
+                        e ?.kill()
                     }), _.current = []
                 })
             };
@@ -17723,22 +17723,22 @@
                             lock: M,
                             scrollStatusRef: z
                         } = (0, b.d)(),
-                        H = h ? .content ? .modules ? .find(e => "featured_news_overview" === e.component);
-                    H && H ? .news_items ? .length > 0 && y.setFeaturedNews(H ? .news_items), y.setRecentNewsData(t), y.setNextStoryData(e), r && y.setAllCases(r);
+                        H = h ?.content ?.modules ?.find(e => "featured_news_overview" === e.component);
+                    H && H ?.news_items ?.length > 0 && y.setFeaturedNews(H ?.news_items), y.setRecentNewsData(t), y.setNextStoryData(e), r && y.setAllCases(r);
                     let {
                         setForceRefresh: B,
                         setPrimaryThemeColor: F
                     } = (0, x.u2)();
-                    F(h ? .content ? .main_color_background ? .color, h ? .content ? .main_color_foreground ? .color), T(h ? .content ? .is_dark_theme, h ? .content ? .accent_color_foreground ? .color, h ? .content ? .accent_color_background ? .color);
+                    F(h ?.content ?.main_color_background ?.color, h ?.content ?.main_color_foreground ?.color), T(h ?.content ?.is_dark_theme, h ?.content ?.accent_color_foreground ?.color, h ?.content ?.accent_color_background ?.color);
                     let E = (0, a.useCallback)(e => {
                         k.xl || (document.body.style.maxHeight = e ? "100vh" : "unset", document.body.style.overflow = e ? "hidden" : "auto")
                     }, []);
                     return (0, c.w)({
                         beforeTransitionOut(e) {
-                            y.setMenuOpenState(!1), S(!1), N() || R() || y.coverPageWipeEffect(!0), L(0, (z ? .current ? .offset ? .y || 0) - 1, 0), e()
+                            y.setMenuOpenState(!1), S(!1), N() || R() || y.coverPageWipeEffect(!0), L(0, (z ?.current ?.offset ?.y || 0) - 1, 0), e()
                         },
                         onDispose() {
-                            A ? .current ? .kill()
+                            A ?.current ?.kill()
                         },
                         beforeTransitionIn: async e => {
                             E(!0), L(0, 0, 0), M(), y.fromPath || (A.current = i.Ay.delayedCall(.5, () => (0, I.l)()), await A.current), y.showPageWipeEffect && await i.Ay.delayedCall(.4, () => y.coverPageWipeEffect(!1)), e(), i.Ay.delayedCall(.1 * !k.xl, async () => {
@@ -17767,7 +17767,7 @@
                         let e = document.querySelector("#__NEXT_DATA__");
                         if (!e) return;
                         let t = JSON.parse(e.innerHTML);
-                        t ? .props ? .pageProps ? .story ? .content ? .seo_title && t ? .props ? .globalSettings ? .seo_title && delete t.props.globalSettings.seo_title, t ? .props ? .pageProps ? .story ? .content ? .seo_description && t ? .props ? .globalSettings ? .seo_description && delete t.props.globalSettings.seo_description, e.innerHTML = JSON.stringify(t), B(e => e + 1)
+                        t ?.props ?.pageProps ?.story ?.content ?.seo_title && t ?.props ?.globalSettings ?.seo_title && delete t.props.globalSettings.seo_title, t ?.props ?.pageProps ?.story ?.content ?.seo_description && t ?.props ?.globalSettings ?.seo_description && delete t.props.globalSettings.seo_description, e.innerHTML = JSON.stringify(t), B(e => e + 1)
                     }, [B]), (0, n.jsx)("div", {
                         ref: d,
                         className: l()(s.className),
@@ -18248,8 +18248,8 @@
                     } = (0, l.e)();
                     (0, s.A)(() => ((async () => {
                         (0, i.ah)(async () => {
-                            await n.current, e ? .transitionIn()
-                        }, t ? .beforeTransitionIn)
+                            await n.current, e ?.transitionIn()
+                        }, t ?.beforeTransitionIn)
                     })(), () => {
                         r && r()
                     }), [e])
@@ -18512,7 +18512,7 @@
                     p.current = !0
                 }), (0, a.useEffect)(() => {
                     t && function(e) {
-                        if (document.querySelector("#storyblokBridge")) n ? .then(() => {
+                        if (document.querySelector("#storyblokBridge")) n ?.then(() => {
                             e()
                         });
                         else {
@@ -18541,7 +18541,7 @@
                                 }), l.on(["published"], async () => {
                                     window.location.reload()
                                 }), l.on("input", r => {
-                                    e && r.story ? .content ? ._uid === e.content._uid && (t(r.story), o().refresh())
+                                    e && r.story ?.content ?._uid === e.content._uid && (t(r.story), o().refresh())
                                 }), l.on("enterEditmode", async n => {
                                     try {
                                         r(!0);

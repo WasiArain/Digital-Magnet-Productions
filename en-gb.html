@@ -2,6 +2,28 @@
 <html lang="en-gb">
 
 <head>
+<script>
+  window.addEventListener('error', function(e) {
+    if (e.message && e.message.includes('Minified React error #418')) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    }
+  });
+</script>
+
+<script>
+  const originalError = console.error;
+  console.error = function(...args) {
+    if (typeof args[0] === 'string' && (args[0].includes('Minified React error #418') || args[0].includes('Minified React error #423'))) return;
+    originalError.apply(console, args);
+  };
+  const originalWarn = console.warn;
+  console.warn = function(...args) {
+    if (typeof args[0] === 'string' && (args[0].includes('GSAP target') || args[0].includes('could not be loaded'))) return;
+    originalWarn.apply(console, args);
+  };
+</script>
+
   <meta charset="utf-8" data-next-head="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" data-next-head="" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" data-next-head="" />
@@ -33,38 +55,38 @@
   <meta property="twitter:image" content="https://a.storyblok.com/f/155984/1200x630/5a3b59649f/socialimage_landscape.png" data-next-head="" />
   <!-- <link rel="canonical" href="https://www.dentsucreative.com/en-gb" data-next-head="" /> -->
   <link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous" />
-  <link rel="preload" href="./_next/static/css/599d8305be7ea574.css" as="style" />
-  <link rel="preload" href="./_next/static/css/f227213fd29ee750.css" as="style" />
+  <link rel="preload" href="/_next/static/css/599d8305be7ea574.css" as="style" />
+  <link rel="preload" href="/_next/static/css/f227213fd29ee750.css" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./_next/static/css/599d8305be7ea574.css" data-n-g="" />
-  <link rel="stylesheet" href="./_next/static/css/f227213fd29ee750.css" data-n-p="" />
+  <link rel="stylesheet" href="/_next/static/css/599d8305be7ea574.css" data-n-g="" />
+  <link rel="stylesheet" href="/_next/static/css/f227213fd29ee750.css" data-n-p="" />
   <noscript data-n-css=""></noscript>
-  <script defer="" nomodule="" src="./_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
-  <script src="./_next/static/chunks/webpack-7d991f5790b6da22.js" defer=""></script>
-  <script src="./_next/static/chunks/framework-29637df95315b638.js" defer=""></script>
-  <script src="./_next/static/chunks/main-30973d7823669aa4.js" defer=""></script>
-  <script src="./_next/static/chunks/pages/_app-42b23cc03402a8ee.js" defer=""></script>
-  <script src="./_next/static/chunks/69b51223-34e4cf24a68c6974.js" defer=""></script>
-  <script src="./_next/static/chunks/1497359d-b10065b93dbddc30.js" defer=""></script>
-  <script src="./_next/static/chunks/409-6ffb199b8cedc546.js" defer=""></script>
-  <script src="./_next/static/chunks/854-f2501e3327a61937.js" defer=""></script>
-  <script src="./_next/static/chunks/pages/%5B%5B...slug%5D%5D-4ea64fb8a0cf22bd.js" defer=""></script>
-  <script src="./_next/static/3c5f7e02599e89870c94cc5feb4befd0197a6c3f/_buildManifest.js" defer=""></script>
-  <script src="./_next/static/3c5f7e02599e89870c94cc5feb4befd0197a6c3f/_ssgManifest.js" defer=""></script>
+  <script defer="" nomodule="" src="/_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
+  <script src="/_next/static/chunks/webpack-7d991f5790b6da22.js" defer=""></script>
+  <script src="/_next/static/chunks/framework-29637df95315b638.js" defer=""></script>
+  <script src="/_next/static/chunks/main-30973d7823669aa4.js" defer=""></script>
+  <script src="/_next/static/chunks/pages/_app-42b23cc03402a8ee.js" defer=""></script>
+  <script src="/_next/static/chunks/69b51223-34e4cf24a68c6974.js" defer=""></script>
+  <script src="/_next/static/chunks/1497359d-b10065b93dbddc30.js" defer=""></script>
+  <script src="/_next/static/chunks/409-6ffb199b8cedc546.js" defer=""></script>
+  <script src="/_next/static/chunks/854-f2501e3327a61937.js" defer=""></script>
+  <script src="/_next/static/chunks/pages/%5B%5B...slug%5D%5D-4ea64fb8a0cf22bd.js" defer=""></script>
+  <script src="/_next/static/3c5f7e02599e89870c94cc5feb4befd0197a6c3f/_buildManifest.js" defer=""></script>
+  <script src="/_next/static/3c5f7e02599e89870c94cc5feb4befd0197a6c3f/_ssgManifest.js" defer=""></script>
 </head>
 
 <body>
   <div id="__next">
 
-    <video></video>
-    <!-- <noscript>
+    
+    <noscript>
 			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBDGVBP" height="0" width="0"
 				style="display: none; visibility: hidden" />
-		</noscript> -->
-    <!-- <noscript>
+		</noscript>
+    <noscript>
 			<img height="1" width="1" style="display: none" alt=""
 				src="https://px.ads.linkedin.com/collect/?pid=5270034&fmt=gif" />
-		</noscript> -->
+		</noscript>
 
     <div class="MenuOverlay_menu-overlay__7RFiB">
       <div class="MenuOverlay_background__kPgyF"></div>
@@ -159,7 +181,7 @@
 
   </div>
 
-  <!-- <script id="__NEXT_DATA__" type="application/json">
+  <script id="__NEXT_DATA__" type="application/json">
   {
     "props": {
      "pageProps": {
@@ -2809,7 +2831,7 @@
     "defaultLocale": "en",
     "scriptLoader": []
    }
-  </script> -->
+  </script>
 
 </body>
 
